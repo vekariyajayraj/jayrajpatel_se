@@ -6,7 +6,7 @@ main(){
 	 {
 	 	for (j=0;j<i;j++)
 	 	{
-	 		pritnf("%d",(i+j)%2);
+	 		printf("%d",(i+j)%2);
 		 }
 		 printf("\n");
 	 }
