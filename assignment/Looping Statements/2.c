@@ -1,14 +1,18 @@
+// 2.wap to accept 5 numbers from user and display all numbers. 
+
 #include<stdio.h>
-void myarray();
-int main()
-{
-  myarray();
-}
-void myarray(){
-	int i=0, number[5];
- for(i=0; i<5; i++) 
- {
-  printf("Enter your Number[%d]:",i);
-  scanf("%d",&number[i]);
- }
+int main(){
+	int numbers=5;
+	
+	printf("enter 5 numbers \n ");
+	for(int i= 0; i<5; ++i){
+		printf("number %d:", i+1);
+		scanf("%d",&numbers);
+	}
+	
+	
+	printf("\n enterd numbers are:");
+	for(int i=0; i<5; ++i){
+		printf("%d",numbers);
+	}
 }

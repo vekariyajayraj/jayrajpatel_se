@@ -7,6 +7,7 @@ int main(){
 	patternc();
 	patternd();
 	patterne();
+	patternf();
 }
 
 int patterna(){
@@ -84,6 +85,24 @@ int patterne(){
 		for(j=1;j<=i;j++){
 			printf("%d",j%2);
 		}
+		printf("\n");
+	}
+}
+
+int patternf(){
+
+	int i,j,k,a;
+	a=1;
+	for(i=1;i<=5;i++){
+		for(j=5;j>=i;j--){
+			printf("   ");
+		}
+		
+		for(k=1;k<=a;k++){
+			printf(" * ");	
+		}
+		
+		a=a+2;
 		printf("\n");
 	}
 }
