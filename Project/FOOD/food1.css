@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainheader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #21243d;
+    text-align: center;
+    height: auto;
+}
+
+.a1 a {
+    text-decoration: none;
+    margin-left: 80px;
+    color: white;
+}
+
+.a1 {
+    padding-top: 25px;
+    font-size: 30px;
+    display: none;
+    flex-wrap: wrap;
+    padding-bottom: 18px;
+}
+
+.search {
+    padding-top: 20px;
+    display: none;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    padding-top: 5px;
+    display: none;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.page1image img {
+    width: 100%;
+    position: absolute;
+    /* left: 0; */
+    /* top: 0px; */
+    z-index: -1; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page1image {
+    /* color: white; */
+    /* width: 700px; */
+    margin-top: 200px;
+}
+
+.page1image h1 {
+    position: relative;
+    /* font-size: 100px; */
+    margin-left: -800px;
+    font-size: 140px;
+    color: #ffffff;
+    /* z-index: 1; */
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.page1image p {
+    width: 800px; 
+    margin-left: 200px;
+    margin-top: 70px;
+    font-size: 20px;
+}
+
+.page1image button {
+    margin-top: 40px;
+    margin-left: 200px;
+    width: 300px;
+    font-size: 20px;
+    border: 2px solid #21243d;
+    height: 60px;
+    color: white;
+    background-color: #21243d;
+    border-radius: 30px 30px 30px 30px;
+}
+
+@media (min-width:210px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .mainheader {
+        /* display: flex; */
+        /* flex-direction: column; */
+        justify-content: space-around;
+        background-color: #21243d;
+        text-align: center;
+        height: auto;
+    }
+
+    .a1 a {
+        text-decoration: none;
+        margin-left: 80px;
+        color: white;
+    }
+
+    .a1 {
+        padding-top: 25px;
+        display: block;
+        flex-direction: column;
+        font-size: 30px;
+        padding-bottom: 18px;
+    }
+
+    .search {
+        padding-top: 20px;
+        display: block;
+        flex-direction: column;
+        padding-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .logo {
+        padding-top: 5px;
+        display: block;
+        flex-direction: column;
+        padding-bottom: 20px;
+        cursor: pointer;
+    }
+}

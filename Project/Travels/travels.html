@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e9e7e7;
+
+        }
+
+        .HGFA {
+            display: flex;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            margin-left: 350px;
+            /* justify-content: space-around; */
+            text-align: center;
+        }
+
+        .a1 {
+
+            height: 16px;
+            font-size: 20px;
+            letter-spacing: -1px;
+            color: #232323;
+            margin-left: 100px;
+            text-decoration: none;
+            font-family: "Lato";
+            /* text-align: left; */
+        }
+
+        .a1:hover {
+            text-shadow: 0px 0px 5px black;
+        }
+
+        .a1:active {
+            font-weight: 900;
+            text-shadow: 0px 0px 5px black;
+
+        }
+
+        .a2 {
+            width: 215px;
+            height: 54px;
+            font-size: 20px;
+            margin-left: 550px;
+            text-align: center;
+            flex-wrap: wrap;
+            text-decoration: none;
+            margin-top: -15px;
+            padding: 15px;
+            color: black;
+            border: 3px solid black;
+            border-radius: 5px;
+        }
+
+        .a2:hover {
+            box-shadow: 0px 0px 5px black;
+        }
+
+        .a2:active {
+            background-color: #8b706d;
+            font-weight: 900;
+            box-shadow: 0px 0px 5px black;
+
+        }
+
+        .page1 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: left;
+            margin-top: 80px;
+
+        }
+
+        .page1text {
+            width: 400px;
+            margin-left: 500px;
+        }
+
+        .d1 {
+            height: 50px;
+            width: 50px;
+            margin-top: -280px;
+            margin-left: -500px;
+        }
+
+        .d2 {
+
+            margin-top: -200px;
+            overflow: hidden;
+            margin-left: 1900px;
+        }
+
+        .page1img {
+            margin-left: 150px;
+        }
+
+        .page1text h1 {
+            font-size: 81px;
+            letter-spacing: -2px;
+            line-height: 81px;
+            color: #232323;
+            font-weight: 700;
+            font-family: "Cardo";
+        }
+
+        .page1text p {
+            font-size: 17px;
+            letter-spacing: 0px;
+            color: #232323;
+            font-weight: 400;
+            font-family: "Lato";
+            text-align: left;
+        }
+
+        .page1text button {
+            font-size: 21px;
+            letter-spacing: -1px;
+            color: #e9e7e7;
+            font-weight: 900;
+            font-family: "Lato";
+            text-align: center;
+            width: 256px;
+            height: 54px;
+            border-radius: 5px;
+            text-decoration: none;
+            border-style: none;
+            background-color: #232323;
+        }
+
+        .page1text button:hover {
+            box-shadow: 0px 0px 5px black;
+        }
+
+        .page1text button:active {
+            box-shadow: 0px 0px 10px black;
+            background-color: black;
+        }
+
+        .page2 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -100px;
+            justify-content: space-evenly;
+            text-align: center;
+            background-color: #232323;
+        }
+
+        .page2text {
+            margin-top: 50px;
+            color: white;
+            padding-bottom: 40px;
+        }
+
+        .page2text h1 {
+            font-size: 55px;
+            letter-spacing: -1px;
+            line-height: 55px;
+            color: #e9e7e7;
+            font-weight: 700;
+            font-family: "Cardo";
+            text-align: center;
+        }
+
+        .page2text p {
+            font-size: 17px;
+            letter-spacing: 0px;
+            color: #e9e7e7;
+            font-weight: 400;
+            font-family: "Lato";
+            text-align: center;
+        }
+
+        .page2text button {
+            width: 256px;
+            height: 54px;
+            border-radius: 5px;
+            color: #e9e7e7;
+            margin-top: 40px;
+            background-color: #232323;
+            border: 3px solid #e9e7e7;
+        }
+
+        .page2d3 {
+            margin-top: 30px;
+            margin-left: -40px;
+        }
+
+        .page2d4 {
+            margin-top: 200px;
+            margin-left: -80px;
+        }
+
+        .page3 {
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: space-evenly;
+            text-align: left;
+            margin-top: 100px;
+        }
+
+        .page3image {
+            margin-left: 50px;
+        }
+
+        .page3image p {
+            margin-top: 10px;
+        }
+
+        .page3d5 {
+            margin-top: -100px;
+            margin-left: -90px;
+        }
+
+        .page4 {
+            margin-top: -150px;
+            flex-wrap: wrap;
+        }
+
+        .page4d7 {
+            margin-left: 72%;
+            height: 500px;
+            width: 200px;
+        }
+
+        .airplaceicon {
+            margin-top: -400px;
+            margin-left: 50%;
+        }
+
+        .page4text h1 {
+            font-size: 98px;
+            letter-spacing: -2px;
+            line-height: 98px;
+            color: #232323;
+            font-weight: 700;
+            width: 900px;
+            margin-left: 25%;
+            font-family: "Cardo";
+            text-align: center;
+        }
+
+        .page4text p {
+            font-size: 25px;
+            letter-spacing: -1px;
+            color: #232323;
+            font-weight: 900;
+            font-family: "Lato";
+            text-align: center;
+            margin-top: 40px;
+            margin-left: -160px;
+        }
+
+        .page4d8 {
+            margin-top: -75px;
+            margin-left: 250px;
+        }
+
+        .page5 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+
+        .page5image2 {
+            margin-left: 750px;
+        }
+
+        .page5image2 img {
+            width: 600px;
+        }
+
+        .page5img2f {
+            display: flex;
+            margin-top: 20px;
+
+        }
+
+        .page5img2f div h1 {
+            width: 200px;
+            font-size: 30px;
+            /* margin-left: 0px; */
+        }
+
+        .page5img2f nav p {
+            margin-left: 20px;
+            width: 600px;
+            font-size: 20px;
+        }
+
+        .page5img2f nav .p {
+            margin-top: 10px;
+        }
+
+        .page5image1 {
+            /* width: 1000px; */
+            margin-left: 200px;
+        }
+
+        .page5image1 img {
+            width: 700px;
+        }
+
+        .page5tape {
+            width: 80px;
+            height: 500px;
+            background-image: url(/Tape.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            color: black;
+            margin-left: -745px;
+            margin-top: 250px;
+        }
+
+        .page5img2f nav img {
+            width: 200px;
+            height: 150px;
+            cursor: pointer;
+            margin-top: 50px;
+            margin-left: 400px;
+            font-size: 10px;
+        }
+
+        .page6 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #232323;
+        }
+
+        .page6text {
+            margin-top: 100px;
+            width: 700px;
+            flex-wrap: wrap;
+            margin-left: 200px;
+        }
+
+        .page6text h1 {
+            font-size: 80px;
+            letter-spacing: -1px;
+            line-height: 55px;
+            color: #e9e7e7;
+            flex-wrap: wrap;
+            flex-wrap: wrap;
+            font-weight: 700;
+            font-family: "Cardo";
+        }
+
+        .page6text h1 p {
+            font-size: 80px;
+            margin-top: 10px;
+            letter-spacing: -1px;
+            line-height: 55px;
+            flex-wrap: wrap;
+            color: #e9e7e7;
+            font-weight: 700;
+            font-family: "Cardo";
+        }
+
+        .page6text h3 {
+            margin-top: 100px;
+            font-size: 40px;
+            letter-spacing: -1px;
+            flex-wrap: wrap;
+            color: #e9e7e7;
+            font-weight: 900;
+            font-family: "Lato";
+        }
+
+        .page6text p {
+            width: 900px;
+            font-size: 25px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            letter-spacing: 0px;
+            color: #e9e7e7;
+            font-weight: 400;
+            font-family: "Lato";
+            text-align: left;
+        }
+
+        .page6text .page6h3 {
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .page6text .page6p {
+            flex-wrap: wrap;
+            margin-top: 10px;
+
+        }
+
+        .page6text img {
+            flex-wrap: wrap;
+            /* margin-top: 80px; */
+            margin-left: -350px;
+        }
+
+        .page6image1 {
+            flex-wrap: wrap;
+            margin-top: 150px;
+        }
+
+        .page7 {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        .page7text h1 {
+            flex-wrap: wrap;
+            width: 900px;
+            font-size: 100px;
+            letter-spacing: -2px;
+            line-height: 81px;
+            color: #232323;
+            font-weight: 700;
+            font-family: "Cardo";
+        }
+
+        .page7hr1 {
+            margin-top: 80px;
+            flex-wrap: wrap;
+        }
+
+        .page7nav {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .page7image img {
+            margin-top: -50px;
+            flex-wrap: wrap;
+            margin-left: -500px;
+
+        }
+
+        .page8 {
+            flex-wrap: wrap;
+            margin-top: 200px;
+        }
+
+        .page8customer1round {
+            width: 135px;
+            height: 135px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            margin-left: 140px;
+            cursor: pointer;
+            border-radius: 68px;
+            background-color: #232323;
+        }
+
+
+        .page8dimag {
+            flex-wrap: wrap;
+            display: flex;
+
+        }
+
+        .page8customer2round img {
+            width: 150px;
+            height: 150px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            margin-left: -6px;
+            /* color:white; */
+        }
+
+        .page8customerbox1 {
+            width: 400px;
+            height: 400px;
+            flex-wrap: wrap;
+            margin-top: 100px;
+            border-radius: 20px;
+            border: 2px solid black;
+        }
+
+        .page8text {
+            font-size: 81px;
+            letter-spacing: -2px;
+            line-height: 81px;
+            flex-wrap: wrap;
+            color: #232323;
+            font-weight: 700;
+            width: 900px;
+            margin-left: 250px;
+            font-family: "Cardo";
+            text-align: center;
+        }
+
+        .page8d10 {
+            flex-wrap: wrap;
+            margin-left: -60px;
+        }
+
+        .page8customerroundtext {
+            /* margin-top: 0px; */
+            margin-left: -80px;
+            flex-wrap: wrap;
+            width: 300px;
+        }
+
+        .page8customerroundtext h1 {
+            flex-wrap: wrap;
+            margin-left: 50px;
+        }
+
+        .page8customerbox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+
+        .page8d11 {
+            margin-top: 40px;
+            margin-left: 69%;
+            flex-wrap: wrap;
+        }
+
+        .page8arrow {
+            width: 100px;
+            height: 50px;
+            flex-wrap: wrap;
+            border: 2px solid black;
+            cursor: pointer;
+            margin-left: -50px;
+            background-color: #e9e7e7
+        }
+
+        .page8arrow img {
+            width: 100px;
+            height: 50px;
+            flex-wrap: wrap;
+        }
+
+        .page8arrow1 {
+            width: 100px;
+            height: 50px;
+            flex-wrap: wrap;
+            border: 2px solid black;
+            margin-left: 345px;
+            cursor: pointer;
+            background-color: #e9e7e7
+        }
+
+        .page8arrow1 img {
+            flex-wrap: wrap;
+            width: 100px;
+            height: 50px;
+        }
+
+        .page9 {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .p9td {
+            flex-wrap: wrap;
+            width: 500px;
+            height: 50px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+
+        .p9th {
+            flex-wrap: wrap;
+            font-size: 80px;
+        }
+
+        .p9tdb {
+            width: 500px;
+            flex-wrap: wrap;
+            height: 50px;
+            margin: 20px;
+            border-radius: 5px;
+            background-color: black;
+            color: wheat;
+        }
+
+        .page10 {
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+
+        .page10textulf {
+            flex-wrap: wrap;
+            display: flex;
+        }
+
+        .page10d {
+            flex-wrap: wrap;
+            display: flex;
+            margin-top: 200px;
+        }
+
+        .page10list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 200px;
+        }
+
+        .page10list li {
+            margin-left: 200px;
+            flex-wrap: wrap;
+            font-size: 30px;
+        }
+
+        .page10listh3 {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .page10text1 h1 {
+            margin-left: 100px;
+            flex-wrap: wrap;
+            width: 200px;
+            font-size: 50px;
+        }
+
+        .page10d13 {
+            flex-wrap: wrap;
+            margin-left: -400px;
+        }
+
+        .page10text2 {
+            margin-left: 500px;
+            flex-wrap: wrap;
+        }
+
+        .maindivall {
+            opacity: 0.85598;
+            /* filter: opacity(0.200); */
+            width: auto;
+            height: auto;
+            z-index: -1;
+            background-color: #00f6ff !important;
+        } 
+
+        @media only screen and (max-width:600) {
+    body {
+        background-color: #e9e7e7;
+
+    }
+
+    .mainheader {
+        background-color: #e9e7e7;
+    }
+
+    .HGFA {
+        flex-direction: column;
+        margin-top: 40px;
+        margin-left: 100px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .a1 {
+
+        gap: 20px;
+        height: 16px;
+        font-size: 20px;
+        letter-spacing: -1px;
+        color: #232323;
+        margin-left: 100px;
+        text-decoration: none;
+        font-family: "Lato";
+        /* text-align: left; */
+    }
+
+    .a1:hover {
+        text-shadow: 0px 0px 5px black;
+    }
+
+    .a1:active {
+        font-weight: 900;
+        text-shadow: 0px 0px 5px black;
+
+    }
+
+    .a2 {
+        width: 215px;
+        height: 54px;
+        font-size: 20px;
+        /* margin-left: 550px; */
+        text-align: center;
+        flex-direction: column;
+        text-decoration: none;
+        /* margin-top: -15px; */
+        padding: 15px;
+        color: black;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+
+    .a2:hover {
+        box-shadow: 0px 0px 5px black;
+    }
+
+    .a2:active {
+        background-color: #8b706d;
+        font-weight: 900;
+        box-shadow: 0px 0px 5px black;
+
+    }
+
+    .page1 {
+        flex-direction: column;
+        text-align: left;
+        margin-top: 80px;
+
+    }
+
+    .page1text {
+        width: 400px;
+        margin-left: 500px;
+    }
+
+    .d1 {
+        height: 50px;
+        width: 50px;
+        margin-top: -280px;
+        margin-left: -500px;
+    }
+
+    .d2 {
+        margin-top: 200px;
+        margin-left: -100px;
+    }
+
+    .page1img {
+        margin-left: 150px;
+    }
+
+    .page1text h1 {
+        font-size: 81px;
+        letter-spacing: -2px;
+        line-height: 81px;
+        color: #232323;
+        font-weight: 700;
+        font-family: "Cardo";
+    }
+
+    .page1text p {
+        font-size: 17px;
+        letter-spacing: 0px;
+        color: #232323;
+        font-weight: 400;
+        font-family: "Lato";
+        text-align: left;
+    }
+
+    .page1text button {
+        font-size: 21px;
+        letter-spacing: -1px;
+        color: #e9e7e7;
+        font-weight: 900;
+        font-family: "Lato";
+        text-align: center;
+        width: 256px;
+        height: 54px;
+        border-radius: 5px;
+        text-decoration: none;
+        border-style: none;
+        background-color: #232323;
+    }
+
+    .page1text button:hover {
+        box-shadow: 0px 0px 5px black;
+    }
+
+    .page1text button:active {
+        box-shadow: 0px 0px 10px black;
+        background-color: black;
+    }
+
+    .page2 {
+        flex-direction: column;
+        margin-top: -100px;
+        justify-content: space-evenly;
+        text-align: center;
+        background-color: #232323;
+    }
+
+    .page2text {
+        margin-top: 50px;
+        color: white;
+        padding-bottom: 40px;
+    }
+
+    .page2text h1 {
+        font-size: 55px;
+        letter-spacing: -1px;
+        line-height: 55px;
+        color: #e9e7e7;
+        font-weight: 700;
+        font-family: "Cardo";
+        text-align: center;
+    }
+
+    .page2text p {
+        font-size: 17px;
+        letter-spacing: 0px;
+        color: #e9e7e7;
+        font-weight: 400;
+        font-family: "Lato";
+        text-align: center;
+    }
+
+    .page2text button {
+        width: 256px;
+        height: 54px;
+        border-radius: 5px;
+        color: #e9e7e7;
+        margin-top: 40px;
+        background-color: #232323;
+        border: 3px solid #e9e7e7;
+    }
+
+    .page2d3 {
+        margin-top: 30px;
+        margin-left: -40px;
+    }
+
+    .page2d4 {
+        margin-top: 200px;
+        margin-left: -40px;
+    }
+
+    .page3 {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: left;
+        margin-top: 100px;
+    }
+
+    .page3image {
+        margin-left: 50px;
+    }
+
+    .page3image p {
+        margin-top: 10px;
+    }
+
+    .page3d5 {
+        margin-top: -100px;
+        margin-left: -90px;
+    }
+
+    .page4 {
+        margin-top: -150px;
+        flex-direction: column;
+    }
+
+    .page4d7 {
+        margin-left: 72%;
+        height: 500px;
+        width: 200px;
+        flex-direction: column;
+    }
+
+    .airplaceicon {
+        margin-top: -400px;
+        margin-left: 50%;
+    }
+
+    .page4text h1 {
+        font-size: 98px;
+        letter-spacing: -2px;
+        line-height: 98px;
+        color: #232323;
+        font-weight: 700;
+        width: 900px;
+        margin-left: 25%;
+        flex-direction: column;
+        font-family: "Cardo";
+        text-align: center;
+    }
+
+    .page4text p {
+        font-size: 25px;
+        letter-spacing: -1px;
+        color: #232323;
+        font-weight: 900;
+        flex-direction: column;
+        font-family: "Lato";
+        text-align: center;
+        margin-top: 40px;
+        margin-left: -160px;
+    }
+
+    .page4d8 {
+        margin-top: -75px;
+        margin-left: 250px;
+    }
+
+    .page5 {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .page5img2f {
+        /* display: flex; */
+        flex-direction: column;
+        margin-top: 20px;
+
+    }
+
+    .page5img2f div h1 {
+        /* width: 200px; */
+        flex-direction: column;
+        font-size: 30px;
+        /* margin-left: 0px; */
+    }
+
+    .page5img2f nav .p {
+        margin-top: 10px;
+    }
+
+
+
+    .page5tape {
+        /* width: 80px; */
+        /* height: 500px; */
+        background-image: url(/Tape.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex-direction: column;
+        color: black;
+        /* margin-left: -745px; */
+        margin-top: 250px;
+    }
+
+    .page5img2f nav img {
+        /* width: 200px; */
+        /* height: 150px; */
+        cursor: pointer;
+        margin-top: 50px;
+        flex-direction: column;
+        /* margin-left: 400px; */
+        font-size: 10px;
+    }
+
+    .page6 {
+        /* display: flex; */
+        flex-direction: column;
+        /* justify-content: space-between; */
+        background-color: #232323;
+    }
+
+    .page6text {
+        margin-top: 100px;
+        width: 700px;
+        flex-direction: column;
+        margin-left: 200px;
+    }
+
+    .page6text h1 {
+        flex-direction: column;
+        font-size: 80px;
+        letter-spacing: -1px;
+        line-height: 55px;
+        color: #e9e7e7;
+        font-weight: 700;
+        font-family: "Cardo";
+    }
+
+    .page6text h1 p {
+        flex-direction: column;
+        font-size: 80px;
+        margin-top: 10px;
+        letter-spacing: -1px;
+        line-height: 55px;
+        color: #e9e7e7;
+        font-weight: 700;
+        font-family: "Cardo";
+    }
+
+    .page6text h3 {
+        margin-top: 100px;
+        flex-direction: column;
+        font-size: 40px;
+        letter-spacing: -1px;
+        color: #e9e7e7;
+        font-weight: 900;
+        font-family: "Lato";
+    }
+
+    .page6text p {
+        width: 900px;
+        font-size: 25px;
+        margin-top: 10px;
+        letter-spacing: 0px;
+        color: #e9e7e7;
+        font-weight: 400;
+        font-family: "Lato";
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .page6text .page6h3 {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .page6text .page6p {
+        flex-direction: column;
+        margin-top: 10px;
+
+    }
+
+    .page6text img {
+        flex-direction: column;
+        /* margin-top: 80px; */
+        margin-left: -350px;
+    }
+
+    .page6image1 {
+        margin-top: 150px;
+        flex-direction: column;
+    }
+    .page7 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.page7text h1 {
+    width: 900px;
+    font-size: 100px;
+    letter-spacing: -2px;
+    line-height: 81px;
+    color: #232323;
+    font-weight: 700;
+    font-family: "Cardo";
+}
+
+.page7hr1 {
+    margin-top: 80px;
+}
+
+.page7nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.page7image img {
+    margin-top: -50px;
+    margin-left: -500px;
+
+}
+
+.page8 {
+    margin-top: 200px;
+    flex-direction: column;
+}
+
+.page8customer1round {
+    width: 135px;
+    height: 135px;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 140px;
+    cursor: pointer;
+    border-radius: 68px;
+    background-color: #232323;
+}
+
+
+.page8dimag {
+    /* display: flex; */
+    flex-direction: column;
+
+
+}
+
+.page8customer2round img {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    flex-direction: column;
+    margin-left: -6px;
+    /* color:white; */
+}
+
+.page8customerbox1 {
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.page8text {
+    font-size: 81px;
+    letter-spacing: -2px;
+    line-height: 81px;
+    color: #232323;
+    flex-direction: column;
+    font-weight: 700;
+    width: 900px;
+    margin-left: 250px;
+    font-family: "Cardo";
+    text-align: center;
+}
+
+.page8d10 {
+    flex-direction: column;
+    margin-left: -60px;
+}
+
+.page8customerroundtext {
+    /* margin-top: 0px; */
+    margin-left: -80px;
+    flex-direction: column;
+    width: 300px;
+}
+
+.page8customerroundtext h1 {
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.page8customerbox {
+    flex-direction: column;
+    /* display: flex; */
+    /* justify-content: space-around; */
+
+}
+
+.page8d11 {
+    margin-top: 40px;
+    flex-direction: column;
+    margin-left: 69%;
+}
+
+.page8arrow {
+    width: 100px;
+    height: 50px;
+    flex-direction: column;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-left: -50px;
+    background-color: #e9e7e7
+}
+
+.page8arrow img {
+    width: 100px;
+    flex-direction: column;
+    height: 50px;
+}
+
+.page8arrow1 {
+    width: 100px;
+    flex-direction: column;
+    height: 50px;
+    border: 2px solid black;
+    margin-left: 345px;
+    cursor: pointer;
+    background-color: #e9e7e7
+}
+
+.page8arrow1 img {
+    flex-direction: column;
+    width: 100px;
+    height: 50px;
+}
+
+.page9 {
+    /* display: flex;
+    justify-content: space-around; */
+    flex-direction: column;
+
+
+}
+
+.p9td {
+    width: 500px;
+    flex-direction: column;
+    height: 50px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.p9th {
+    flex-direction: column;
+    font-size: 80px;
+}
+
+.p9tdb {
+    flex-direction: column;
+    width: 500px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: black;
+    color: wheat;
+}
+
+.page10 {
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.page10textulf {
+    flex-direction: column;
+    /* display: flex; */
+}
+
+.page10d {
+    /* display: flex; */
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.page10list {
+    /* display: flex; */
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+.page10list li {
+    flex-direction: column;
+    margin-left: 200px;
+    font-size: 30px;
+}
+
+.page10listh3 {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.page10text1 h1 {
+    flex-direction: column;
+    margin-left: 100px;
+    width: 200px;
+    font-size: 50px;
+}
+
+.page10d13 {
+    flex-direction: column;
+    margin-left: -400px;
+}
+
+.page10text2 {
+    flex-direction: column;
+    margin-left: 500px;
+}
+
+}
+    </style>
+</head>
+
+<body class="maindivall">
+    <div>
+        <section class="mainheader">
+            <div class="HGFA">
+                <a class="a1" href="HOME">Home</a>
+                <a class="a1" href="Guides">Guides</a>
+                <a class="a1" href="Flights">Flights</a>
+                <a class="a1" href="About">About</a>
+                <a class="a2" href="contect Us">contect Us</a>
+            </div>
+        </section>
+        <section class="page1">
+            <div class="d1"><img src="/Travels/d1.svg" alt=""> </div>
+            <div class="page1text">
+                <h1>
+                    Travel to your dream destination
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet exercitationem minima tenetur ad unde
+                    cumque, iusto praesentium vel voluptatum repudiandae voluptate consectetur eaque in laudantium
+                    labore ab
+                    modi esse veniam.
+                </p>
+                <button>
+                    Reserve Ticket
+                </button>
+            </div>
+            <div class="page1img">
+                <img src="/Travels/page1img.svg" alt="">
+            </div>
+            <div class="d2"><img src="/Travels/d2.svg" alt=""></div>
+
+        </section>
+        <section class="page2">
+            <div class="page2d3">
+                <img src="/Travels/d3.svg" alt="">
+            </div>
+            <div class="page2text">
+                <h1>Create a memory to remember</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do ei usmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Quis ipsum sus pendisse ultrices gravi</p>
+                <button>My Travel logs</button>
+            </div>
+            <div class="page2d4">
+                <img src="/Travels/d4.svg" alt="">
+            </div>
+        </section>
+        <section class="page3">
+            <div class="page3d5">
+                <img src="/Travels/d5.svg" alt="">
+            </div>
+            <div class="page3image">
+                <img src="/Travels/page3image1.svg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita quidem distinctio nisi
+                    labore,
+                    animi recusandae quaerat aliquid asperiores dolor!</p>
+            </div>
+            <div class="page3image">
+                <img src="/Travels/page3image2.svg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita quidem distinctio nisi
+                    labore,
+                    animi recusandae quaerat aliquid asperiores dolor!</p>
+            </div>
+            <div class="page3image">
+                <img src="/Travels/page3image3.svg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita quidem distinctio nisi
+                    labore,
+                    animi recusandae quaerat aliquid asperiores dolor!</p>
+            </div>
+            <div class="page3d6">
+                <img src="/Travels/d6.svg" alt="">
+            </div>
+        </section>
+        <section class="page4">
+            <div class="page4d7"> <img src="/Travels/d7.svg" alt=""></div>
+            <div class="airplaceicon">
+                <img src="/Travels/Airplace Icon.svg" alt="">
+            </div>
+            <div class="page4text">
+                <h1>See places you've <i><u>never</u></i> been before</h1>
+                <p>Lorem, ipsum dolor.| Lorem, ipsum dolor.| Lorem, ipsum dolor.</p>
+            </div>
+            <div class="page4d8">
+                <img src="/Travels/d8.svg" alt="">
+            </div>
+        </section>
+        <section class="page5">
+            <div class="page5image1">
+                <img src="/Travels/page5image1.svg" alt="">
+            </div>
+            <div class="page5tape">
+                <!-- <img src="/Tape.svg" alt=""> -->
+            </div>
+            <div class="page5image2">
+                <img src="/Travels/page5image2.svg" alt="">
+                <div class="page5img2f">
+                    <div>
+                        <h1>
+                            <u> Lorem ipsum dolor, sit amet consectetur adipisicing elit Optio.</u>
+                        </h1>
+                    </div>
+                    <nav>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim dolor reiciendis
+                            omnis ducimus nobis sed facilis recusandae adipisci veniam. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Facere quis et voluptatum alias dolores voluptates, debitis
+                            quasi
+                            libero suscipit omnis molestias magnam assumenda vitae odio culpa nobis magni nemo in
+                            perferendis perspiciatis id earum. Corporis, placeat </p>
+                        <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste enim dolor reiciendis
+                            omnis ducimus nobis sed facilis recusandae adipisci veniam. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Facere quis et voluptatum alias dolores voluptates, debitis
+                            quasi
+                            libero suscipit omnis molestias magnam assumenda vitae odio culpa nobis magni nemo in
+                            perferendis perspiciatis id earum. Corporis, placeat </p>
+
+                        <img src="/Travels/arrow-right-solid.svg" alt="">
+
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section class="page6">
+            <div class="page6text">
+                <h1>Choose anywhere <p> you’d like to be </p>
+                </h1>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei usmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in repre henderit in voluptate velit esse.</p>
+                <h3 class="page6h3">Lorem Ipsum dolor</h3>
+                <p class="page6p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei usmod tempor
+                    incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in repre henderit in voluptate velit esse.</p>
+                <img src="/Travels/d9.svg" alt="">
+            </div>
+            <div class="page6image1">
+                <img src="/Travels/page6image1.svg" alt="">
+            </div>
+        </section>
+        <section class="page7">
+            <div class="page7text">
+                <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                <hr class="page7hr1">
+                <nav class="page7nav">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aliquam architecto! </p>
+                    <p>+</p>
+                </nav>
+                <hr class="page7hr2">
+                <nav class="page7nav">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aliquam architecto! </p>
+                    <p>+</p>
+                </nav>
+                <hr class="page7hr3">
+                <nav class="page7nav">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aliquam architecto! </p>
+                    <p>+</p>
+                </nav>
+                <hr class="page7hr4">
+                <nav class="page7nav">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aliquam architecto! </p>
+                    <p>+</p>
+                </nav>
+                <hr class="page7hr5">
+            </div>
+            <div class="page7image">
+                <img src="/Travels/page7image1.svg" alt="">
+            </div>
+        </section>
+        <section class="page8">
+            <div class="page8dimag">
+                <div class="page8d10">
+                    <img src="/Travels/d10.svg" alt="">
+                </div>
+                <div class="page8text">
+                    <h1>Here's what they have to say...</h1>
+                </div>
+            </div>
+            <div class="page8customerbox">
+                <div class="page8customerbox1">
+                    <div class="page8customer1round">
+                        <div class="page8customer2round"><img src="/Travels/d12.svg" alt=""></div>
+                        <div class="page8customerroundtext">
+                            <h1>Customer Name</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae totam maxime libero
+                                ea
+                                eum
+                                dolorem, esse hic fuga enim voluptatum.consectetur adipisicing elit. Repudiandae totam
+                                maxime libero ea eum
+                                dolorem, esse hic fuga enim voluptatum.</p>
+                        </div>
+                    </div>
+                    <div class="page8arrow">
+                        <img src="/Travels/arrow-left-solid.svg" alt="">
+                    </div>
+                </div>
+                <div class="page8customerbox1">
+                    <div class="page8customer1round">
+                        <div class="page8customer2round"><img src="/Travels/d12.svg" alt=""></div>
+                        <div class="page8customerroundtext">
+                            <h1>Customer Name</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae totam maxime libero
+                                ea
+                                eum
+                                dolorem, esse hic fuga enim voluptatum.consectetur adipisicing elit. Repudiandae totam
+                                maxime libero ea eum
+                                dolorem, esse hic fuga enim voluptatum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page8customerbox1">
+                    <div class="page8customer1round">
+                        <div class="page8customer2round"><img src="/Travels/d12.svg" alt=""></div>
+                        <div class="page8customerroundtext">
+                            <h1>Customer Name</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae totam maxime libero
+                                ea
+                                eum
+                                dolorem, esse hic fuga enim voluptatum.consectetur adipisicing elit. Repudiandae totam
+                                maxime libero ea eum
+                                dolorem, esse hic fuga enim voluptatum.</p>
+                        </div>
+                    </div>
+                    <div class="page8arrow1">
+                        <img src="/Travels/arrow-right-solid.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="page8d11">
+                <img src="/Travels/d11.svg" alt="">
+            </div>
+        </section>
+        <section class="page9">
+            <div class="page9table">
+                <table>
+                    <th class="p9th">Be update!</th>
+                    <tr>
+                        <td><input class="p9td" type="text" placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="p9td" type="text" placeholder="Last Name "></td>
+                    </tr>
+                    <tr>
+                        <td><input class="p9td" type="email" placeholder=" Email subject"></td>
+                    </tr>
+                    <tr>
+                        <td> <textarea class="p9td" name="" id=""></textarea> </td>
+                    </tr>
+                    <tr>
+                        <td><input class="p9tdb" type="submit" value="Submit Email"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="page9image1">
+                <img src="/Travels/page9image1.svg" alt="">
+            </div>
+        </section>
+        <section class="page10">
+            <div class="page10textulf">
+                <div class="page10text1">
+                    <h1>My Log Travels</h1>
+                </div>
+                <div class="page10list">
+                    <ul>
+                        <li>
+                            <h3 class="page10listh3">Quick link</h3>
+                        </li>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>My Travel Logs</li>
+                    </ul>
+                    <ul>
+                        <li>Travel</li>
+                        <li>Promo Flights</li>
+                        <li>Travel Routes</li>
+                    </ul>
+                    <ul>
+                        <li>Recommendation</li>
+                        <li>Guides</li>
+                        <li>Blogs</li>
+                    </ul>
+                    <ul>
+                        <li>Mission Statement</li>
+                        <li>The Team</li>
+                        <li>Contact us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page10d">
+                <div class="page10d13">
+                    <img src="/Travels/d13.svg" alt="">
+                </div>
+                <div class="page10text2">
+                    <h2>2021-2022 Log Travel Right Reserved.</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
