@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-black text-center">Responsive Registration Form</h1>
+                        <form id="registrationForm">
+                            <div class="pb-3 pt-5 d-flex">
+                                <div class="border" style="width: 38px;">
+                                    <i class="fa-solid fa-envelope mt-2 ml-2"></i>
+                                </div>
+                                <input type="email" class="form-control user-select-none" name="email" id="Email"
+                                    placeholder="Email" required>
+                            </div>
+                            <div class="pb-3 pt-2 d-flex">
+                                <div class="border" style="width: 38px;">
+                                    <i class="fa-solid fa-lock mt-2 ml-2"></i>
+                                </div>
+                                <input type="password" class="form-control user-select-none" name="password"
+                                    id="Password" placeholder="Password" required>
+                            </div>
+                            <div class="pb-3 pt-2 d-flex">
+                                <div class="border" style="width: 38px;">
+                                    <i class="fa-solid fa-lock mt-2 ml-2"></i>
+                                </div>
+                                <input type="password" class="form-control user-select-none" name="confirmPassword"
+                                    id="ConfirmPassword" placeholder="Re-type Password" required>
+                            </div>
+                            <div class="pb-3 d-flex">
+                                <div class="d-flex">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-user mt-2 ml-2"></i>
+                                    </div>
+                                    <input type="text" class="form-control user-select-none" name="firstName"
+                                        id="FirstName" placeholder="First Name" required>
+                                </div>
+                                <div class="d-flex ml-4">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-user mt-2 ml-2"></i>    
+                                    </div>
+                                    <input type="text" class="form-control user-select-none" name="lastName"
+                                        id="LastName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-2">
+                                <div>
+                                    <input type="radio" name="gender" value="male" required> Male
+                                </div>
+                                <div class="ml-4">
+                                    <input type="radio" name="gender" value="female" required> Female
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <select name="country" id="Country" class="form-control user-select-none" required>
+                                    <option value="" hidden>Select a country
+                                    </option>
+                                    <option value="India">India</option>
+                                    <option value="US">U.S</option>
+                                </select>
+                            </div>
+                            <div class="mt-2">
+                                <div>
+                                    <input type="checkbox" name="terms" id="Terms" required> I agree with terms and
+                                    condition
+                                </div>
+                                <div class="mt-2">
+                                    <input type="checkbox" name="newsletter" id="Newsletter"> I want to receive the
+                                    newsletter
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <button type="submit"
+                                    class="form-control user-select-none btn btn-warning">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="resultModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="icon-box ml-5">
+                        <div class="ml-3">
+                            <div class="ml-5">
+                                <div class="ml-5">
+                                    <div class="ml-5"
+                                        style="border: 2px solid; margin-left: 80px; border-radius: 50%; height: 60px; width: 60px;">
+                                        <i class="fa-solid" id="modal-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                    <h4 id="modal-title">Success!</h4>
+                    <p id="modal-message">Your action has been completed successfully.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showModal(title, message, iconClass) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-message').innerText = message;
+            const modalIcon = document.getElementById('modal-icon');
+            modalIcon.className = `fa-solid ${iconClass}`;
+            $('#resultModal').modal('show');
+        }
+
+        document.getElementById('Password').onfocus = function () {
+            document.getElementById('message').style.display = 'block';
+        }
+
+        document.getElementById('Password').onblur = function () {
+            document.getElementById('message').style.display = 'none';
+        }
+
+        document.getElementById('Password').onkeyup = function () {
+            const lowerCaseLetters = /[a-z]/g;
+            const upperCaseLetters = /[A-Z]/g;
+            const numbers = /[0-9]/g;
+
+            // Validate lowercase letters
+            if (this.value.match(lowerCaseLetters)) {
+                document.getElementById('letter').classList.remove('invalid');
+                document.getElementById('letter').classList.add('valid');
+            } else {
+                document.getElementById('letter').classList.remove('valid');
+                document.getElementById('letter').classList.add('invalid');
+            }
+
+            // Validate capital letters
+            if (this.value.match(upperCaseLetters)) {
+                document.getElementById('capital').classList.remove('invalid');
+                document.getElementById('capital').classList.add('valid');
+            } else {
+                document.getElementById('capital').classList.remove('valid');
+                document.getElementById('capital').classList.add('invalid');
+            }
+
+            // Validate numbers
+            if (this.value.match(numbers)) {
+                document.getElementById('number').classList.remove('invalid');
+                document.getElementById('number').classList.add('valid');
+            } else {
+                document.getElementById('number').classList.remove('valid');
+                document.getElementById('number').classList.add('invalid');
+            }
+
+            // Validate length
+            if (this.value.length >= 8) {
+                document.getElementById('length').classList.remove('invalid');
+                document.getElementById('length').classList.add('valid');
+            } else {
+                document.getElementById('length').classList.remove('valid');
+                document.getElementById('length').classList.add('invalid');
+            }
+        }
+
+        document.getElementById('registrationForm').onsubmit = function (e) {
+            e.preventDefault();
+            const password = document.getElementById('Password').value;
+            const confirmPassword = document.getElementById('ConfirmPassword').value;
+
+            if (password !== confirmPassword) {
+                showModal('Error', 'Passwords do not match!', 'fa-xmark');
+            } else {
+                showModal('Success', 'Your action has been completed successfully.', 'fa-check');
+            }
+        }
+    </script>
+</body>
+
+</html>
