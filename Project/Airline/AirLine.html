@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRLINE</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainheader {
+
+            /* width: 100px; */
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+        .icon {
+            margin-bottom: 70px;
+            margin-right: 150px;
+            margin-left: 150px;
+        }
+
+        .header {
+
+            height: 90vh;
+            background-image: url('https://images.pexels.com/photos/249581/pexels-photo-249581.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            font-size: 30px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        .header p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: medium;
+        }
+
+        .form {
+            margin-left: 100px;
+            width: 30%;
+            background-color: rgb(211, 211, 208);
+            height: 80%;
+        }
+
+        .flex {
+            display: flex;
+            font-family: 'Courier New', Courier, monospace;
+            /* background-color: rgb(179, 172, 172); */
+        }
+
+        .sideflex {
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 50%;
+        }
+
+        .ntable {
+            margin-right: 100px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .box1 {
+
+            background: rgb(73, 191, 249);
+            background: linear-gradient(90deg, rgba(73, 191, 249, 1) 18%, rgba(34, 179, 250, 1) 54%, rgba(6, 144, 222, 1) 100%);
+            padding: 10px 10px 10px 10px;
+        }
+
+        .footer {
+            background-color: rgb(35, 33, 33);
+            height: 90px;
+            width: 100%;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            padding-top: 50px;
+        }
+
+        .a1 {
+            text-decoration: none !important;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        .a1:hover {
+            border: 1px !important;
+            color: rgb(255, 253, 253) !important;
+            box-shadow: 0px 0px 10px rgb(78, 77, 77);
+        }
+
+        .a1:active {
+            background-color: aqua;
+        }
+
+        .go1:hover {
+            color: rgb(0, 0, 0);
+            box-shadow: 0px 0px 5px black;
+        }
+
+        .go1 {
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(110, 167, 223);
+            cursor: pointer;
+        }
+
+        .btn {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: right;
+            cursor: pointer !important;
+            border: none;
+            /* background-color: rgb(22, 21, 21); */
+        }
+
+        .readbtn {
+            text-align: right;
+        }
+
+        .p2 {
+            color: rgb(110, 167, 223);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainheader" style="background-color: rgb(23, 22, 22); color: rgb(250, 250, 250);">
+
+        <h1
+            style="margin-left: 150px;  font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+            AIRLINE <p style="font-size: small;">INTERNATIONAL TRAVEL</p>
+        </h1>
+
+
+        <a class="a1"
+            href="https://www.skyscanner.co.in/flights-to/del/cheap-flights-to-new-delhi-airport.html?gclid=54cccab7db7e1ab0fd22acb9bade4d97&gclsrc=3p.ds&&utm_source=bing&utm_medium=cpc&utm_campaign=IN-Flights-Search-EN-DSA&utm_term=DYNAMIC+SEARCH+ADS&associateID=SEM_GGF_19370_00076&msclkid=54cccab7db7e1ab0fd22acb9bade4d97"
+            target="_blank" style="color: white; margin-top: 50px; ">HOME</a>
+        <a class="a1" href="https://www.westjet.com/en-ca/aircraft" target="_blank"
+            style="color: white; margin-top: 50px;">OUR
+            AIRCRAFT</a>
+        <a class="a1"
+            href="https://www.forbes.com/sites/laurabegleybloom/2024/01/03/ranked-the-25-safest-airlines-in-the-world-according-to-airlineratingscom/?sh=5b0c08fb4c03"
+            target="_blank" style="color: white; margin-top: 50px;">SAFETY</a>
+        <a class="a1"
+            href="https://www.in.cheapflights.com/?lang=en&utm_campaign=Generic+-+Group&utm_content=No+Location+-+charter+flights+-+T%3Dcharter+-+P%3Dflights+-+D%3DNone&utm_medium=cpc&utm_source=bing&utm_term=charter+flights&skipapp=true"
+            target="_blank" style="color: white; margin-top: 50px;">CHARTED</a>
+        <a class="a1" href="https://www.airindia.com/in/en/contact-us.html" target="_blank"
+            style="color: white; margin-top: 50px;">CONTACTS</a>
+        <nav class="icon">
+            <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+        </nav>
+
+    </div>
+    <section class="header">
+        <br><br><br><br>
+        <h1>COMFORT <BR> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Guaranteed</BR></h1>
+        <br><br><br><br><br><br><br><br><br><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Ab repudiandae non est nemo. Eaque itaque laudantium eius <br>
+            labore aut, quaerat dignissimos autem distinctio assumenda <br>
+            necessitatibus, beatae maioresexercitationem repudiandae perferendis.</p>
+    </section>
+    <section class="flex">
+        <div class="form">
+
+            <fieldset>
+                <form>
+                    <legend
+                        style=" text-align: center; margin-left: 140px; width: 250px;  border: 2px solid rgb(40, 39, 39); background-color: rgb(40, 39, 39); color: white; font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                        ORDER TICKETS ONLINE </legend>
+                    <table style="margin-left: 50px;">
+                        <tr>
+                            <td>
+                                <h2
+                                    style="padding-top: 40px; font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+                                    Your Flight Planner</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="display: inline-block; padding-top: 40px;"> <input type="radio" name="a"
+                                        value="Round trip">Round trip <br>
+                                    <input type="radio" name="a" value="Empty-leg">Empty-leg
+                                </div>
+                                <div style="display: inline-block; padding-left: 40px;"> <input type="radio" name="a"
+                                        value="One way">One
+                                    way <br>
+                                    <input type="radio" name="a" value="Multi-leg">Multi-leg
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 50px;">Leaving form: <br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Enter City Or Airport Code" required><br><br></td>
+                        </tr>
+                        <tr>
+                            <td>Going To: <br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Enter City Or Airport Code" required><br><br></td>
+                        </tr>
+                        <tr>
+                            <td>Departure Date and Time: <br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="datetime-local" required><br><br></td>
+                        </tr>
+                        <tr>
+                            <td>Return Date and Time: <br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="datetime-local" required><br><br></td>
+                        </tr>
+                        <tr>
+                            <td>Passenger(s): <br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="#Passenger" required><br></td>
+                            <td><button class="go1" type="submit">Go!</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h2>Recent News<br><br></h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgb(110, 167, 223);">Nemo enim ips am volupatatem quia <br></td>
+
+                        </tr>
+                        <tr>
+                            <td>November 5,2010
+                                <hr><br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color:  rgb(110, 167, 223);">volupats as pernatur autoditaul fjugit <br></td>
+                        </tr>
+                        <tr>
+                            <td>November 1,2010
+                                <hr> <br><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="color:  rgb(110, 167, 223);">Sed quia consequuntur magni <br></td>
+                        </tr>
+
+                        <tr>
+                            <td>October 23,2010
+                                <hr> <br><br><br><br><br>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </form>
+        </div>
+        </fieldset>
+        <div class="sideflex">
+            <table>
+                <tr>
+                    <td>
+                        <h2
+                            style=" font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+                            Wellcome to our Website!</h2><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime optio cum
+                            aspernatur
+                            deleniti maiores, magnam, eaque quia a eius nisi distinctio tempora, assumenda minima
+                            quis omnis iure accusantium aliquam voluptates. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Iusto non eum libero doloribus aperiam possimus et aut quia culpa atque,
+                            alias
+                            ducimus commodi dolorem totam id ipsum praesentium perferendis repudiandae?</p> <br><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <p class="p2"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi repudiandae facere
+                            quaerat
+                            praesentium, quas iusto! Autem at tempora officiis odio blanditiis est! Corporis blanditiis
+                            iste
+                            dolorem earum labore id a. <br><br></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>
+                                <h4>Aircraft </h4>
+                            </li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quis, alias corrupti modi aut,
+                            qui voluptatibus dolore minima numquam fugiat molestias vitae, assumenda voluptatem
+                            facere distinctio praesentium. Dolor, nulla molestiae? <br><br></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="readbtn"><button type="button"
+                            style="color: white; padding: 10px; cursor: pointer; background-color: rgb(40, 39, 39);">READ
+                            MORE</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>
+                                <h4>charters</h4>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident necessitatibus itaque hic
+                        perferendis eos ut nesciunt, ipsa numquam quas earum modi saepe explicabo, assumenda soluta
+                        omnis molestias maxime debitis! Facilis! Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Earum repellat dolores est, iste facere doloribus cum alias. <br><br><br> </td>
+                </tr>
+
+                <tr>
+
+                    <td class="btn"><button type="button"
+                            style="font-style: italic; padding: 10px; background-color: rgb(73,191,249) ; color: white; cursor: pointer; ">FLEET</button>
+                        <button
+                            style="font-style: italic; padding: 10px; margin-left: 10px; cursor: pointer; background-color: rgb(37, 37, 37); color: white;"
+                            type="button">RESERVATION</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1
+                            style=" font-weight: 400; font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+                            Our clients</h1> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <div style="display: inline-block; height: 100px; background-color: red;">
+                        Lorem ipsum dolor sit, <br>amet consectetur <br> adipisicing elit. Quaerat, soluta? </div>
+                    </td>
+                    <td style="">
+                        <div style="display: inline-block; margin-right: 50px; background-color: aqua;">
+                            Lorem ipsum dolor, sit amet consectetur <br> adipisicing elit. Molestiae sunt fugit debitis
+                            <br> eos
+                            dolor, consequuntur a facilis sapiente ea <br> nesciunt ullam. Culpa necessitatibus
+                            inventore <br> minima
+                            aliquam, ipsum omnis repellendus esse. </div> -->
+                    <td>
+                        <div class="container">
+                            <div class="box">
+                                Lorem ipsum dolor, sit amet consectetur <a href="" style="color: rgb(110, 167, 223) ;">
+                                    adipisicing elit.</a> Molestiae sunt fugit
+                                debitiseos dolor, consequuntur a facilis sapiente ea nesciunt ullam. Culpa
+                                necessitatibus
+                                inventore minima aliquam, ipsum omnis repellendus esse.
+                            </div>
+                            <div class="box1">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, soluta?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, unde! Omnis labore
+                                aspernatur soluta nemo?
+                                Lorem ipsum dolortr <br><br>
+                                <p style="text-align: right;"> Mr. Thomas Udoy</p>
+                            </div>
+                        </div>
+
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer class="footer">
+        <p style="margin-left: 100px;">Copyright@2010<a style="color: white;" href="">Domain name</a>-All rights
+            Reserved
+
+            <a style="margin-left: 500px; color: white;" href="">Free css Template</a>by<a href=""
+                style="color: white;">Templatemonster</a>
+        </p>
+    </footer>
+    <p style="font-family: 'Courier New', Courier, monospace; text-align: center;">The Template dow nloaded from <a
+            href="" style="color: rgb(110, 167, 223) ;">free w ebsite Template</a></p>
+</body>
+
+</html>
