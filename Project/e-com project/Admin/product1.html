@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Management</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Side Navigation -->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <h1>Demo</h1>
+                <p>Navigation</p>
+                <ul class="nav nav-sidebar">
+                    <li><a href="./localstorage.html">DASHBOARD</a></li>
+                    <li><a href="./categories.html">CATEGORIES</a></li>
+                    <li><a href="./product.html">PRODUCT</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-sm-9 col-md-10 main">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="navbar">
+                            <a href="./localstorage.html" class="btn btn-default navbar-btn">Dashboard</a>
+                            <a href="./categories.html" class="btn btn-default navbar-btn">Categories</a>
+                            <a href="./product.html" class="btn btn-default navbar-btn">Product</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Form Section -->
+                    <div class="col-md-6">
+                        <form method="post" enctype="multipart/form-data">
+
+
+                            <div class="form-group">
+                                <label for="selectcat">SELECT CATEGORY:</label>
+                                <select class="form-control" id="selectcat"></select>
+                            </div>
+
+                            <div >
+                                <p class="form-container" style="color: black;font-size: larger;">SELECT CATAGORY:</p>
+                            </div>
+                            <div>
+                                <label for="selectcat">SELECT CATEGORY:</label>
+                                <select  id="selectcat"></select></div><br><br>
+                            <input class="form-control" type="hidden" id="catid" value="">
+                            <div>
+
+
+
+
+                            <div class="form-group">
+                                <label for="proname">ENTER PRODUCT:</label>
+                                <input type="text" class="form-control" id="proname">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="price">ENTER PRICE:</label>
+                                <input type="text" class="form-control" id="price">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="filesec">CHOOSE IMAGE:</label>
+                                <input type="file" class="form-control-file" id="filesec" onchange="saveimg(event)">
+                            </div>
+                            <img src="" alt="" id="proimg" height="50px" width="50px"> <br><br>
+
+                            <button type="button" id="addbtn" class="btn btn-primary" onclick="addproduct()">Submit</button>
+                        </form>
+                    </div>
+
+                    <!-- Table Section -->
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Product</th>
+                                    <th>Image</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="prdata">
+                                <!-- Product data will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="product.js"></script>
+</body>
+
+</html>

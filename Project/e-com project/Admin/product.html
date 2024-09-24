@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="maindiv">
+        <div id="sidediv">
+            <h1>Navigation</h1>
+            <a href="./categories.html"><button class="sidebtn">CATAGORIES</button></a><br><br>
+            <a href="./product.html"><button class="sidebtn">PRODUCT</button></a>
+
+        </div>
+        <div id="seconddiv">
+            <div id="navdiv">
+                <a href="./localstorage.html"><button class="navbtn">Dashboard</button></a>
+                <a href="./categories.html"><button class="navbtn">Catagories</button></a>
+                <a href="./product.html"><button class="navbtn">Product</button></a>
+
+
+            </div>
+            <div>
+                <div class="col-md-12" id="catdiv">
+                    <form method="post" enctype="multipart/form-data">
+                        <div >
+                            <p class="form-container" style="color: black;font-size: larger;">SELECT CATAGORY:</p>
+                        </div>
+                        <div>
+                            <select style="width: 100%; height: 35px; border-radius: 5px;"  id="selectcat"></select></div><br><br>
+                        <input class="form-control" type="hidden" id="catid" value="">
+                        <div>
+                            <p style="color: black;font-size: larger;">ENTER PRODUCT:</p>
+                        </div>
+                        <div><input id="proname" class="form-control" type="text"></div><br><br>
+
+
+                        <div>
+                            <p style="color: black;font-size: larger;">ENTER PRICE:</p>
+                        </div>
+                        <div><input id="price" class="form-control" type="text"></div><br><br>
+                        <div>
+                            <p style="color: black;font-size: larger;">CHOSE IMAGE:</p>
+                        </div>
+
+                        <div><input  type="file" id="filesec" onchange="saveimg(event)"></div><br>
+                        <img src="" alt="" id="proimg" height="50px" width="50px"> <br><br>
+
+                        <div>
+                            <button type="button" id="addbtn" class=" btn-primary"
+                                onclick="addproduct()">submit</button>
+
+                        </div>
+                    </form>
+
+                </div>
+                <div id="tablediv">
+
+                        <table class="table table-bordered">
+                        <tr>
+                            <th>No.</th>
+                            <th>Product</th>
+                            <th>Image</th>
+                            <th>Catagiry</th>
+                            <th>Price</th>
+                            <th>Action</th>
+
+
+                        </tr>
+                        <tbody id="prdata">
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+</body>
+<script src="product.js"></script>
+
+</html>

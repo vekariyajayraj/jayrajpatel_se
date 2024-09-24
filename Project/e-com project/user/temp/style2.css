@@ -1,0 +1,32 @@
+#navdiv{
+   
+    height: fit-content;
+    
+    border-radius: 5px;
+    
+    background-color: grey;
+    text-align: right;
+    padding: 20px;
+}
+.navbtn{
+    height: 40px;
+    color: white;
+    background-color: grey;
+    border-style: none;
+    cursor: pointer;
+    font-style: italic;
+    font-size:large;
+}
+.prodetail{
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    color: white;
+}
+#productdata{
+    display: flex;
+    background-color: rgb(60, 74, 70);
+    gap: 5px;
+    padding: 30px;
+
+}

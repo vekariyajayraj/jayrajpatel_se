@@ -1,0 +1,134 @@
+#maindiv {
+    display: flex;
+}
+
+#sidediv {
+
+    background: linear-gradient(0deg, rgba(233, 2, 2, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    height: 760px;
+    width: 250px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    position: sticky;
+
+}
+
+h1 {
+    color: whitesmoke;
+    padding-top: 4px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.sidebtn {
+    width: 200px;
+    height: 40px;
+    text-align: left;
+    border-style: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(105, 12, 12, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+#navdiv {
+    width: auto;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    padding-left: 910px;
+    /* background-color: rgb(136, 53, 53); */
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(105, 12, 12, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    text-align: right;
+}
+
+.navbtn {
+    height: 40px;
+    color: black;
+    background-color: rgb(197, 115, 115);
+    border-style: none;
+    border-radius: 30px 30px 30px 30px;
+    cursor: pointer;
+    font-style: italic;
+    font-size: large;
+
+}
+
+.navbtn:hover {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(105, 12, 12, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+}
+
+#dashdiv {
+    margin-top: 10px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(233, 2, 2, 1) 100%);
+    display: flex;
+    padding: 40px;
+    gap: 50px;
+}
+
+#first,
+#second,
+#third,
+#fourth {
+    background: linear-gradient(0deg, rgba(233, 2, 2, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    color: black;
+    height: 150px;
+    width: 250px;
+    padding-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+    text-align-last: center;
+
+
+}
+
+#catdiv {
+    /* margin: 10px;
+    width: 400px;
+    height: fit-content; */
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(233, 2, 2, 1) 100%);
+    margin-left: 10px;
+    padding: 50px;
+    /* gap: 50px; */
+}
+
+#catin,
+#agein {
+    width: fit-content;
+    height: 30px;
+    padding: 5px;
+    font-size: large;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 7px;
+}
+
+#addbtn {
+    width: 90px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    font-size: large;
+}
+
+#addbtn:hover {
+
+    border-style: none;
+
+}
+
+.table {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
