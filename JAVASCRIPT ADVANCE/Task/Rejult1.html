@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Marks Entry</title>
+    <style>
+        h1, table {
+            text-align: center;
+        }
+
+        td {
+            padding: 8px;
+        }
+        .table{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* width: 500px; */
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Maths</h1>
+    <table class="table" id="table">
+        <tr>
+            <td>C Language:</td>
+            <td><input type="text" id="cLanguage" /></td>
+        </tr>
+        <tr>
+            <td>C++ Language:</td>
+            <td><input type="text" id="cppLanguage" /></td>
+        </tr>
+        <tr>
+            <td>Database:</td>
+            <td><input type="text" id="database" /></td>
+        </tr>
+        <tr>
+            <td>HTML:</td>
+            <td><input type="text" id="html" /></td>
+        </tr>
+        <tr>
+            <td>CSS:</td>
+            <td><input type="text" id="css" /></td>
+        </tr>
+        <tr>
+            <td>PHP:</td>
+            <td><input type="text" id="php" /></td>
+        </tr>
+        <tr>
+            <td>Core Java:</td>
+            <td><input type="text" id="coreJava" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calculateResults()">Result</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Total is:</td>
+            <td><h1 id="total">0</h1></td>
+        </tr>
+        <tr>
+            <td>Percentage is:</td>
+            <td><h1 id="percentage">0%</h1></td>
+        </tr>
+    </table>
+
+    <script>
+        function calculateResults() {
+            const subjects = ['cLanguage', 'cppLanguage', 'database', 'html', 'css', 'php', 'coreJava'];
+            let total = 0;
+            let isValid = true;
+
+            for (let i = 0; i < subjects.length; i++) {
+                const mark = parseFloat(document.getElementById(subjects[i]).value);
+                if (isNaN(mark) || mark < 0 || mark > 50) {
+                    alert('Please enter valid marks between 0 and 50 for all subjects.');
+                    isValid = false;
+                    break;
+                }
+                total += mark;
+            }
+
+            if (!isValid) return;
+
+            const percentage = (total / (subjects.length * 50)) * 100;
+
+            document.getElementById('total').textContent = total;
+            document.getElementById('percentage').textContent = percentage.toFixed(2) + '%';
+        }
+    </script>
+</body>
+</html>

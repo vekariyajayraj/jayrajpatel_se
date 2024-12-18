@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summation</title>
+</head>
+<body>
+    <p> summation of given number (1523)</p>
+</body>
+<script>
+    function sumOfDigit(num) {
+    return num.toString().split("")
+        .reduce((sum, digit) =>
+            sum + parseInt(digit), 0);
+}
+
+document.write(sumOfDigit(1234));
+
+</script>
+</html>

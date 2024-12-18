@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mainheader {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            margin-top: -40px;
+
+            background-color: #21243d;
+
+        }
+
+        .logo img {
+            height: 150px;
+            width: 150px;
+            margin-top: -10px;
+            /* background-color: black; */
+        }
+
+        .link .a1 {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding-left: 100px;
+            margin-top: 50px;
+        }
+
+        .image img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 198vh;
+            z-index: -1;
+        }
+
+        .search img {
+            height: 20px;
+            width: 20px;
+
+        }
+
+        .page1 h1 {
+            font-size: 70px;
+            color: white;
+            margin-left: 120px;
+            margin-top: 50px;
+        }
+
+        .page1 p {
+            color: white;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-left: 120px;
+        }
+
+        .page1 button {
+            background-color: #21243d;
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            color: white;
+            margin-left: 120px;
+            margin-top: 20px;
+
+        }
+
+        .page2 {
+            background-color: #21243d;
+            margin-top: 400px;
+            overflow: hidden;
+            width: 198vh;
+        }
+
+        .page2 .page2d1image2 {
+            float: right;
+            margin-right: -40px;
+            margin-top: -40PX;
+        }
+
+        .page2 .page2d1image1 {
+            margin-left: 180px;
+            margin-top: -20PX;
+        }
+
+        .page2 h1 {
+            color: white;
+            font-size: 30px;
+            margin-left: 500px;
+        }
+
+        .page2 p {
+            color: white;
+            margin-left: 420px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .page2 .page2d1image3 {
+            margin-left: 180px;
+            margin-top: -10PX;
+        }
+
+        .page2img1 img {
+            border-radius: 50%;
+        }
+
+        .page2imageall {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+
+        }
+
+        .page2img1 h3 {
+            color: white;
+            margin-left: 80px;
+        }
+
+        .page2img1 h5 {
+            color: white;
+            margin-left: 50px;
+        }
+
+        .page2 .page2d1image4 {
+            float: right;
+            margin-top: -250PX;
+            margin-right: -20px;
+        }
+
+        .page2 .page2d1image5 {
+            margin-top: -150px;
+            margin-bottom: 150px;
+            margin-left: -50px;
+        }
+
+        .page2 .page2d1image6 {
+            margin-top: -50px;
+            float: right;
+        }
+
+        .page3 {
+            background-color: #ffd17e;
+            overflow: hidden;
+            /* width: 198vh;  */
+        }
+
+        .page3 .page3d1image7 {
+            margin-left: 1350px;
+        }
+
+        .page3 .page3d1image8 {
+            margin-left: 650px;
+            margin-top: -100px;
+            overflow: hidden;
+            /* padding-top: -60px; */
+        }
+
+        .page3 .page3d1image9 {
+            margin-left: 100px;
+            margin-top: -650px;
+            height: 250px;
+
+        }
+
+        .page3imageall img {
+            margin-left: 200px;
+            margin-top: -150px;
+            height: 280px;
+            border-radius: 50%;
+        }
+
+        .page3 h2 {
+            margin-left: 650px;
+            margin-top: 40px;
+            font-size: 60px;
+            color: #21243d;
+        }
+
+        .page3 p {
+            margin-left: 650px;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        .page3 button {
+            background-color: #21243d;
+            color: white;
+            border-radius: 30px;
+            height: 30px;
+            width: 130px;
+            margin-left: 650px;
+            margin-top: 40px;
+        }
+
+        .page3 .page3d1image10 {
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+
+        .page3 .page3d1image11 {
+            float: right;
+            margin-right: -50px;
+            margin-top: -35px;
+        }
+
+        .page4 {
+            background-color: #21243d;
+            overflow: hidden;
+
+        }
+
+        .page4 .page3d1image12 {
+            margin-top: 50px;
+        }
+
+        .page4 h4 {
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 50px;
+            margin-top: -30px;
+        }
+
+        .page4 p {
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+
+        }
+
+        .page4 .page4d1image13 {
+            /* float: right; */
+            margin-left: 1250px;
+            margin-top: -150px;
+        }
+
+        .page4 .page4d1image14 {
+            margin-left: 100px;
+            /* margin-top: 30px; */
+            margin-bottom: 10px;
+        }
+
+        .page4 .round {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 200px;
+
+        }
+
+        .page4 .page4d1image14 {
+            border-radius: 50%;
+        }
+
+        .page5 {
+            background-color: black;
+            color: white;
+
+        }
+
+        .page5 h4 {
+            padding-top: 150px;
+            font-weight: 200;
+            font-size: 30px;
+            /* display: flex;
+            justify-content: space-around;
+            align-items: center */
+
+        }
+
+        .page5 p {
+            padding-top: 20px;
+        }
+
+        .page5 .page5logo {
+            padding-top: 30px;
+        }
+
+        .page5 .page5about {
+            padding-top: - 150px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+
+        }
+
+        .round1212 {
+            border-radius: 50%;
+            padding: 40px;
+            border: 2PX solid white;
+            width: 200px;
+            height: 200px;
+            font-size: 42px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Montserrat";
+            text-align: center;
+
+        }
+
+        .round1213 {
+            border-radius: 50%;
+            border: 2PX solid white;
+            padding: 40px;
+            width: 200px;
+            height: 200px;
+            font-size: 42px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Montserrat";
+            text-align: center;
+
+        }
+
+        .round1214 {
+            border-radius: 50%;
+            border: 2PX solid white;
+            padding: 40px;
+            width: 200px;
+            height: 200px;
+            font-size: 42px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Montserrat";
+            text-align: center;
+
+        }
+
+        .page4 .page4d1image15 {
+            margin-left: 350px;
+            margin-bottom: -230px;
+        }
+
+        .page4 .page4d1image16 {
+            margin-left: 850px;
+            padding-bottom: -150px;
+            margin-bottom: 50px;
+        }
+
+        .page4 .page4d1image17 {
+            float: right;
+            margin-right: 40px;
+
+        }
+
+        .page5 {
+            background-color: #ffd17e;
+            color: black;
+        }
+
+        .page5 .page4d1image18 {
+            margin-left: 550px;
+            margin-top: 100px;
+
+        }
+
+        .page5 .page4d1image19 {
+            margin-left: 100px;
+        }
+
+        .page5 .page4d1image20 {
+            margin-left: 1150px;
+            margin-top: -80px;
+        }
+
+        .page5 .main {
+            margin-left: 100px;
+            font-size: 75px;
+            color: #21243d;
+            font-weight: 700;
+            font-family: "Montserrat";
+        }
+
+        .page5 .main1 {
+            width: 1131px;
+            height: 210px;
+            margin-left: 140px;
+            font-size: 30px;
+            color: #21243d;
+            font-weight: 400;
+            font-family: "Montserrat";
+
+        }
+
+        .page5 .page5d1image21 {
+            float: right;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+            margin-top: -400px;
+            margin-right: 120px;
+        }
+
+        .main1 button {
+            border-radius: 30px;
+            height: 30px;
+            width: 150px;
+            background-color: #21243d;
+            color: #ffffff;
+        }
+
+        .page5 .page5d1image22 {
+            margin-left: 550px;
+            margin-top: -100px;
+            margin-bottom: 40px;
+        }
+
+        .page5 .page5d1image23 {
+            margin-left: 600px;
+            margin-top: -140px;
+            margin-bottom: 40px;
+        }
+
+        .page6 {
+            height: 100vh;
+            width: auto;
+            background-image: url(chetu2.png);
+            background-position: center center;
+            background-size: cover;
+
+        }
+
+
+        .page6 .page6d1image25 {
+            border-radius: 50%;
+            margin-left: 600px;
+            margin-top: 140px;
+            width: auto;
+
+        }
+
+        .page6 p {
+            margin-left: 500px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .page6 h1 {
+            font-size: 30px;
+            margin-left: 630px;
+            margin-top: 40px;
+        }
+
+        .page7 {
+            background-color: #ffd17e;
+            overflow: hidden;
+        }
+
+        .page7 .page7d7image27 {
+            margin-left: 900px;
+            margin-top: 30px;
+
+        }
+
+        .page7 .page7d7image26 {
+            margin-left: 50px;
+            /* padding-top: 50px; */
+        }
+
+        .page7 .page7d7image28 {
+            float: right;
+            margin-right: -40px;
+            margin-top: 20px;
+        }
+
+        .page7 h1 {
+            margin-left: 20px;
+            font-size: 75px;
+            color: #21243d;
+            font-weight: 650;
+            font-family: "Montserrat";
+            text-align: center;
+            margin-left: 100px;
+        }
+
+        .page7 p {
+            /* width: 1811px; */
+            /* height: 210px; */
+            font-size: 30px;
+            color: #21243d;
+            margin-top: 20px;
+            font-weight: 450;
+            font-family: "Montserrat";
+            text-align: center;
+        }
+
+        .page7 input {
+            border-radius: 30px;
+            width: 350px;
+            height: 30px;
+            margin-left: 520px;
+        }
+
+        .page7 button {
+            background-color: #21243d;
+            color: #ffffff;
+            border-radius: 30px;
+            height: 30px;
+            width: 120px;
+            margin-left: -100px;
+            margin-top: 20px;
+        }
+
+        .page7 .page7d7image29 {
+            margin-left: 70px;
+            padding-bottom: 100px;
+        }
+
+        .page7 .page7d7image30 {
+            margin-left: 500px;
+            margin-top: 60px;
+            padding-bottom: 30px;
+
+        }
+
+        .page7 .page7d7image31 {
+            margin-left: 500px;
+            margin-top: -350px;
+            padding-bottom: 60px;
+        }
+
+        .page8 {
+            height: auto;
+            width: 100%;
+            background: black;
+            color: #ffd7ad;
+            padding: 140px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page8 .sub {
+            width: 958px;
+            height: 244px;
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: 400;
+            font-family: "Montserrat";
+            padding: 50px;
+
+        }
+
+        .page8 p {
+            margin-top: 40px;
+        }
+
+
+
+        .subs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-left: 500px;
+            margin-top: -220px;
+        }
+
+        .page8 h3 {
+
+            font-size: 32px;
+            color: #ffffff;
+            font-weight: 400;
+            font-family: "Montserrat";
+        }
+
+        .page8 .subs h6 {
+            font-size: 20px;
+            line-height: 42px;
+            color: #ffffff;
+            font-weight: 400;
+            font-family: "Montserrat";
+        }
+
+        .page8 img {
+            padding-top: 20px;
+            gap: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="">
+        <div class="logo">
+            <img src="logo.svg" alt="">
+        </div>
+        <div class="link">
+            <a class="a1" href="">Home</a>
+            <a class="a1" href="">product</a>
+            <a class="a1" href="">promo</a>
+            <a class="a1" href="">About</a>
+            <a class="a1" href="">Contact</a>
+        </div>
+        <div class="search">
+            <img src="Search.svg" alt="">
+        </div>
+        <div class="image"><img src="Place Your Image Here (Double Click to Edit) (1).svg" alt="">
+        </div>
+    </section>
+    <section class="page1">
+        <h1>Title Here</h1>
+        <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Ipsum rerum provident nobis animi <br> placeat.
+            Nulla
+            officia odio, natus veniam accusantium.</p>
+        <button>order now</button>
+    </section>
+
+    <section class="page2">
+        <div class="page2d1">
+            <img class="page2d1image1" src="Shape (5).svg" alt="">
+            <img class="page2d1image2" src="Shape (4).svg" alt="">
+        </div>
+
+        <div class="head">
+            <h1>POPULAR MENU</h1>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing hello <br>elit. Assumenda animi et at aperiam
+                accusamus
+                voluptatem etcs.</P>
+        </div>
+        <div class="page2d2">
+            <img class="page2d1image3" src="Shape (6).svg" alt="">
+
+        </div>
+        <div class="page2imageall">
+            <div class="page2img1">
+                <img src="c.svg" alt="">
+                <h3 class="h1">Title Here</h3>
+                <h5 class="p">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit.</h5>
+            </div>
+
+            <div class="page2img1">
+                <img src="c.svg" alt="">
+                <h3 class="h1">Title Here</h3>
+                <h5 class="p">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit.</h5>
+            </div>
+
+            <div class="page2img1">
+                <img src="c.svg" alt="">
+                <h3 class="h1">Title Here</h3>
+                <h5 class="p">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit.</h5>
+            </div>
+
+        </div>
+        <div class="page2d2">
+            <img class="page2d1image4" src="Shape (7).svg" alt="">
+        </div>
+        <div class="page2d2">
+            <img class="page2d1image5" src="Shape (8).svg" alt="">
+        </div>
+        <div class="page2d2">
+            <img class="page2d1image6" src="Shape (6).svg" alt="">
+
+        </div>
+        </div>
+
+    </section>
+
+    <section class="page3">
+        <div class="page3d3">
+            <img class="page3d1image7" src="Shape (9).svg" alt="">
+
+        </div>
+        <div class="page3d3">
+            <img class="page3d1image8" src="Shape (10).svg" alt="">
+        </div>
+        <div class="head1">
+            <h2>Title Here</h2>
+            <p>Lorem ipsum dolor sit amet consecte <br>tur adipisicing elit. Error illo quod, alias <br> officia optio a
+                quo voluptatum.</p>
+            <button>Order NOw</button>
+        </div>
+        <div class="page3d3">
+            <img class="page3d1image9" src="Shape (11).svg" alt="">
+        </div>
+        <div class="page3imageall">
+            <img src="c.svg" alt="">
+        </div>
+        <div class="page3d3">
+            <img class="page3d1image10" src="Shape (9).svg" alt="">
+            <img class="page3d1image11" src="Shape (11).svg" alt="">
+        </div>
+        <div class="page3d3">
+
+        </div>
+    </section>
+    <section class="page4">
+        <div class="pade4d4">
+            <img class="page3d1image12" src="Shape (5).svg" alt="">
+        </div>
+        <div class="head2">
+            <h4>Statistics</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing <br> elit. Repellendus omnis architecto rerum libero,
+        </div>
+        <div class="page4d4">
+            <img class="page4d1image14" src="Shape (6).svg" alt="">
+
+        </div>
+
+        <div class="page4d4">
+            <img class="page4d1image13" src="Shape (4).svg" alt="">
+        </div>
+
+        <div class="round">
+            <div class="round1212">123 <br> store</div>
+            <div class="round1213">100<br> Menu</div>
+            <div class="round1214">200 <br> Chef</div>
+        </div>
+        <div class="page4d4">
+            <img class="page4d1image15" src="Shape (8).svg" alt="">
+        </div>
+        <div class="page4d4">
+            <img class="page4d1image16" src="Shape (5).svg" alt="">
+        </div>
+        <div class="page4d4">
+            <img class="page4d1image17" src="Shape (6).svg" alt="">
+        </div>
+    </section>
+
+    <section class="page5">
+        <div class="pade5d5">
+            <img class="page4d1image18" src="Shape (13).svg" alt="">
+        </div>
+        <div class="pade5d5">
+            <img class="page4d1image19" src="Shape (10).svg" alt="">
+        </div>
+        <div class="page5d5">
+            <img class="page4d1image20" src="Shape (11).svg" alt="">
+        </div>
+
+        <div class="main">
+            <h1>Title Here</h1>
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, repudiandae!</p> </div> -->
+
+        </div>
+        <div class="main1">
+            <p>Lorem, ipsum dolor sit amet consecte <br> tur adipisicing elit. Aperiam laud <br> antium neque illum
+                alias vitae <br></p>
+            <button>order now</button>
+
+        </div>
+        <div class="page5d5">
+            <img class="page5d1image21" src="copy.svg" alt="">
+            <img class=" page5d1image22" src="Shape (11).svg" alt="">
+            <img class=" page5d1image23" src="Shape (9).svg" alt="">
+        </div>
+        </div>
+
+    </section>
+    <section class="page6">
+        <!-- <img class="page6d1image24" src="chetu.svg" alt=""> -->
+        <img class="page6d1image25" src="image1.svg" alt="">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Veniam fugit itaque magni delectus reiciendis
+            nemo. <br>
+            Quia explicabo laudantium accusantium recusandae <br> sequi fuga amet vel eligendi quo vero dolorem,
+            obcaecati
+            hic?</p>
+        <h1>phoebe frazier</h1>
+
+
+
+    </section>
+    <section class="page7">
+        <div class="page7d7">
+            <img class="page7d7image27" src="Shape (1).png" alt="">
+            <img class="page7d7image28" src="Shape (2).png" alt="">
+
+        </div>
+        <div class="page7d8">
+            <img class="page7d7image26" src="Shape.png" alt="">
+
+        </div>
+        <div class="page7d7">
+            <h1>Title Here</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Expedita in, illo ipsa quo velit alias
+                soluta
+                doloremque <br> suscipit reprehenderit perferendis.</p>
+            <input type="text" placeholder="your email" id="">
+            <button>subscribe</button>
+        </div>
+        <div class="page7d7">
+            <img class="page7d7image29" src="Shape (1).png" alt="">
+            <img class="page7d7image30" src="Shape (2).png" alt="">
+            <img class="page7d7image31" src="Shape (3).png" alt="">
+
+        </div>
+
+    </section>
+    <section class="page8">
+        <div class="page8d8">
+            <div class="sub">
+                <h1>Title Here</h1>
+                <p>Lorem ipsum dolor sit amet consect <br> etur, adipisicing elit. Id consequatur<br> repr ehenderit a
+                    sint
+                    asperiores.Sun <br>tquas quo fuga aspernatur quasi rati.
+                </p>
+                <img src="Instagram.png" alt="">
+                <img src="Twitter.png" alt="">
+                <img src="Facebook.png" alt="">
+                <img src="WhatsApp.png" alt="">
+            </div>
+            <div class="subs">
+                <div class="sub1">
+                    <h3>About</h3>
+                    <h6>History<h6>
+                            <h6>our Team</h6>
+                            <h6>Brand Guideline</h6>
+                            <h6>privacy policy</h6>
+                </div>
+                <div class="sub2">
+                    <h3>Services</h3>
+                    <h6>How To order</h6>
+                    <h6>Our Product</h6>
+                    <h6>Order Status</h6>
+                    <h6>Promo</h6>
+                    <h6>payment Mothod</h6>
+                </div>
+                <div class="sub3">
+                    <h3>Other</h3>
+                    <h6>Contact US</h6>
+                    <h6>Help</h6>
+                    <h6>Privacy</h6>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+</body>
+
+</html>

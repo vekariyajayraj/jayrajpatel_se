@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="one" value="" oninput="set()">
+    <textarea name="" id="two" cols="30" rows="10"></textarea>
+</body>
+<script>
+    function set() {
+        var data = document.getElementById("one").value
+        document.getElementById("two").innerHTML = data
+       var style =  document.getElementById("two")
+        style.style.color="aqua"
+        style.style.backgroundColor="black"
+
+    }
+</script>
+
+</html>

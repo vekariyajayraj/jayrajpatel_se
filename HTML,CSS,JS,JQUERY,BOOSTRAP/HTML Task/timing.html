@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documen</title>
+    <style>
+        div{
+            height: 50px;
+            width: 100px;
+            background-color: red;
+            position: relative;
+            margin: 20px;
+            animation-name: time;
+            animation-duration: 5s;
+            animation-iteration-count: infinite; 
+
+
+        }
+        #div1{
+            animation-timing-function: linear;
+        }
+        #div2{
+            animation-timing-function: ease;
+        }
+        #div3{
+            animation-timing-function: ease-in;
+        }
+        #div4{
+            animation-timing-function: ease-out;
+        }
+        #div5{
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes time {
+            from{
+                left: 0px;
+            }
+            to{
+                left: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">linear</div>
+    <div id="div2">ease</div>
+    <div id="div3">ease-in</div>
+    <div id="div4">ease-out</div>
+    <div id="div5">ease-in-out</div>
+</body>
+</html>

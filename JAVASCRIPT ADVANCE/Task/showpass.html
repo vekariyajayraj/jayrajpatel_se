@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Password Visibility</title>
+</head>
+Enter Password: <input type="password" value="" id="pswrd"> <br>
+<input type="checkbox" onclick="toggleVisibility()" />Show Password</br>
+
+<body>
+  <script>
+    function toggleVisibility() {
+      var getPasword = document.getElementById("pswrd");
+      if (getPasword.type === "password") {
+        getPasword.type = "text";
+      } else {
+        getPasword.type = "password";
+      }
+    }  
+  </script>
+</body>
+
+</html>

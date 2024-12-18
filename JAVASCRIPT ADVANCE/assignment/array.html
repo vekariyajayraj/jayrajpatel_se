@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>(Array and object Question)</title>
+
+</head>
+
+<body class="bg-dark">
+    <div class="text-light  ">
+        <h1 class="d-flex justify-content-center text-secondary">(Array and object Question)</h1>
+        <h5 class="mt-5 text-secondary"> Q.40 Write a JavaScript Program to display the current day and time in the
+            following format.
+            Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?</h5>
+        <span class="mt-2 text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <div id="timeDisplay" class=" ml-5"></div>
+        <script>
+            function updateTime() {
+                var today = new Date();
+                var day = today.getDay();
+                var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+                var hour = today.getHours();
+                var minute = today.getMinutes();
+                var second = today.getSeconds();
+                var prepand = (hour >= 12) ? " PM " : " AM ";
+                hour = (hour >= 12) ? hour - 12 : hour;
+                if (hour === 0 && prepand === ' PM ') {
+                    if (minute === 0 && second === 0) {
+                        hour = 12;
+                        prepand = ' Noon';
+                    }
+                    else {
+                        hour = 12;
+                        prepand = ' PM';
+                    }
+                }
+                if (hour === 0 && prepand === ' AM ') {
+                    if (minute === 0 && second === 0) {
+                        hour = 12;
+                        prepand = ' Midnight';
+                    }
+                    else {
+                        hour = 12;
+                        prepand = ' AM';
+                    }
+                }
+                hour = (hour < 10) ? "0" + hour : hour;
+                minute = (minute < 10) ? "0" + minute : minute;
+                second = (second < 10) ? "0" + second : second;
+                var time = "Today is : " + daylist[day] + "<br>Current Time : " + hour + prepand + " : " + minute + " : " + second;
+                document.getElementById("timeDisplay").innerHTML = time;
+            }
+
+            setInterval(updateTime, 1000);
+            updateTime(); // Initial call to display time immediately on page load
+        </script>
+    </div>
+    <div class="mt-5 text-light ">
+        <h5 class="text-secondary">Q.41 Write a JavaScript program to get the current date?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let date = new Date().toDateString();
+
+            document.write("<br>" + (date));
+
+        </script>
+    </div>
+    <div class="mt-5 text-light">
+        <h5 class="text-secondary">Q.42 Write a JavaScript program to compare two objects? </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            const obj1 = { a: 1, b: 2 };
+            const obj2 = { a: 1, b: 2 };
+
+            document.write("<br> object:- 1" + "<br>" + (obj1 == obj2) + "<br>"); // false
+            document.write((obj1 === obj2)); // false
+
+            function compareObjects(obj1, obj2) {
+                return JSON.stringify(obj1) === JSON.stringify(obj2);
+            }
+
+            document.write("<br><br> object:- 2" + "<br>" + compareObjects(obj1, obj2)); // true
+        </script>
+    </div>
+    <div class="text-light">
+        <h5 class="text-secondary">Q.43 Write a JavaScript program to convert an array of objects into CSV string?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            const objectToCsv = function (data) {
+
+                const csvRows = [];
+                const headers = Object.keys(data[0]);
+                csvRows.push(headers.join(','));
+                for (const row of data) {
+                    const values = headers.map(header => {
+                        const val = row[header]
+                        return `"${val}"`;
+                    });
+                    csvRows.push(values.join(','));
+                }
+                return csvRows.join('\n');
+            };
+            const data = [{
+                "firstname": "jayraj",
+                "lastname": "vekariya",
+                "age": 18
+            },
+
+            {
+                "firstname": "vishwadipshinh",
+                "lastname": "rana",
+                "age": 21
+            },
+            {
+                "firstname": "tapan",
+                "lastname": "joshi",
+                "age": 24
+
+            },
+            ];
+            // const csvData = objectToCsv(data);
+            // document.write("<br>" + (objectToCsv(data)));
+            // document.write("<br>" + (csvData)); 
+            const csvData = objectToCsv(data);
+            document.write("<br> CSV Data:<br>" + csvData.replace(/\n/gi, "<br>"));
+
+            // Print each first name in a separate line
+            document.write("<br><br>First Names:<br>");
+            data.forEach(person => {
+                document.write(person.firstname + "<br>");
+            });
+            document.write("<br>last Names:<br>");
+            data.forEach(person => {
+                document.write(person.lastname + "<br>");
+            });
+            document.write("<br><br>age:<br>");
+            data.forEach(person => {
+                document.write(person.age + "<br>");
+            });
+        </script>
+    </div>
+    <div class="text-light">
+        <h5 class="mt-5 text-secondary">Q.44 Write a JavaScript program to capitalize first letter of a string? </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+
+        <script>
+            function capitalizeFirstLetter(str) {
+                if (str.length === 0) return str;
+                return str.charAt(0).toUpperCase() + str.slice(1);
+            }
+
+            const exampleString = "hello world!";
+            const capitalizedString = capitalizeFirstLetter(exampleString);
+
+            document.write("<br> Original String: " + exampleString + "<br>");
+            document.write("Capitalized String: " + capitalizedString + "<br>");
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q. 45 Write a JavaScript program to determine if a variable is array?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            function checkArray() {
+                let str = 'This is a string';
+                let num = 25;
+                let arr = [10, 20, 30, 40];
+
+                let ans = Array.isArray(str);
+                document.write("<br>" + "Output for String: " + ans + "<br>");
+
+                ans = Array.isArray(num);
+                document.write("Output for Number: " + ans + "<br>");
+
+                ans = Array.isArray(arr);
+                document.write("Output for Array: " + ans + "<br>");
+            }
+
+            checkArray();
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.46 Write a JavaScript program to clone an array?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            const originalArray = [1, 2, 3];
+            const clonedArray = originalArray.slice();
+            document.write("<br>" + (clonedArray));
+
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.47 What is the drawback of declaring methods directly in JavaScript objects?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            var j = function (name) {
+                this.name = name;
+
+                var barkCount = 0;
+
+                this.bark = function () {
+                    barkCount++;
+                    document.write(this.name + "<br>");
+                };
+
+                this.getBarkCount = function () {
+                    document.write(this.name + " has barked " + barkCount + " times");
+                };
+            };
+
+
+
+            var dog = new j("jayraj");
+            dog.bark();
+            dog.bark();
+            dog.getBarkCount();
+            dog.wagTail();
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.48 Print the length of the string on the browser console using console.log()? </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i> <br> <span class="text-light"> You can find
+                the length of a String value
+                by writing . length after the string variable or string literal. console. log("Alan Peter".</span>
+        </span>
+
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.49 Change all the string characters to capital letters using toUpperCase() method?
+        </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <span>We first define a string variable containing the lowercased string we want to capitalize. Then, we call
+            the toUpperCase() method on the string, which returns a new string containing all uppercase characters.
+            Finally, we log the capitalized string to the console. Note that this method doesn't modify the original
+            string.</span>
+        <script>
+            let string = "hello world";
+            string = string.toUpperCase();
+            document.write("<br><br>" + (string)); // Output: "HELLO WORLD"
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.50 What is the drawback of declaring methods directly in JavaScript objects?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            var j = function (name) {
+                this.name = name;
+
+                var barkCount = 0;
+
+                this.bark = function () {
+                    barkCount++;
+                    document.write(this.name + "<br>");
+                };
+
+                this.getBarkCount = function () {
+                    document.write(this.name + " has barked " + barkCount + " times");
+                };
+            };
+
+
+
+            var dog = new j("jayraj");
+            dog.bark();
+            dog.bark();
+            dog.getBarkCount();
+            dog.wagTail();
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.51 Write a JavaScript program to get the current date. Expected Output :
+            mm-dd-yyyy,
+            mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy? </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            // Get the current date
+            var today = new Date();
+
+            // Get the day of the month
+            var dd = today.getDate();
+
+            // Get the month (adding 1 because months are zero-based)
+            var mm = today.getMonth() + 1;
+
+            // Get the year
+            var yyyy = today.getFullYear();
+
+            // Add leading zero if the day is less than 10
+            if (dd < 10) {
+                dd = '0' + dd;
+            }
+
+            // Add leading zero if the month is less than 10
+            if (mm < 10) {
+                mm = '0' + mm;
+            }
+
+            // Format the date as mm-dd-yyyy and log it
+            today = mm + '-' + dd + '-' + yyyy;
+            document.write("<br><br>" + (today));
+
+            // Format the date as mm/dd/yyyy and log it
+            today = mm + '/' + dd + '/' + yyyy;
+            document.write("<br><br>" + (today));
+
+            // Format the date as dd-mm-yyyy and log it
+            today = dd + '-' + mm + '-' + yyyy;
+            document.write("<br><br>" + (today));
+            // Format the date as dd/mm/yyyy and log it
+            today = dd + '/' + mm + '/' + yyyy;
+            document.write("<br><br>" + (today));
+
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.52 Use indexOf to determine the position of the first occurrence of a in 30 Days Of
+            JavaScript?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <p>indexOf() returns the position of the first occurrence of a value in a string.</p>
+
+        <p>Find "e", start at position 30:</p>
+
+        <p id="demo"></p>
+        <script>
+            let font = "Hello world, welcome to the universe.";
+            document.getElementById("demo").innerHTML = font.indexOf("e", 30);
+        </script>
+    </div>
+
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q53. Use lastIndexOf to determine the position of the last occurrence of "a" in "30
+            Days Of JavaScript"</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <p>lastIndexOf() returns the index of the last occurrence of a specified value in a string.</p>
+
+        <p>Find the last occurrence of "a":</p>
+        <p id="demo"></p>
+        <script>
+            let text1 = "30 Days Of JavaScript";
+            let result = text1.lastIndexOf("a");
+
+            document.getElementById("demo").innerHTML = result;
+        </script>
+    </div>
+    <div>
+        <div class="text-light mt-5">
+            <h5 class="text-secondary">Q.54 Form Validtion in JS?</h5>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <div class="container mt-5 pt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h1 class="text-black text-center"> Validtion Form</h1>
+                                <form id="registrationForm">
+                                    <div class="pb-3 pt-5 d-flex">
+                                        <div class="border" style="width: 38px;">
+                                            <i class="fa-solid fa-envelope mt-2 ml-2" style="margin-left: 7px;"></i>
+                                        </div>
+                                        <input type="email" class="form-control user-select-none" name="email"
+                                            id="Email" placeholder="Email" required>
+                                    </div>
+                                    <div class="pb-3 pt-2 d-flex">
+                                        <div class="border" style="width: 38px;">
+                                            <i class="fa-solid fa-lock mt-2 ml-2" style="margin-left: 7px;"></i>
+                                        </div>
+                                        <input type="password" class="form-control user-select-none" name="password"
+                                            id="Password" placeholder="Password" required>
+                                    </div>
+                                    <div class="pb-3 pt-2 d-flex">
+                                        <div class="border" style="width: 38px;">
+                                            <i class="fa-solid fa-lock mt-2 ml-2" style="margin-left: 7px;"></i>
+                                        </div>
+                                        <input type="password" class="form-control user-select-none"
+                                            name="confirmPassword" id="ConfirmPassword" placeholder="Re-type Password"
+                                            required>
+                                    </div>
+                                    <div class="pb-3 d-flex">
+                                        <div class="d-flex">
+                                            <div class="border" style="width: 38px;">
+                                                <i class="fa-solid fa-user mt-2 ml-2" style="margin-left: 7px;"></i>
+                                            </div>
+                                            <input type="text" class="form-control user-select-none" name="firstName"
+                                                id="FirstName" placeholder="First Name" required>
+                                        </div>
+                                        <div class="d-flex ml-4">
+                                            <div class="border" style="width: 38px;">
+                                                <i class="fa-solid fa-user mt-2 ml-2" style="margin-left: 7px;"></i>
+                                            </div>
+                                            <input type="text" class="form-control user-select-none" name="lastName"
+                                                id="LastName" placeholder="Last Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                        <div>
+                                            <input type="radio" name="gender" value="male" required> Male
+                                        </div>
+                                        <div class="ml-4">
+                                            <input type="radio" name="gender" value="female" required> Female
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <select name="country" id="Country" class="form-control user-select-none"
+                                            required>
+                                            <option value="" hidden>Select a country
+                                            </option>
+                                            <option value="India">India</option>
+                                            <option value="US">U.S</option>
+                                        </select>
+                                    </div>
+                                    <div class="mt-2">
+                                        <div>
+                                            <input type="checkbox" name="terms" id="Terms" required> I agree with terms
+                                            and
+                                            condition
+                                        </div>
+                                        <div class="mt-2">
+                                            <input type="checkbox" name="newsletter" id="Newsletter"> I want to receive
+                                            the
+                                            newsletter
+                                        </div>
+                                    </div>
+                                    <div class="pt-2">
+                                        <button type="submit"
+                                            class="form-control user-select-none text-light bg-primary btn btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultModal" class="modal fade">
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-header justify-content-center">
+                            <div class="icon-box ml-5">
+                                <div class="ml-3">
+                                    <div class="ml-5">
+                                        <div class="ml-5">
+                                            <div class="ml-5"
+                                                style="border: 2px solid; margin-left: 80px; border-radius: 50%; height: 60px; width: 60px;">
+                                                <div style="margin-left: 23px; margin-top: 15px;">
+                                                    <i class="fa-solid fa-5x" id="modal-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <h4 id="modal-title">Success!</h4>
+                            <p id="modal-message">Your action has been completed successfully.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function showModal(title, message, iconClass) {
+                    document.getElementById('modal-title').innerText = title;
+                    document.getElementById('modal-message').innerText = message;
+                    const modalIcon = document.getElementById('modal-icon');
+                    modalIcon.className = `fa-solid ${iconClass}`;
+                    $('#resultModal').modal('show');
+                }
+
+                document.getElementById('Password').onfocus = function () {
+                    document.getElementById('message').style.display = 'block';
+                }
+
+                document.getElementById('Password').onblur = function () {
+                    document.getElementById('message').style.display = 'none';
+                }
+
+                document.getElementById('Password').onkeyup = function () {
+                    const lowerCaseLetters = /[a-z]/g;
+                    const upperCaseLetters = /[A-Z]/g;
+                    const numbers = /[0-9]/g;
+
+                    // Validate lowercase letters
+                    if (this.value.match(lowerCaseLetters)) {
+                        document.getElementById('letter').classList.remove('invalid');
+                        document.getElementById('letter').classList.add('valid');
+                    } else {
+                        document.getElementById('letter').classList.remove('valid');
+                        document.getElementById('letter').classList.add('invalid');
+                    }
+
+                    // Validate capital letters
+                    if (this.value.match(upperCaseLetters)) {
+                        document.getElementById('capital').classList.remove('invalid');
+                        document.getElementById('capital').classList.add('valid');
+                    } else {
+                        document.getElementById('capital').classList.remove('valid');
+                        document.getElementById('capital').classList.add('invalid');
+                    }
+
+                    // Validate numbers
+                    if (this.value.match(numbers)) {
+                        document.getElementById('number').classList.remove('invalid');
+                        document.getElementById('number').classList.add('valid');
+                    } else {
+                        document.getElementById('number').classList.remove('valid');
+                        document.getElementById('number').classList.add('invalid');
+                    }
+
+                    // Validate length
+                    if (this.value.length >= 8) {
+                        document.getElementById('length').classList.remove('invalid');
+                        document.getElementById('length').classList.add('valid');
+                    } else {
+                        document.getElementById('length').classList.remove('valid');
+                        document.getElementById('length').classList.add('invalid');
+                    }
+                }
+
+                document.getElementById('registrationForm').onsubmit = function (e) {
+                    e.preventDefault();
+                    const password = document.getElementById('Password').value;
+                    const confirmPassword = document.getElementById('ConfirmPassword').value;
+
+                    if (password !== confirmPassword) {
+                        showModal('Error', 'Passwords do not match!', 'fa-xmark');
+                    } else {
+                        showModal('Success', 'Your action has been completed successfully.', 'fa-check');
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.55 Form in Email, number, Password, Validation?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="container mt-5 pt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="text-black text-center"> Email, number, Password, Form</h1>
+                            <form id="registrationForm">
+                                <div class="pb-3 pt-5 d-flex">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-envelope mt-2 ml-2" style="margin-left: 7px;"></i>
+                                    </div>
+                                    <input type="email" class="form-control user-select-none" name="email" id="Email"
+                                        placeholder="Email" required>
+                                </div>
+                                <div class="pb-3 pt-2 d-flex">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-phone mt-2" style="margin-left: 7px;"></i>
+                                    </div>
+                                    <input type="text" class="form-control user-select-none" name="Number" id="Number"
+                                        placeholder="Number" maxlength="13" value="+91" required>
+                                </div>
+                                <div class="pb-3 pt-2 d-flex">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-lock mt-2 ml-2" style="margin-left: 7px;"></i>
+                                    </div>
+                                    <input type="password" class="form-control user-select-none" name="password"
+                                        id="Password" placeholder="Password" required>
+                                </div>
+
+                                <div class="pb-3 pt-2 d-flex">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-lock mt-2 ml-2" style="margin-left: 7px;"></i>
+                                    </div>
+                                    <input type="password" class="form-control user-select-none" name="confirmPassword"
+                                        id="ConfirmPassword" placeholder="Re-type Password" required>
+                                </div>
+
+                                <div class="pt-2">
+                                    <button type="submit"
+                                        class="form-control text-light user-select-none btn btn-primary bg-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultModal" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <div class="icon-box ml-5">
+                            <div class="ml-3">
+                                <div class="ml-5">
+                                    <div class="ml-5">
+                                        <div class="ml-5"
+                                            style="border: 2px solid; margin-left: 80px; border-radius: 50%; height: 60px; width: 60px;">
+                                            <div style="margin-left: 23px; margin-top: 15px;">
+                                                <i class="fa-solid fa-5x" id="modal-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4 id="modal-title">Success!</h4>
+                        <p id="modal-message">Your action has been completed successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showModal(title, message, iconClass) {
+                document.getElementById('modal-title').innerText = title;
+                document.getElementById('modal-message').innerText = message;
+                const modalIcon = document.getElementById('modal-icon');
+                modalIcon.className = `fa-solid ${iconClass}`;
+                $('#resultModal').modal('show');
+            }
+
+            document.getElementById('Password').onfocus = function () {
+                document.getElementById('message').style.display = 'block';
+            }
+
+            document.getElementById('Password').onblur = function () {
+                document.getElementById('message').style.display = 'none';
+            }
+
+            document.getElementById('Password').onkeyup = function () {
+                const lowerCaseLetters = /[a-z]/g;
+                const upperCaseLetters = /[A-Z]/g;
+                const numbers = /[0-9]/g;
+
+                // Validate lowercase letters
+                if (this.value.match(lowerCaseLetters)) {
+                    document.getElementById('letter').classList.remove('invalid');
+                    document.getElementById('letter').classList.add('valid');
+                } else {
+                    document.getElementById('letter').classList.r
+                    emove('valid');
+                    document.getElementById('letter').classList.add('invalid');
+                }
+
+                // Validate capital letters
+                if (this.value.match(upperCaseLetters)) {
+                    document.getElementById('capital').classList.remove('invalid');
+                    document.getElementById('capital').classList.add('valid');
+                } else {
+                    document.getElementById('capital').classList.remove('valid');
+                    document.getElementById('capital').classList.add('invalid');
+                }
+
+                // Validate numbers
+                if (this.value.match(numbers)) {
+                    document.getElementById('number').classList.remove('invalid');
+                    document.getElementById('number').classList.add('valid');
+                } else {
+                    document.getElementById('number').classList.remove('valid');
+                    document.getElementById('number').classList.add('invalid');
+                }
+
+                // Validate length
+                if (this.value.length >= 8) {
+                    document.getElementById('length').classList.remove('invalid');
+                    document.getElementById('length').classList.add('valid');
+                } else {
+                    document.getElementById('length').classList.remove('valid');
+                    document.getElementById('length').classList.add('invalid');
+                }
+            }
+
+            document.getElementById('registrationForm').onsubmit = function (e) {
+                e.preventDefault();
+                const password = document.getElementById('Password').value;
+                const confirmPassword = document.getElementById('ConfirmPassword').value;
+
+                if (password !== confirmPassword) {
+                    showModal('Error', 'Passwords do not match!', 'fa-xmark');
+                } else {
+                    showModal('Success', 'Your action has been completed successfully.', 'fa-check');
+                }
+            }
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.56 Dynamic Form Validation in JS? </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="container mt-5 pt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="text-black text-center">Dynamic Form Validation</h1>
+                            <form id="registrationForm">
+                                <div class="pb-3 pt-5 d-flex">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-envelope mt-2 ml-2"></i>
+                                    </div>
+                                    <input type="email" class="form-control user-select-none" name="email" id="Email"
+                                        placeholder="Email" required>
+                                    <div id="emailError" class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+                                </div>
+                                <div class="pb-3 pt-2 d-flex">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-lock mt-2 ml-2"></i>
+                                    </div>
+                                    <input type="password" class="form-control user-select-none" name="password"
+                                        id="Password" placeholder="Password" required>
+                                    <div id="passwordError" class="invalid-feedback">
+                                        Password must be at least 8 characters long.
+                                    </div>
+                                </div>
+                                <div class="pb-3 pt-2 d-flex">
+                                    <div class="border" style="width: 38px;">
+                                        <i class="fa-solid fa-lock mt-2 ml-2"></i>
+                                    </div>
+                                    <input type="password" class="form-control user-select-none" name="confirmPassword"
+                                        id="ConfirmPassword" placeholder="Re-type Password" required>
+                                    <div id="confirmPasswordError" class="invalid-feedback">
+                                        Passwords do not match.
+                                    </div>
+                                </div>
+                                <div class="pb-3  ">
+                                    <div class="d-flex">
+                                        <div class="border" style="width: 38px;">
+                                            <i class="fa-solid fa-user mt-2 ml-2"></i>
+                                        </div>
+                                        <input type="text" class="form-control user-select-none" name="firstName"
+                                            id="FirstName" placeholder="First Name" required>
+                                        <div id="firstNameError" class="invalid-feedback">
+                                            Please enter your first name.
+                                        </div>
+                                    </div>
+                                    <div class="d-flex  mt-3">
+                                        <div class="border" style="width: 38px;">
+                                            <i class="fa-solid fa-user mt-2 ml-2"></i>
+                                        </div>
+                                        <input type="text" class="form-control user-select-none" name="lastName"
+                                            id="LastName" placeholder="Last Name" required>
+                                        <div id="lastNameError" class="invalid-feedback">
+                                            Please enter your last name.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="mt-3">
+                                    <select name="country" id="Country" class="form-control user-select-none" required>
+                                        <option value="" hidden>Select a country</option>
+                                        <option value="India">India</option>
+                                        <option value="US">U.S</option>
+                                    </select>
+                                    <div id="countryError" class="invalid-feedback">
+                                        Please select your country.
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <div>
+                                        <input type="checkbox" name="terms" id="Terms" required> I agree with terms and
+                                        conditions
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="checkbox" name="newsletter" id="Newsletter"> I want to receive the
+                                        newsletter
+                                    </div>
+                                    <div id="termsError" class="invalid-feedback">
+                                        You must agree to the terms and conditions.
+                                    </div>
+                                </div>
+                                <div class="pt-2">
+                                    <button type="submit"
+                                        class="form-control user-select-none bg-primary text-light btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('registrationForm');
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    if (validateForm()) {
+                        // Form validation passed, you can proceed with form submission
+                        alert('Form submitted successfully!');
+                        // You can add your form submission logic here
+                    } else {
+                        // Form validation failed, display error messages
+                        validateInputs();
+                    }
+                });
+
+                function validateForm() {
+                    const email = document.getElementById('Email').value.trim();
+                    const password = document.getElementById('Password').value;
+                    const confirmPassword = document.getElementById('ConfirmPassword').value;
+                    const firstName = document.getElementById('FirstName').value.trim();
+                    const lastName = document.getElementById('LastName').value.trim();
+                    const gender = document.querySelector('input[name="gender"]:checked');
+                    const country = document.getElementById('Country').value;
+                    const terms = document.getElementById('Terms').checked;
+
+                    // Basic validation checks
+                    if (!isValidEmail(email)) {
+                        return false;
+                    }
+                    if (password.length < 8) {
+                        return false;
+                    }
+                    if (password !== confirmPassword) {
+                        return false;
+                    }
+                    if (firstName === '') {
+                        return false;
+                    }
+                    if (lastName === '') {
+                        return false;
+                    }
+                    if (!gender) {
+                        return false;
+                    }
+                    if (country === '') {
+                        return false;
+                    }
+                    if (!terms) {
+                        return false;
+                    }
+
+                    return true;
+                }
+
+                function validateInputs() {
+                    const email = document.getElementById('Email').value.trim();
+                    const password = document.getElementById('Password').value;
+                    const confirmPassword = document.getElementById('ConfirmPassword').value;
+                    const firstName = document.getElementById('FirstName').value.trim();
+                    const lastName = document.getElementById('LastName').value.trim();
+                    const genderError = document.getElementById('genderError');
+                    const country = document.getElementById('Country').value;
+                    const terms = document.getElementById('Terms').checked;
+
+                    if (!isValidEmail(email)) {
+                        document.getElementById('emailError').style.display = 'block';
+                    } else {
+                        document.getElementById('emailError').style.display = 'none';
+                    }
+
+                    if (password.length < 8) {
+                        document.getElementById('passwordError').style.display = 'block';
+                    } else {
+                        document.getElementById('passwordError').style.display = 'none';
+                    }
+
+                    if (password !== confirmPassword) {
+                        document.getElementById('confirmPasswordError').style.display = 'block';
+                    } else {
+                        document.getElementById('confirmPasswordError').style.display = 'none';
+                    }
+
+                    if (firstName === '') {
+                        document.getElementById('firstNameError').style.display = 'block';
+                    } else {
+                        document.getElementById('firstNameError').style.display = 'none';
+                    }
+
+                    if (lastName === '') {
+                        document.getElementById('lastNameError').style.display = 'block';
+                    } else {
+                        document.getElementById('lastNameError').style.display = 'none';
+                    }
+
+                    const genderChecked = document.querySelector('input[name="gender"]:checked');
+                    if (!genderChecked) {
+                        genderError.style.display = 'block';
+                    } else {
+                        genderError.style.display = 'none';
+                    }
+
+                    if (country === '') {
+                        document.getElementById('countryError').style.display = 'block';
+                    } else {
+                        document.getElementById('countryError').style.display = 'none';
+                    }
+
+                    if (!terms) {
+                        document.getElementById('termsError').style.display = 'block';
+                    } else {
+                        document.getElementById('termsError').style.display = 'none';
+                    }
+                }
+
+                function isValidEmail(email) {
+                    // Basic email validation
+                    const re = /\S+@\S+\.\S+/;
+                    return re.test(email);
+                }
+            });
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.57 how many type of JS Event? How to use it?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <p>Click the button to display the date.</p>
+        <button onclick="displayDate()" class="bg-primary text-light">The time is?</button>
+        <p id="jp"></p>
+        <script>
+            function displayDate() {
+                document.getElementById("jp").innerHTML = Date();
+            }
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.59 What is Bom vs Dom in JS? </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <div>
+
+            <p>Click on the button to see image</p>
+            <img id="image">
+        </div>
+        <button type="button" onclick="show()" id="btnID">
+            Show Image
+        </button>
+
+        <script>
+            function show() {
+                let image = document.getElementById("image");
+                image.src =
+                    "https://media.geeksforgeeks.org/wp-content/uploads/20210915115837/gfg3.png"
+                document.getElementById("btnID")
+                    .style.display = "none";
+            } 
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.60 Array vs object defences in JS?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let a = [1, 2, 3, 4, 5]; // declaration of an array
+            document.write("<br>1) Aerry <br>" + (a))
+        </script>
+        <script>
+            var jv = { name: "John", age: 30, occupation: "Developer" }; // declaration of an object
+            document.write("<br> <br> 2) object <br>");
+            document.write(jv);
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.61 Split the string into an array using split() Method?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let str = "30 Days Of JavaScript";
+            let arr = str.split(" ");
+            document.write("<br>Split string into array: <br> " + arr.join(", <br> "));
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.62 Check if the string contains a word Script using includes() method?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let str1 = "30 Days Of JavaScript";
+            let containsScript = str1.includes("Script");
+            document.write("<br>Contains 'Script': <br>" + containsScript);
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.63 Change all the string characters to lowercase letters using toLowerCase()
+            Method. </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let str2 = "30 Days Of JavaScript";
+            let lowerCaseStr = str2.toLowerCase();
+            document.write("<br>Lowercase string:<br> " + lowerCaseStr);
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.64 What is Character at index 15 in ’30 Days of JavaScript’ string? Use charAt()
+            method. </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let str3 = "30 Days Of JavaScript";
+            let charAt15 = str3.charAt(15);
+            document.write("<br>Character at index 15: " + charAt15);
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.65 copy to one string to another string in JS? </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let originalString = "Hello World";
+            let copiedString = originalString;
+            document.write("<br>Original String: " + originalString + "<br>Copied String: " + copiedString);
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.66 Find the length of a string without using libraryFunction?</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            function stringLength(str) {
+                let length = 0;
+                while (str[length] !== undefined) {
+                    length++;
+                }
+                return length;
+            }
+
+            let testString = "Hello World";
+            let lengthOfString = stringLength(testString);
+            document.write("<br>Length of string '" + testString + "': " + lengthOfString);
+        </script>
+    </div>
+    <div class="mt-5">
+        <div class="mt-5">
+            <div class="mt-5"></div>
+        </div>
+    </div>
+
+    <!-- <div class="text-light">
+        <h5 class="text-secondary"></h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+
+        </script>
+    </div> -->
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> summation of first and last digit</title>
+</head>
+<body>
+    <p> summation of first and last Digit. (1234)</p>
+</body>
+<script> 
+        function firstDigit(n) 
+        { 
+            while (n >= 10) 
+                n /= 10; 
+            return Math.floor(n); 
+        } 
+        function lastDigit(n) 
+        { 
+            return Math.floor(n % 10); 
+        } 
+            let n = 1234; 
+            document.write(firstDigit(n) +  lastDigit(n)); 
+    </script> 
+</html>

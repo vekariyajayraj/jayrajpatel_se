@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 400px;
+            width: 400px;
+            background-color: aqua;
+        }
+        .main > p {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <p class="jay">jay</p>
+        <p>jayraj</p>
+        <p>jayraj patel</p>
+    </div>
+    <button>Empty</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    // $(document).ready(function () {
+    //     $("button").click(function () {
+    //         $(".main").empty()
+    //     })
+    // })
+
+    // $(document).ready(function () {
+    //     $("button").click(function () {
+    //         $(".main").remove()
+    //     })
+    // })
+    $(document).ready(function () {
+        $("button").click(function () {
+            $(".main").find("p.jay").remove()
+        })
+    })
+</script>
+</html>

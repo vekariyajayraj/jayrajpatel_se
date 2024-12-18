@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .main{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            margin: 200px;
+            animation-name:change ;
+            animation-duration: 10s;
+
+        }
+        @keyframes change {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: aqua;
+            }
+            
+        }
+        .sec{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            margin: 200px;
+            animation-name:change ;
+            animation-duration: 15s;
+        }
+        .sub{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            margin: 200px;
+            animation-name:change ;
+            animation-duration: 20s;
+            border-radius: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <div class="sec"></div>
+    <div class="sub"></div>
+</body>
+</html>

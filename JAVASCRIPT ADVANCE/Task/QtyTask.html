@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            height: 100vh;
+            width: 100vw;
+            background-color: #00b4d8;
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #img {
+            height: 50vh;
+            width: 33vw;
+            /* border: 2px solid black; */
+            background: url('https://m.media-amazon.com/images/I/811ssp-s+ZL._AC_UY218_.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        #plus {
+            font-size: 25px;
+            color: #38b000;
+            padding: 15px;
+            border-radius: 30%;
+            background-color: #ccd5ae;
+            /* border: 2px solid black; */
+        }
+
+        #minus {
+            font-size: 25px;
+            color: #d00000;
+            padding: 15px;
+            border-radius: 30%;
+            background-color: #ccd5ae;
+            /* border: 2px solid black; */
+        }
+
+        #currentqty {
+            height: 5vh;
+            width: 5vw;
+            border-radius: 15px 15px 15px 15px;
+            background-color: #ffadad;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #price {
+            height: auto;
+            width: auto;
+            padding: 5px;
+            background-color: #f6aa1c;
+            border-radius: 15px 15px 15px 15px;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #total {
+            padding: 20px;
+            background-color: #708d81;
+            border-radius: 15px 15px 15px 15px;
+            /* border: 2px solid black; */
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="img"></div>
+        <div id="price">1,00,00,0&#8377</div>
+        <div class="buttons">
+            <button id="plus" onclick="addition()">+</button>
+            <div id="currentqty">0</div>
+            <button id="minus" onclick="subtraction()">-</button>
+        </div>
+        <div id="total" sum()>Total=</div>
+    </div>
+</body>
+<script>
+    var price = 100000;
+    var quantity = 0;
+
+
+    function addition() {
+        quantity++;
+        document.getElementById("currentqty").innerHTML = quantity;
+        sum();
+    }
+
+    function subtraction() {
+        if (quantity > 0) {
+            quantity--;
+            document.getElementById("currentqty").innerHTML = quantity;
+            sum();
+        }
+    }
+
+    function sum() {
+        var a = price * quantity;
+        document.getElementById("total").innerHTML = "Total = " + a + "&#8377;";
+    }
+
+    sum();
+</script>
+
+</html>

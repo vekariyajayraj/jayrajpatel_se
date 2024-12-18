@@ -1,0 +1,38 @@
+*{
+    margin: 1%;
+    padding: 0%;
+}
+ .backimg{
+    width: 100%;
+    height: 100vh;
+    /* background-color: blue; */
+    background-image: url( marvell\ properties\ 4.jpg);
+    background-size: 100%  100% ;
+    background-attachment: none;
+ }
+ .backimg1{
+    width: 100%;
+    height: 100vh;
+    /* background-color: blue; */
+    background-image: url( marvell\ properties\ 3.jpg);
+    background-size: 100%  100% ;
+    background-attachment: none ;
+ }
+ .backimg2{
+   width: 100%;
+   height: 100vh;
+   /* background-color: blue; */
+   background-image: url( marvell\ properties\ 2.jpg);
+   background-size: 100%  100% ;
+   background-attachment: none ;
+}
+
+ 
+ .backimg3{
+    width: 100%;
+    height: 100vh;
+    /* background-color: blue; */
+    background-image: url( marvell\ properties\ 1.jpg);
+    background-size: 100%  100% ;
+    background-attachment: none ;
+ }

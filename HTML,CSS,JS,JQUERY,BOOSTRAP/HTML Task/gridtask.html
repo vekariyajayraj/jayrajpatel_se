@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: blue;
+        }
+        .grid{
+            display:grid;
+            gap: 20px;
+            /* justify-content: space-between; */
+            grid-template-columns: auto auto auto auto auto;
+        }
+        .grid-item{
+            background-color:blue;
+            color: white;
+            border: 2px solid white;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            box-shadow: 0px 0px 10px red;
+        }
+        .grid-item1{
+            grid-column: 1 / span 2 ;
+            grid-row: 1;
+        }
+        .grid-item3{
+            grid-row: 1 / span 2 ;
+            grid-column: 4;
+        }
+        .grid-item5{
+            grid-column: 1 / span 2 ;
+            grid-row: 2;
+        }
+        .grid-item7{
+            grid-row: 2;
+        }
+        .grid-item6{
+            grid-column: 1 / span 2;
+            /* grid-row: 3 / 6; */
+            grid-row: 3 / span 3;    
+        }
+        .grid-item9{
+            grid-row: 2 / span 3 ;
+            grid-column: 5;
+            
+        }  
+        
+        .grid-item8{
+           grid-column: 3 / span 2;
+           grid-row: 3 / 6;
+           /* grid-row: 4; */
+           
+        }
+        .grid-item10{
+            grid-column: 5;
+        }
+        .grid-item13{
+            grid-column: 3 / span 2;
+        }
+        .body1{
+            background-color: whitesmoke;
+            margin-left: 100px;
+        }
+        .grid1{
+            display:inline-grid;
+            /* justify-content: space-between; */
+            gap: 20px;
+            grid-template-columns: auto auto auto auto auto auto auto auto;
+        }
+        .g1{
+            background-color: rgb(64, 255, 47);
+            border: 2px solid black;
+            padding: 20px;
+            font-size: 30px;
+            box-shadow: 0px 0px 10px black;
+           
+        }
+        .item2{
+            grid-column: 2 / span 6;
+            grid-row: 1;
+        }
+        .item4{
+            grid-column: 1 / span 4;
+            grid-row: 2;
+        }
+        .item5{
+            grid-row: 2;
+        }
+        .item6{
+            grid-column: 6 / span 3;
+        }
+        .item8{
+            grid-column: 2 / span 2;
+        }
+        .item9{
+            grid-column: 4 / span 5;
+        }
+        .item10{
+            grid-column: 1 / span 2;
+        }
+        .item12{
+            grid-column: 4 / span 2;
+        }
+        .item14{
+            grid-column:7 / span 2 ;
+        }
+        .flex{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+    <div class="body">
+    <div class="grid">
+        <div class="grid-item1 grid-item">1</div>
+        <div class="grid-item2 grid-item">2</div>
+        <div class="grid-item3 grid-item">3</div>
+        <div class="grid-item4 grid-item">4</div>
+        <div class="grid-item5 grid-item">5</div>
+        <div class="grid-item6 grid-item">6</div>
+        <div class="grid-item7 grid-item">7</div>
+        <div class="grid-item8 grid-item">8</div>
+        <div class="grid-item9 grid-item">9</div>
+        <div class="grid-item10 grid-item">10</div>
+        <div class="grid-item11 grid-item">11</div>
+        <div class="grid-item12 grid-item">12</div>
+        <div class="grid-item13 grid-item">13</div>
+        <div class="grid-item14 grid-item">14</div>
+    </div>
+    <br><br><br>
+</div>
+<br><br><br>
+    <div class="body1">
+        <div class="grid1">
+            <div class="item1 g1"></div>
+            <div class="item2 g1"></div>
+            <div class="item3 g1"></div>
+            <div class="item4 g1"></div>
+            <div class="item5 g1"></div>
+            <div class="item6 g1"></div>
+            <div class="item7 g1"></div>
+            <div class="item8 g1"></div>
+            <div class="item9 g1"></div>
+            <div class="item10 g1"></div>
+            <div class="item11 g1"></div>
+            <div class="item12 g1"></div>
+            <div class="item13 g1"></div>
+            <div class="item14 g1"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

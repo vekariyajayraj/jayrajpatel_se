@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, reiciendis. Corrupti assumenda perferendis
+        inventore perspiciatis autem! Voluptatem esse ea dolores hic autem sequi quis qui velit nam, enim saepe
+        excepturi?</p>
+    <button>click</button>
+    <button id="abc">show</button>
+    <button class="jkl">Hide&show</button>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    //tag :-
+    // $(document).ready(function () {
+    //     $("button").click(function () {
+    //         $("p").hide(3000)
+    //     })
+    // })
+    // // id :-
+    // $(document).ready(function () {
+    //     $("#abc").click(function () {
+    //         $("p").show(3000)
+    //     })
+    
+    // })
+    // class:-
+    $(document).ready(function () {
+        $(".jkl").click(function () {
+            $("p").toggle(3000)
+        })
+    })
+</script>
+
+</html>

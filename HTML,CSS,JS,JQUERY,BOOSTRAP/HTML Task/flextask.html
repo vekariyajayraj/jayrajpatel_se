@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .body1 {
+            background-color: #fcc302;
+        }
+
+        .header {
+            display: flex;
+            background-color: #daac00;
+            justify-content: space-around;
+            text-align: center;
+            height: auto;
+            padding-bottom: 20px;
+        }
+
+        .imagelogo {
+            width: auto;
+            height: 50px;
+            margin-top: 25px;
+            /* margin-left: 150px; */
+        }
+
+        .search1 {
+            height: 31px;
+            width: 200px;
+            margin-top: 37px;
+            background-color: #fcc302;
+        }
+
+        .searchbox {
+            margin-left: 170px;
+            margin-top: -24px;
+            height: 30px;
+            width: 80px;
+            background-color: #00bec9;
+
+        }
+
+        a {
+            text-decoration: none;
+            margin-left: 35px;
+            color: white;
+            font-size: larger;
+        }
+
+        a:hover {
+            color: #326366;
+        }
+
+        a:active {
+            color: #00bec9;
+        }
+
+        .ahome {
+            margin-top: 35px;
+        }
+
+        .pimage {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 120px;
+            margin-left: 180px;
+        }
+
+        .lionimage {
+            margin-left: 400px;
+            width: auto;
+        }
+
+        .button {
+            width: 120px;
+            height: 50px;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #fcc302;
+            border-radius: 10px 10px 10px 10px;
+            cursor: pointer;
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        .button:active {
+            background-color: #00bec9;
+        }
+
+        hr {
+            box-shadow: 0px 0px 10px black;
+        }
+
+        .page2 {
+            height: 500px;
+            width: auto;
+            background-color: white;
+            display: flex;
+        }
+
+        .pageimage2 {
+            width: 300px;
+            height: 300px;
+            margin-top: -130px;
+            margin-left: 30px;
+            border: 2px solid #00bec9;
+            background-image: url(/Place\ Your\ Image\ Here.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box {
+            /* opacity: 0.569; */
+            width: 300px;
+            height: 300px;
+            background-color: rgba(218, 172, 0, 0.5686274509803921);
+        }
+
+        .boxsecound {
+            width: 200px;
+            height: 200px;
+            margin-top: 260px;
+            margin-left: 300px;
+            background-color: #fcc302;
+        }
+
+        .round-1 {
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border: 2px solid white;
+            cursor: pointer;
+            margin-top: -168px;
+            margin-left: 135px;
+            border-radius: 50%;
+        }
+
+        .iconsvg {
+            width: 25px;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+
+        .secound {
+            margin-top: 120px;
+            margin-left: 180px;
+        }
+
+        .button1 {
+            width: 120px;
+            height: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: #fcc302;
+            border-radius: 10px 10px 10px 10px;
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        .button1:active {
+            background-color: #00bec9;
+        }
+
+        .page3 {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .firstimage {
+            margin-left: 50px;
+        }
+
+        .fp {
+            width: 450px;
+        }
+
+        .center {
+            width: 400px;
+        }
+
+        .threep {
+            width: 300px;
+
+        }
+
+        .button2 {
+            width: 120px;
+            height: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: #fcc302;
+            border-radius: 10px 10px 10px 10px;
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        .button2:active {
+            background-color: #00bec9;
+        }
+
+        .secound1 {
+            margin-top: 120px;
+            margin-left: 180px;
+        }
+
+        .center1 {
+            width: 400px;
+            margin-left: 80px;
+            text-align: right;
+        }
+
+        .pageimage3 {
+            width: 300px;
+            height: 300px;
+            margin-top: -130px;
+            margin-left: 30px;
+            border: 2px solid #00bec9;
+            background-image: url(/4.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .boxsecound1 {
+            width: 200px;
+            height: 200px;
+            margin-top: 260px;
+            margin-left: 300px;
+            background-color: #fcc302;
+        }
+
+        .fontstyle {
+            color: white;
+        }
+
+        .dogpricebutton {
+            width: 100px;
+            height: 50px;
+            cursor: pointer;
+            background-color: #00bec9;
+            border-radius: 30px 30px 30px 30px;
+        }
+
+        .dogpricebutton:active {
+            background-color: #fcc302;
+        }
+
+        .threep {
+            width: 340px;
+
+        }
+
+        .page6 {
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            /* flex-direction: column; */
+        }
+
+        .page6first {
+            display: inline;
+            justify-content: center;
+            text-align: center;
+            width: 200px;
+            background-color: white;
+            padding-top: 100px;
+        }
+
+        .threep1 {
+            width: 340px;
+
+        }
+
+        .fontstyle1 {
+            color: black;
+        }
+
+        .fa-brands {
+            margin-top: 8px;
+        }
+
+        .icon4 {
+            height: 30px;
+            width: 30px;
+            background-color: #fcc302;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .allicon {
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            margin-left: 35px;
+            margin-bottom: 40px;
+        }
+
+        .page7img {
+            background-image: url(/11.svg);
+            width: auto;
+            height: 650px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .page7 {
+            /* opacity: 0.220; */
+            width: auto;
+            height: 800px;
+            background-color: rgba(236, 190, 22, 0.861);
+        }
+
+        .page7flex {
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: -500px;
+        }
+
+        .page8 {
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+            background-color: white;
+            color: black;
+        }
+
+        .page8header {
+            background-color: white;
+            color: black;
+        }
+
+        .page8p {
+            border: 1px solid rgb(147, 143, 143);
+            width: 360px;
+            margin-top: -5px;
+
+
+        }
+
+        .footer {
+            background-color: #343434;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        li {
+            list-style: none;
+            margin: 5px;
+        }
+
+        .lastfooter {
+            text-align: right;
+        }
+
+        .inputbox {
+            height: 35px;
+            width: 250px;
+            background-color: #fcc302;
+        }
+
+        .planbox {
+            height: 35px;
+            width: 70px;
+            background-color: #00bec9;
+            margin-left: 200px;
+        }
+
+        .firstfooter {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            cursor: pointer;
+        }
+
+        .icon5 {
+            height: 30px;
+            width: 30px;
+            color: black;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .allicon1 {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 110px;
+        }
+
+        .icon5:active {
+            background-color: #00bec9;
+        }
+
+        .icon4:active {
+            background-color: #00bec9;
+        }
+
+        .secound>.center>h1 {
+            margin-bottom: 40px;
+            font-size: 40px;
+
+        }
+
+        .secound>.center>p {
+            font-size: 20px;
+
+        }
+
+        .search1>h3 {
+            margin-right: 120px;
+            margin-top: 3px;
+            color: #343434;
+        }
+
+        .searchbox>i {
+            margin-top: 7px;
+            cursor: pointer;
+        }
+
+        .pimage>.fp>h1 {
+            font-size: 50px;
+            color: white;
+        }
+
+        .pimage>.fp>h1>p {
+            margin-top: -11px;
+        }
+
+        .pimage>.fp>p {
+            font-size: 20px;
+            color: white;
+        }
+
+        .paeg3header>h1 {
+            font-size: 60px;
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        .paeg3header>p {
+            font-size: larger;
+            text-align: center;
+            margin-left: 320px;
+            width: 900px;
+        }
+
+        .secound1>.center1>h1 {
+            margin-bottom: 40px;
+            font-size: 40px;
+        }
+
+        .secound1>.center1>p {
+            font-size: 20px;
+        }
+
+        .page6first>h1 {
+            font-size: 60px;
+            background-color: white;
+        }
+
+        .page6first>p {
+            font-size: larger;
+            background-color: white;
+            text-align: center;
+            width: 900px;
+            margin-left: 320px;
+        }
+
+        .page8header>h1 {
+            font-size: 60px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .page8header>p {
+            margin-left: 320px;
+            width: 900px;
+            font-size: larger;
+            text-align: center;
+        }
+
+        .firstimage>.page8p>h1 {
+            margin-left: 10px;
+        }
+
+        .firstimage>.page8p>.varyfont {
+            color: #00bec9;
+            margin-left: 10px;
+        }
+
+        .firstimage>.page8p>p {
+            margin-left: 10px;
+        }
+
+        .firstimage>.page8p>h2 {
+            color: #00bec9;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        .firstfooter>.lastfooter>.inputbox>.planbox>i {
+            margin-right: 28px;
+            margin-top: 9px;
+        }
+
+        @media only screen and (max-width:600) {
+            .header {
+                display: flex;
+                background-color: #daac00;
+                text-align: center;
+                height: auto;
+                flex-flow: wrap;
+                padding-bottom: 20px;
+            }
+
+            .imagelogo {
+                width: auto;
+                height: 50px;
+                flex-flow: wrap;
+                margin-top: 25px;
+                /* margin-left: 150px; */
+            }
+
+            .search1 {
+                height: 31px;
+                width: 200px;
+                flex-flow: wrap;
+                margin-top: 37px;
+                background-color: #fcc302;
+            }
+
+            .pimage {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 120px;
+                flex-wrap: wrap;
+                flex-direction: column;
+                margin-left: 180px;
+            }
+
+            .pageimage2 {
+                width: 300px;
+                height: 300px;
+                margin-top: -130px;
+                margin-left: 30px;
+                border: 2px solid #00bec9;
+                background-image: url(/Place\ Your\ Image\ Here.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                flex-direction: column;
+                flex-flow: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="body1">
+        <div class="header">
+            <img class="imagelogo" src="/Vector Smart Object (Double Click to Edit) .svg" alt="">
+            </h3>
+            <nav class="ahome">
+                <a href="home">Home</a>
+                <a href="About">About</a>
+                <a href="Service">Service</a>
+                <a href="Contact">Contact</a>
+            </nav>
+            <div class="search1">
+                <h3>Search...</h3>
+                <div class="searchbox">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="pimage">
+            <div class="fp">
+                <h1>First I Wanted to be <p> a veterinarian </p>
+                </h1> <br><br>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi asperiores
+                    magni dolorem? Architecto
+                    dolore deleniti minima quasi dignissimos reiciendis aliquid labore! Quam fugit tempora at
+                    exercitationem alias, dicta consequatur animi.</p> <br>
+                <button class="button">Contact Us</button>
+                <button class="button">Our Service</button>
+            </div>
+            <img class="lionimage" src="/Place Your Image Here (Double Click to Edit).svg" alt="">
+        </div>
+        <div class="page2">
+            <hr>
+            <div class="secound">
+                <div class="center">
+                    <h1>
+                        As a Veterinarian and lover of animals.
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae corrupti voluptatem
+                        ullam quaerat cumque blanditiis hic at accusamus, aliquam nam ad quia, culpa architecto, cum
+                        omnis iste ducimus explicabo?
+                    </p>
+                    <button class="button1">Our Service</button>
+                </div>
+            </div>
+            <div class="boxsecound">
+                <div class="pageimage2">
+                    <div class="box"></div>
+                    <div class="round-1"> <img class="iconsvg" src="/Icon.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="paeg3header">
+            <h1>Title Here</h1> <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Sedm temporibus dolore velit voluptas
+                reprehenderit maxime, modi, tempore labore eius dolor pariatur.
+            </p> <br><br>
+        </div>
+        <div class="page3">
+
+            <div class="firstimage">
+                <img src="/1.svg" alt=""> <br>
+                <div class="threep">
+                    <h1>Veterinarian</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellendus laboriosam veniam
+                        ratione doloremque fugiat sunt laborum nihil dolore at. <br><br><br></p>
+                </div>
+            </div>
+            <div class="firstimage">
+                <img src="/2.svg" alt=""> <br>
+                <div class="threep">
+                    <h1>Vaccination Care</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellendus laboriosam veniam
+                        ratione doloremque fugiat sunt laborum nihil dolore at.<br><br><br></p>
+                </div>
+            </div>
+            <div class="firstimage">
+                <img src="/3.svg" alt=""><br>
+                <div class="threep">
+                    <h1>Dental Care</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellendus laboriosam veniam
+                        ratione doloremque fugiat sunt laborum nihil dolore at.<br><br><br></p>
+                </div>
+            </div>
+        </div>
+        <div class="page2">
+            <hr>
+            <div class="boxsecound1">
+                <div class="pageimage3">
+                    <div class="box"></div>
+                    <div class="round-1"> <img class="iconsvg" src="/Icon.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="secound1">
+                <div class="center1">
+                    <h1>
+                        As a Veterinarian and lover of animals.
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae orrupti voluptatem ullam quaerat
+                        cumque blanditiis hic at accusamus, aliquam nam ad quia, culpa architecto, cum omnis iste
+                        ducimus explicabo?
+                    </p>
+                    <button class="button2">Our Service</button>
+                </div>
+            </div>
+        </div>
+        <div class="paeg3header">
+            <h1>Title Here</h1> <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed temporibus dolore velit voluptas
+                reprehenderit maxime, modi, tempore labore eius dolor pariatur.
+            </p> <br><br>
+        </div>
+        <div class="page3">
+
+            <div class="firstimage">
+                <img src="/5.svg" alt=""> <br><br>
+                <div class="threep1">
+                    <h1 class="fontstyle"><del>&nbsp;$50&nbsp;</del>&nbsp; $30</h1><br>
+                    <button class="dogpricebutton">Buy Now</button>
+                </div>
+            </div>
+            <div class="firstimage">
+                <img src="/6.svg" alt=""> <br><br>
+                <div class="threep1">
+                    <h1 class="fontstyle"> <del>&nbsp;$40&nbsp;</del> &nbsp;$25</h1><br>
+                    <button class="dogpricebutton">Buy Now</button>
+                </div>
+            </div>
+            <div class="firstimage">
+                <img src="/7.svg" alt=""><br><br>
+                <div class="threep1">
+                    <h1 class="fontstyle"> <del>&nbsp;$45&nbsp;</del> &nbsp; $20</h1><br>
+                    <button class="dogpricebutton">Buy Now</button> <br><br><br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="page6first">
+        <h1> <br>The Vetcare Team</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed temporibus dolore velit voluptas
+            reprehenderit maxime, modi, tempore labore eius dolor pariatur.
+            <br><br><br><br>
+        </p>
+    </div>
+    <section class="page6">
+        <div class="firstimage">
+            <img src="/8.svg" alt=""> <br><br>
+            <div class="threep2">
+                <h1 class="fontstyle1">Jennfer Mullen</h1><br>
+                <p> VETERINARY</p><br>
+                <div class="allicon">
+                    <p class="icon4"><i class="fa-brands fa-instagram"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-facebook"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-twitter"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-whatsapp"></i></p> <br><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="firstimage">
+            <img src="/9.svg" alt=""> <br><br>
+            <div class="threep2">
+                <h1 class="fontstyle1">Sheeren Collins</h1><br>
+                <p> ADMINISTRATION</p>
+                <br>
+                <div class="allicon">
+                    <p class="icon4"><i class="fa-brands fa-instagram"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-facebook"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-twitter"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-whatsapp"></i></p><br><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="firstimage">
+            <img src="/10.svg" alt=""><br><br>
+            <div class="threep2">
+                <h1 class="fontstyle1"> Jennfer Mullen</h1><br>
+                <p> VETERINARY</p> <br>
+                <div class="allicon">
+                    <p class="icon4"><i class="fa-brands fa-instagram"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-facebook"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-twitter"></i></p>
+                    <p class="icon4"><i class="fa-brands fa-whatsapp"></i></p><br><br><br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page7img">
+        <div class="page7"></div>
+        <div class="page7flex">
+            <div> <img src="/hearticon1.svg" alt="">
+                <h1>+34793 </h1>
+                <h1>Happy Clients</h1>
+            </div>
+            <div> <img src="/icon2.svg" alt="">
+                <h1>+45382 </h1>
+                <h1>Department</h1>
+            </div>
+            <div> <img src="/Icon 3.svg" alt="">
+                <h1>+54762 </h1>
+                <h1>Vaccination</h1>
+            </div>
+        </div>
+    </section>
+    <div class="page8header">
+        <h1> <br>Recent Posts</h1> <br>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed temporibus dolore velit voluptas reprehenderit
+            maxime, modi, tempore labore eius dolor pariatur.
+        </p> <br><br>
+    </div>
+    <div class="page8">
+        <div class="firstimage">
+            <img src="/12.svg" alt=""> <br>
+            <div class="page8p">
+                <h1> As a veterinarian and lover of animals</h1> <br>
+                <p class="varyfont"> FEBRUARY 09,2020</p><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nulla illum aut.
+                    Consequatur, optio nihil accusantium obcaecati vero iste veritatis.</p>
+                <br>
+                <h2>Read More+</h2>
+            </div>
+            <br><br><br>
+        </div>
+        <div class="firstimage">
+            <img src="/13.svg" alt=""> <br>
+            <div class="page8p">
+                <h1>
+                    As a veterinarian and lover of animals
+                </h1> <br>
+                <p class="varyfont">FEBRUARY 09,2020</p><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+                    nulla
+                    illum aut. Consequatur, optio
+                    nihil accusantium obcaecati vero iste veritatis.</p>
+                <br>
+                <h2>Read More+</h2>
+            </div>
+            <br><br><br>
+        </div>
+        <div class="firstimage">
+            <img src="/14.svg" alt=""><br>
+            <div class="page8p">
+                <h1 style="margin-left: 10px;">
+                    As a veterinarian and lover of animals
+                </h1> <br>
+                <p class="varyfont">FEBRUARY 09,2020</p><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+                    nulla
+                    illum aut. Consequatur, optio
+                    nihil accusantium obcaecati vero iste veritatis.</p>
+                <br>
+                <h2>Read More+</h2>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="firstfooter">
+            <ul>
+                <li>
+                    <h1>About</h1>
+                </li><br>
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Brand Guidelines</li>
+                <li>Terms & Condition</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+        <div class="firstfooter">
+            <ul>
+                <li>
+                    <h1>Service</h1>
+                </li><br>
+                <li>How to Order</li>
+                <li>Our Product</li>
+                <li>Order Status</li>
+                <li>promo</li>
+                <li>Payment Method</li>
+            </ul>
+        </div>
+        <div class="firstfooter">
+            <div class="lastfooter">
+                <h1>Title Here</h1>
+                <p>Lorem ipsum dolor sit amet. Lorem, ipsum.</p><br><br>
+                <div class="inputbox">
+                    <div class="planbox">
+                        <i class="fa-sharp fa-solid fa-paper-plane"></i>
+                    </div>
+                </div>
+                <div class="allicon1">
+                    <p class="icon5"><i class="fa-brands fa-instagram"></i></p>
+                    <p class="icon5"><i class="fa-brands fa-facebook"></i></p>
+                    <p class="icon5"><i class="fa-brands fa-twitter"></i></p>
+                    <p class="icon5"><i class="fa-brands fa-whatsapp"></i></p><br><br><br>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

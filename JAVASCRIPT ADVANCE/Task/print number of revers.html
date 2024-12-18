@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+</head>
+
+<body>
+    <h1>Q34. Number in reverse order e.g.: number = 64728 ==> reverse = 82746</h1>
+    <h1 id="result"></h1>
+
+    <script>
+        function reverse_a_number(n) {
+            n = n + "";
+            return n.split("").reverse().join("");
+        }
+        
+        let number = 64728;
+        let reversedNumber = Number(reverse_a_number(number));
+        document.getElementById("result").innerText = `==> Reversed number: ${reversedNumber}`;
+    </script>
+</body>
+
+</html>

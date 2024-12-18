@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade</title>
+    <style>
+        #one {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* display: none; */
+        }
+
+        #on {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+             /* display: none;  */
+        }
+
+        #o {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* display: none;  */
+        }
+    </style>
+</head>
+<!-- slid 
+dwon 
+stop
+up -->
+
+<body>
+    <div id="one"></div>
+    <div id="on"></div>
+    <div id="o"></div>
+    <button class="abc">click</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    // // fade in :-
+    // $(document).ready(function () {
+    //     $(".abc").click(function () {
+    //         $("#one").fadeIn()
+    //         $("#on").fadeIn("slow")
+    //         $("#o").fadeIn(3000)
+    //     })
+    // })
+    // // fade out :-
+    // $(document).ready(function () {
+    //     $(".abc").click(function () {
+    //         $("#one").fadeOut()
+    //         $("#on").fadeOut("slow")
+    //         $("#o").fadeOut(3000)
+    //     })
+    // })
+    // fade to :-
+    // $(document).ready(function () {
+    //     $(".abc").click(function () {
+    //         $("#one").fadeTo("slow", 0.80)
+    //         $("#on").fadeTo("slow",0.5)
+    //         $("#o").fadeTo("slow",0.2)
+    //     })
+    // })
+    // fade toggle :-
+    $(document).ready(function () {
+        $(".abc").click(function () {
+            $("#one").fadeToggle()
+            $("#on").fadeToggle("slow")
+            $("#o").fadeToggle(3000)
+        })
+    })
+</script>
+
+</html>

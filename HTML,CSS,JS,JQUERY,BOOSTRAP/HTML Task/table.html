@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <caption><h2>Nested Tables</h2></caption>
+    <table border="1">
+
+        <tr>
+            <th>
+                Header Column 1
+            </th>
+            <th>
+                Header Column 2
+            </th>
+
+
+            <th>
+                Header Column 3
+            </th>
+            <th>
+                Header Column 4
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                Row 2 - Item 1
+            </td>
+            <td>
+                Row 2 - Item 2
+            </td>
+            <td rowspan="2">
+                <b>Row 2: Nested Table 1</b><br><br>
+                <table border="1">
+                    <tr>
+                        <th>Row 1 Header</th>
+                        <td>Item</td>
+                    </tr>
+                    <tr>
+                        <th>Row 2 Header</th>
+                        <td>Item</td>
+                    </tr>
+                    <tr>
+                        <th>Row 3 Header</th>
+                        <td>Item</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                Row 2 - Item 4 <br>
+                A Second Line
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Row 3: Nested Table 2</b><br><br><br>
+                <table border="1">
+                    <tr>
+                        <th>
+                            Row 1 Header
+                        </th>
+                        <td>
+                            Item
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Row 2 Header
+                        </th>
+                        <td>
+                            Item
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                Row 3 - Item 2
+            </td>
+            <td rowspan="2">
+                Row 3 - Item 3
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Row 4 - Item 1
+            </td>
+            <td>
+                Row 4 - Item 2
+            </td>
+            <td>
+                Row 4 - Item 3
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                Row 5 - Last Row of Outer Table
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2" cellpadding="10px" cellspacing="0">
+        <tr><td>Hours</td>
+        <td>1p.m to 2 p.m</td>
+        <td>2p.m to 3p.m</td>
+        <td>3p.m to 4p.m</td>
+        </tr>
+        <tr><td>Monday</td>
+        <td>study</td>
+        <td>study</td>
+        <td>free time</td>
+        </tr>
+        
+        <tr><td>Tuesday</td>
+        <td>study</td>
+        <td>study</td>
+        <td>free time</td>
+    </tr>
+        <tr><td>Wednesday</td>
+            <td>study</td>
+            <td>study</td>
+            <td>free time</td>
+        </tr>
+    </table>
+</body>
+</html>

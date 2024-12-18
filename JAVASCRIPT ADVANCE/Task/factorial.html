@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finding Factorial of a Number using JavaScript </title>
+</head>
+<body>
+    
+    <h2>Factorial Calculator</h2>
+    <form>
+        Enter a number:
+        <input type="number" id="inputValue">
+        <button type="button" onclick="FindFactorial()">Find</button>
+    </form>
+    <p id="outputArea"></p>
+
+</body>
+<script>
+    function FindFactorial() {
+        let number = parseInt(document.getElementById("inputValue").value);
+        let result = 1;
+
+        if (number === 0 || number === 1) {
+            result = 1;
+        }
+        else {
+            for (let i = 2; i <= number; i++) {
+                result *= i;
+            }
+        }
+
+        document.getElementById("outputArea").innerHTML = "Factorial of " + number + " is: " + result;
+    }
+</script>
+</html>

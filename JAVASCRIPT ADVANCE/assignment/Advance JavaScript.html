@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODULE: 1 (Introduction and Code Quality)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .password-toggle {
+            position: relative;
+            display: inline-block;
+        }
+
+        .password-toggle input[type="password"] {
+            padding-right: 30px;
+        }
+
+        .password-toggle .toggle-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <h1 class="d-flex justify-content-center text-secondary"><u class="">Advance JavaScript</u></h1>
+    <h2 class="d-flex justify-content-center text-secondary">MODULE: 1 (Introduction and Code Quality)</h2>
+    <hr class="text-secondary">
+    <hr class="text-secondary">
+    <div class="text-light">
+        <h5 class="text-secondary">Q.1 Write a program to Show an alert.</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <button onclick="myFunction()" class="btn btn-primary">alert box.</button>
+        <script>
+            function myFunction() {
+                alert("Hello! I am an alert box!");
+            }
+        </script>
+    </div>
+    <div class="text-light mt-4">
+        <h5 class="text-secondary">Q.2 What will be the result for these expressions?</h5>
+        <h6 class="text-secondary" style="margin-left: 40px;">a. 5 > 4</h6>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let x = 5;
+            document.write(x > 4);
+        </script>
+        <div class="text-light mt-4">
+            <h6 class="text-secondary" style="margin-left: 40px;">b. "apple" > "pineapple"</h6>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let a = "apple";
+                document.write(a > "Pineapple"); 
+            </script>
+        </div>
+        <div class="text-light mt-4">
+            <h6 class="text-secondary" style="margin-left: 40px;">c. "2" > "12</h6>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let b = "2";
+                document.write(b > "12"); 
+            </script>
+        </div>
+        <div class="text-light mt-4">
+            <h6 class="text-secondary" style="margin-left: 40px;">c. undefined == null</h6>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let c = undefined;
+                document.write(c == null); 
+            </script>
+        </div>
+        <div class="text-light mt-4">
+            <h6 class="text-secondary" style="margin-left: 40px;">d. undefined === null</h6>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let d = undefined;
+                document.write(d === null); 
+            </script>
+        </div>
+        <div class="text-light mt-4">
+            <h6 class="text-secondary" style="margin-left: 40px;">e. null == "\n0\n"</h6>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let e = null;
+                document.write(e == "\n0\n"); 
+            </script>
+        </div>
+        <div class="text-light mt-4">
+            <h6 class="text-secondary" style="margin-left: 40px;">f. . null === +"\n0\n"</h6>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let f = null;
+                document.write(f === +"\n0\n"); 
+            </script>
+        </div>
+    </div>
+    <div class="text-light mt-4">
+        <h5 class="text-secondary">Q.3 Will alert be shown? <br>
+            <h5 class="text-secondary" style="margin-left: 100px;">if ("0") { alert( 'Hello'); }</h5>
+        </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <button onclick="myFunction1()" class="btn btn-primary">if condition</button>
+        <script>
+            function myFunction1() {
+                if ("0") {
+                    alert('Hello'); // This will be shown
+                }
+
+                let year = prompt('In which year was the ECMAScript-2024 specification published?', '');
+
+                if (year == 2024) {
+                    alert('You guessed it right!');
+                } else {
+                    alert('How can you be so wrong?'); // any value except 2024
+                }
+            }
+        </script>
+    </div>
+    <div class="text-light mt-4">
+        <h5 class="text-secondary">Q.4 What is the code below going to output? alert( null || 2 || undefined );</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <button class="btn btn-primary" onclick="myfunction2()">Button</button>
+        <script>
+            let nu = null;
+            let un = undefined;
+            function myfunction2() {
+                alert(nu || 2 || un);
+            }
+        </script>
+    </div>
+    <div class="text-light mt-4">
+        <h5 class="text-secondary">Q.5 The following function returns true if the parameter age is 18 or greater.
+            Otherwise it asks for a confirmation and returns its result:</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <input type="text" id="ageInput" placeholder="Enter your age"> <br>
+        <button class="btn btn-primary" style="margin-left: 20px; margin-top: 10px;"
+            onclick="checkAgeButton()">age</button>
+        <script>
+            function checkAge(age) {
+                if (age >= 18) {
+                    return true;
+                } else {
+                    return confirm('Did parents allow you?');
+                }
+            }
+
+            function checkAgeButton() {
+                const ageInput = document.getElementById('ageInput').value;
+                const age = parseInt(ageInput, 10);
+
+                if (isNaN(age)) {
+                    alert('Please enter a valid number for age.');
+                    return;
+                }
+
+                const result = checkAge(age);
+                alert('Result: ' + result);
+            }
+        </script>
+    </div>
+
+    <div class="text-light mt-4">
+        <h5 class="text-secondary">Q.6 Replace Function Expressions with arrow functions in the code below:</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <button class="btn btn-primary"
+            onclick="ask('Do you agree?', () => alert('You agreed.'), () => alert('You canceled the execution.'))">Yes
+            or no</button>
+        <script>
+            function ask(question, yes, no) {
+                if (confirm(question)) yes();
+                else no();
+            }
+        </script>
+    </div>
+    <hr class="text-secondary mt-5">
+    <hr class="text-secondary">
+    <h2 class="d-flex justify-content-center text-secondary">MODULE: 2 (Data Types and Objects)</h2>
+    <hr class="text-secondary">
+    <hr class="text-secondary">
+
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.1 Write the code, one line for each action:
+            <h5 style="margin-left: 40px;" class="text-secondary">a. Create an empty object user</h5>
+        </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <p> let user = {};</p>
+        <script>
+            let user = {};// Create an empty object named user
+
+        </script>
+        <div class="text-light mt-5">
+            <h5 style="margin-left: 40px;" class="text-secondary">b. Add the property name with the value John.</h5>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let user1 = {}; // Create an empty object named user
+                user1.name = 'John'; // Add the property 'name' with the value 'John'
+                document.write(JSON.stringify(user1)); // Convert object to JSON string for display
+            </script>
+        </div>
+        <div class="text-light mt-5">
+            <h5 style="margin-left: 40px;" class="text-secondary">c. Add the property surname with the value Smith.</h5>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let user2 = {}; // Create an empty object named user
+                user2.name = 'John'; // Add the property 'name' with the value 'John'
+                user2.surname = 'Smith';
+                document.write(JSON.stringify(user2)); // Convert object to JSON string for display
+            </script>
+        </div>
+        <div class="text-light mt-5">
+            <h5 style="margin-left: 40px;" class="text-secondary">d. Change the value of the name to Pete.</h5>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let user3 = {}; // Create an empty object named user
+                user3.name = 'John'; // Add the property 'name' with the value 'John'
+                user3.surname = 'Smith';
+                user3.name = 'pete';
+                document.write(JSON.stringify(user3)); // Convert object to JSON string for display
+            </script>
+        </div>
+        <div class="text-light mt-5">
+            <h5 style="margin-left: 40px;" class="text-secondary">e. Remove the property name from the object.</h5>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let user4 = {            // Create an object named user
+                    name: 'John',       // Add the property 'name' with the value 'John'
+                    surname: 'Smith'    // Add the property 'surname' with the value 'Smith'
+                };
+
+                delete user4.name;       // Remove the 'name' property from the user object
+
+                document.write(JSON.stringify(user4)); // Convert object to JSON string for display
+            </script>
+        </div>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.2 Is array copied? <h5 style="margin-left: 40px;" class="text-secondary">
+                let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" let
+                shoppingCart = fruits; shoppingCart.push("Banana"); // what's in fruits?
+                alert( fruits.length ); // ?
+            </h5>
+        </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let fruits = ["Apples", "Pear", "Orange"]; // Original array
+
+            // Assigning fruits array to shoppingCart (both point to the same array)
+            let shoppingCart = fruits;
+
+            // Modifying shoppingCart (which modifies the same array as fruits)
+            shoppingCart.push("Banana");
+
+            // What's in fruits?
+            document.write("<br>" + fruits + "<br>")
+            document.write(fruits.length);
+
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.3 Map to names </h5>
+        <h5 style="margin-left: 40px;" class="text-secondary">
+            let john = { name: "John", age: 25 }; let pete = { name: "Pete", age: 30 }; let mary =
+            { name: "Mary", age: 28 }; let users = [ john, pete, mary ]; let names = /* ... your
+            code */ alert( names ); // John, Pete, Mary</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let john = { name: "John", age: 25 };
+            let pete = { name: "Pete", age: 30 };
+            let mary = { name: "Mary", age: 28 };
+
+            let users = [john, pete, mary];
+
+            let names = users.map(user => user.name);
+
+            document.write(names); // John, Pete, Mary
+
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.4 Map to objects <h5 style="margin-left: 40px;" class="text-secondary">let john = {
+                name: "John", surname: "Smith", id: 1 }; let pete = { name: "Pete",
+                surname: "Hunt", id: 2 }; let mary = { name: "Mary", surname: "Key", id: 3 }; let
+                users = [ john, pete, mary ]; let usersMapped = /* ... your code ... */
+                /*
+                usersMapped = [
+                { fullName: "John Smith", id: 1 },
+                { fullName: "Pete Hunt", id: 2 },
+                { fullName: "Mary Key", id: 3 }
+                ]
+                */ alert( usersMapped[0].id ) // 1 alert( usersMapped[0].fullName ) // John Smith</h5>
+        </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let john1 = { name: "John", surname: "Smith", id: 1 };
+            let pete1 = { name: "Pete", surname: "Hunt", id: 2 };
+            let mary1 = { name: "Mary", surname: "Key", id: 3 };
+
+            let users1 = [john, pete, mary];
+
+            let usersMapped = users.map(user => ({
+                fullName: `${users1.name} ${users1.surname}`,
+                id: users1.id
+            }));
+
+            /*
+            usersMapped = [
+                { fullName: "John Smith", id: 1 },
+                { fullName: "Pete Hunt", id: 2 },
+                { fullName: "Mary Key", id: 3 }
+            ]
+            */
+
+            document.write(usersMapped[0].id + "<br>"); // 1
+            document.write(usersMapped[0].fullName); // John Smith
+
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.5 Sum the properties There is a salaries object with arbitrary number of salaries.
+            Write
+            the function sumSalaries(salaries) that returns the sum of all salaries using
+            Object.values and the for..of loop.If salaries is empty, then the result must be 0.
+            <h5 class="text-secondary" style="margin-left: 40px;">
+                let salaries = {<br>
+                "John": 100,<br>
+                "Pete": 300,<br>
+                "Mary": 250 <br>
+                }; <br>
+                alert( sumSalaries(salaries) ); // 650</h5>
+        </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let salaries = {
+                "John": 100,
+                "Pete": 300,
+                "Mary": 250
+            };
+
+            function sumSalaries(salaries) {
+                let sum = 0;
+                for (let salary of Object.values(salaries)) {
+                    sum += salary;
+                }
+                return sum;
+            }
+
+            document.write(sumSalaries(salaries)); // 650
+
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.6 Destructuring assignment We have an object: Write the Destructuring assignment
+            that
+            reads:<h5 class="text-secondary" style="margin-left: 40px;">
+                a. Name property into the variable name.
+            </h5>
+        </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let users2 = {
+                name: "John",
+                age: 30
+            };
+
+            let { name } = users2;
+
+            document.write(name); // John
+
+        </script>
+        <div class="text-light mt-5">
+            <h5 class="text-secondary" style="margin-left: 40px;">
+                b. Year’s property into the variable age.
+            </h5>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let user5 = {
+                    name: "John",
+                    year: 30
+                };
+
+                let { year: age } = user5;
+
+                document.write(age); // 30
+
+            </script>
+        </div>
+        <div class="text-light mt-5">
+            <h5 class="text-secondary" style="margin-left: 40px;">
+                c. isAdmin property into the variable isAdmin (false, if no such property)
+            </h5>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let user6 = {
+                    name: "John",
+                    year: 30
+                    // isAdmin is not defined here
+                };
+
+                let { isAdmin = false } = users;
+
+                document.write(isAdmin); // false
+            </script>
+        </div>
+        <div class="text-light mt-5">
+            <h5 class="text-secondary" style="margin-left: 40px;">
+                d. let user = { name: "John", years: 30};
+            </h5>
+            <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+            <script>
+                let user7 = { names1: "John", years: 30 };
+
+                let { names1, years: ages, isAdmins = false } = user7;
+
+                document.write("<br>" + names1 + "<br>");   // John
+                document.write(ages + "<br>");    // 30
+                document.write(isAdmins + "<br>"); // false
+
+            </script>
+        </div>
+    </div>
+    <div class="text-light">
+        <h5 class="text-secondary">Q.7 Turn the object into JSON and back</h5>
+        <h5 class="text-secondary" style="margin-left: 40px;">user = { name: "John Smith", age: 35};</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <script>
+            let user8 = { name: "John Smith", age: 35 };
+
+            // Convert the user object to a JSON string
+            let userJSON = JSON.stringify(user8);
+
+            // Parse the JSON string back into an object
+            let userParsed = JSON.parse(userJSON);
+
+            // Display the result as a string
+            document.write(JSON.stringify(userParsed));
+        </script>
+    </div>
+    <hr class="text-secondary mt-5">
+    <hr class="text-secondary">
+    <h2 class="d-flex justify-content-center text-secondary">MODULE: 3 (Document, Event and Controls)</h2>
+    <hr class="text-secondary">
+    <hr class="text-secondary">
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.1 Create a program to hide/show the password ? </h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="password-toggle">
+            <input type="password" id="passwordInput" placeholder="Enter your password">
+            <span class="toggle-btn" onclick="togglePasswordVisibility()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zM12 4c4.42 0 8 3.58 8 8s-3.58 8-8 8-8-3.58-8-8 3.58-8 8-8zm0 14c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+            </span>
+        </div>
+
+        <script>
+            function togglePasswordVisibility() {
+                var passwordInput = document.getElementById("passwordInput");
+                var toggleBtn = document.querySelector(".toggle-btn");
+
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    toggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                                    <path fill="none" d="M0 0h24v24H0z"/>
+                                </svg>`;
+                } else {
+                    passwordInput.type = "password";
+                    toggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zM12 4c4.42 0 8 3.58 8 8s-3.58 8-8 8-8-3.58-8-8 3.58-8 8-8zm0 14c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                </svg>`;
+                }
+            }
+        </script>
+    </div>
+    <div class="text-light mt-5">
+        <h5 class="text-secondary">Q.2 Create a program that will select all the classes and loop over and whenever i click the
+            button the alert should show</h5>
+        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+        <button class="btn btn-primary" onclick="myfunction3()">Button</button>
+        <script>
+            function myfunction3() {
+                alert("Hello");
+            }
+        </script>
+    </div>
+</body>
+
+</html>

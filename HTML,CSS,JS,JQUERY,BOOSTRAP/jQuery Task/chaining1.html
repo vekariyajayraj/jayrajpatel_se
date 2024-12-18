@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="one">Lorem ipsum dolor <b>sit</b> amet consectetur adipisicing elit. Magni sapiente consequatur quis error officiis sunt. Beatae, veritatis! Ullam illo impedit quos neque, dignissimos, asperiores esse temporibus enim doloribus velit suscipit!</p>
+    <button>Click</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $(".one").css("color","red").slideUp(2000).slideDown(2000)
+        })
+    })
+</script>
+</html>

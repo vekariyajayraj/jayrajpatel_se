@@ -1,0 +1,2880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Essentials & Advanced</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <table class="table">
+        <tr>
+            <td class="bg-dark ">
+
+                <h1 class="d-flex justify-content-center text-secondary"><u class="">JavaScript Advanced</u></h1>
+                <h2 class="d-flex justify-content-center text-secondary">Module - WD - JavaScript Essentials & Advanced
+                </h2>
+                <hr class="text-secondary">
+                <hr class="text-secondary">
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.1 Using console.log() print out the following statement: The quote
+                        'There is no
+                        exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches
+                        usto
+                        help one another. Using console.log() print out the following quote by Mother Teresa:</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+
+                    <script>
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.2 Check if typeof '10' is exactly equal to 10. If not make it exactly
+                        equal?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h6>JavaScript Operators</h6>
+                    <h6>The typeof Operator</h6>
+                    <p>The typeof operator returns the type of a variable or an
+                        expression:</p>
+                    <p id="demo"></p>
+                    <script>
+                        document.getElementById("demo").innerHTML =
+                            "'Hello' is " + typeof "Hello" + "<br>" +
+                            "('Hello') + ('Hello') is " + typeof " ('Hello') + ('Hello')" + "<br>" +
+                            "12345 is " + typeof 12345 + "<br>" +
+                            "12.12 is " + typeof 12.12 + "<br>" +
+                            "(12 + 12) is " + typeof (12 + 12) + "<br>" +
+                            "NaN is " + typeof NaN + "<br>" +
+                            "True is " + typeof true + "<br>" +
+                            "False is " + typeof false + "<br>" +
+                            "123456n is " + typeof 1235456n + "<br>" +
+                            "Symbol () is " + typeof Symbol() + "<br>" +
+                            "x is " + typeof x;
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.3 Write a JavaScript Program to find the area of a triangle?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h6>Calculate the area of triangle </h6>
+                    <div>
+                        <input type="text" id="a">
+                        <input type="text" id="b">
+                        <input type="text" id="c">
+                    </div>
+                    <br>
+                    <button onclick="cal()" class="btn btn-secondary">Calculate</button>
+                    <p id="ans"></p>
+                    <script>
+                        function cal() {
+                            const a = parseInt(document.getElementById("a").value);
+                            const b = parseInt(document.getElementById("b").value);
+                            const c = parseInt(document.getElementById("c").value);
+                            const sp = (a + b + c) / 2;
+                            const area = Math.sqrt(sp * ((sp - a) * (sp - b) * (sp - c)));
+                            document.getElementById("ans").innerHTML = "Answer :" + area;
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.4 Write a JavaScript program to calculate days left until next
+                        Christmas?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        today = new Date();
+                        var cmas = new Date(today.getFullYear(), 11, 25);
+                        if (today.getMonth() == 11 && today.getDate() > 25) {
+                            cmas.getFullYear(cmas.getFullYear() + 1);
+                        }
+                        var one_day = 1000 * 60 * 60 * 24;
+                        document.write("<br>")
+                        document.write(Math.ceil((cmas.getTime() - today.getTime()) / (one_day)) + " Days left until christmas!");
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.5 What is Condition Statement?</h5>
+                    <!-- <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> -->
+                    <p><span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> Conditional
+                        statements are those
+                        statements where a hypothesis is followed
+                        by a conclusion.</p>
+                    <p><span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> It is also known as
+                        an " If-then"
+                        statement.</p>
+                    <p><span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> If the hypothesis is
+                        true and the
+                        conclusion is false, then the conditional
+                        statement is false. </p>
+                    <p><span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> Likewise, if the
+                        hypothesis is
+                        false the whole statement is false. </p>
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240208140623/Types-of-Conditional-Statements-in-Programming.png"
+                        alt="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.6 Find circumference of Rectangle formula : C = 4 * a ?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        function findArea(width, height) {
+                            return width * height;
+                        }
+
+                        function findperimeter(width, height) {
+                            return 2 * (width + height);
+                        }
+                        var width = 5;
+                        var height = 10;
+                        var area = findArea(width, height);
+                        var perimeter = findperimeter(width, height);
+                        document.write("<br>  area of Rectangle: " + area);
+                        document.write("<br>  perimeter of Rectangle: " + perimeter);
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.7 WAP to convert years into days and days into years?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        function getAge(date_1, date_2) {
+                            var date2_UTC = new Date(Date.UTC(date_2.getUTCFullYear(), date_2.getUTCMonth(), date_2.getUTCDate()));
+                            var date1_UTC = new Date(Date.UTC(date_1.getUTCFullYear(), date_1.getUTCMonth(), date_1.getUTCDate()));
+                            var year, month, day;
+                            var days = date2_UTC.getDate() - date1_UTC.getDate();
+                            if (days < 0) {
+                                date2_UTC.setMonth(date2_UTC.getMonth() - 1);
+                                days += DaysInMonth(date2_UTC);
+                            }
+                            month = date2_UTC.getMonth() - date1_UTC.getMonth();
+                            if (month < 0) {
+                                date2_UTC.setFullYear(date2_UTC.getFullYear() - 1);
+                                month += 12;
+                            }
+                            year = date2_UTC.getFullYear() - date1_UTC.getFullYear();
+                            var yearText = year > 1 ? " years" : " year";
+                            var monthText = month > 1 ? " months" : " month";
+                            var dayText = days > 1 ? " days" : " day";
+                            return "<br>" + year + yearText + ",<br>" + month + monthText + ",<br>" + days + dayText;
+                        }
+                        function DaysInMonth(date2_UTC) {
+                            var monthStart = new Date(date2_UTC.getFullYear(), date2_UTC.getMonth(), 1);
+                            var monthEnd = new Date(date2_UTC.getFullYear(), date2_UTC.getMonth() + 1, 1);
+                            var monthLength = (monthEnd - monthStart) / (1000 * 60 * 60 * 24);
+                            return monthLength;
+                        }
+                        document.write(getAge(new Date(1978, 11, 22), new Date()));
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.8 Convert temperature Fahrenheit to Celsius? (Conditional logic
+                        Question)</h5>
+
+                    <p> <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> To convert
+                        Fahrenheit to
+                        Celsius, subtract 32 from the Fahrenheit temperature and then multiply the result by 5/9.</p>
+                    <p> <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> let fahrenheit =
+                        285; let
+                        celsius = (fahrenheit - 32) * 5/9; console.log(celsius); The answer is approximately 140.56
+                        degrees Celsius.
+                    </p>
+                    <img src="https://sciencenotes.org/wp-content/uploads/2021/08/Fahrenheit-to-Celsius-Example.png"
+                        height="400px" width="700px" alt="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary"> Q.9 Write a JavaScript exercise to get the extension of a filename.?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p id="one"></p>
+                    <p id="two"></p>
+                    <script>
+                        filename = "system.php"
+                        document.write(filename.split('.').pop());
+                        filename = "system.java"
+                        document.write("<br>" + filename.split('.').pop());
+                    </script>
+                    <br>
+                    <img src="https://www.w3resource.com/w3r_images/javascript-basic-image-exercise-14.png" alt="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.10 What is the result of the expression (5 > 3 && 2 < 4)?</h5>
+                            <p>
+                                <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                                The result is true, because both conditions are true.
+                            </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.11 What is the result of the expression (true && 1 && "hello")?</h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        The result is "hello", because all the operands are truthy, and the "&&"
+                        operator returns the last truthy operand.
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.12 What is the result of the expression true && false || false && true?
+                    </h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        A coworker and I have tried to work this out and the closest thing we could come
+                        up with is that the statement is being evaluated by order of precedence.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        According to the <a href="#"> <u> MDN Operator Precedence </u> </a> logical-and has a higher
+                        precidence
+                        over logical-or, suggesting that the condition is evaluated as if false && true were
+                        a single statement, which then moves on to determine the boolean condition of
+                        false || true which is then true. Written out, this would be:- (false && true) || true
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.13 Check Number Is Positive or Negative in JavaScript?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p>Math.sign() retuns whether a number is negative, positive or zero:</p>
+                    <p id="demo"></p>
+                    <script>
+                        document.getElementById("demo").innerHTML = Math.sign(3); 
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.14 Find the Character Is Vowel or Not ?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        let input = 'a';
+                        if (
+                            input === 'a' || input === 'A' ||
+                            input === 'e' || input === 'E' ||
+                            input === 'i' || input === 'I' ||
+                            input === 'o' || input === 'O' ||
+                            input === 'u' || input === 'U'
+                        ) {
+                            document.write(true);
+                        } else {
+                            document.write(false);
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.15 Write to check whether a number is negative, positive or zero?</h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Using Math.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        abs() method to determine if a number is positive, negative, or zero.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        The Math. abs() method returns the absolute value of a number, which is its
+                        magnitude without regard to its sign.
+                    </p>
+                    <p> <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        We can then compare the result with the original number to determine its
+                        sign.
+                    </p>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <br>
+                    <script>
+                        function numberChecking(num) {
+                            switch (Math.sign(num)) {
+                                case 1:
+                                    document.write("The number is Positive <br>");
+                                    break;
+                                case -1:
+                                    document.write("The number is Negative <br>");
+                                    break;
+                                default:
+                                    document.write("The number is Zero <br>");
+                            }
+                        }
+                        numberChecking(12);
+                        // Output: Positive 
+                        numberChecking(-1);
+                        // Output: Negative 
+                        numberChecking(0);
+                        // Output: Zero
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.16 Write to find number is even or odd using ternary operator in JS?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h6>1,2,3,4,5,6</h6>
+                    <script>
+                        let array = [1, 2, 3, 4, 5, 6];
+                        let oddNum = 0;
+                        let evenNum = 0;
+                        for (let index = 0; index < array.length; index++) {
+
+
+
+
+                            if (array[index] % 2 == 0) {
+                                evenNum++;
+                            }
+                            else {
+                                oddNum++;
+                            }
+                        }
+                        document.write("<br>" + "Total even number: " + evenNum);
+                        document.write("<br>" + "Total odd number: " + oddNum); 
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.17 Write find maximum number among 3 numbers using ternary operator in
+                        JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p>10,5,8</p>
+                    <script>
+                        function findLargest(num1, num2, num3) {
+                            if (num1 >= num2 && num1 >= num3) {
+                                return num1;
+                            } else if (num2 >= num1 && num2 >= num3) {
+                                return num2;
+                            } else {
+                                return num3;
+                            }
+                        }
+                        const largestNumber = findLargest(10, 5, 8);
+                        document.write("Largest number:", largestNumber);
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.18 Write to find minimum number among 3 numbers using ternary operator
+                        in JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        let num1 = 12;
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        let num2 = 7;
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        let num3 = 18;
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        // Third number let smallest; // Variable to store the smallest number //
+                        Employing conditional statements to compare the numbers and find.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        the smallest if (num1 < num2 && num1 < num3) { smallest=num1; } else if (num2 < num1 && num2 <
+                            num3) </p>
+                            <script>
+                                let num1 = 12;
+                                let num2 = 7;
+                                let num3 = 18;
+                                let smallest;
+                                if (num1 < num2 && num1 < num3) {
+                                    smallest = num1;
+                                } else if (num2 < num1 && num2 < num3) {
+                                    smallest = num2;
+                                } else {
+                                    smallest = num3;
+                                }
+                                document.write("Among " + num1 + ", <br> " + num2 + ", and  <br>" + num3 + ", <br> the smallest number is: " + smallest + ".");
+                            </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.19 Write to find the largest of three numbers in JS?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        let num1 = 42;
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        let num2 = 78;
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        let num3 = 55;
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        let largest; // To hold the largest number // Using conditional statements to
+                        compare the numbers and determine.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        The largest if (num1 > num2 && num1 > num3) { largest = num1; } else if
+                        (num2 > num1 && num2 > num3).
+                    </p>
+                    <script>
+                        let num1s = 42;
+                        let num2s = 78;
+                        let num3s = 55;
+                        let smallests
+                        if (num1s > num2s && num1s > num3s) {
+                            smallest = num1;
+                        } else if (num2s > num1s && num2s > num3s) {
+                            smallest = num2s;
+                        } else {
+                            smallest = num3s;
+                        }
+                        document.write("Among " + num1s + ",<br> " + num2s + ", and <br> " + num3s + ",<br>The smallest number is: " + smallests + ".");
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div>
+                    <h5 class="text-secondary">Q.20 Write to show </h5>
+                    <h6 class="text-secondary">i). Monday to Sunday using switch case in JS?</h6>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p>Enter a number : </p>
+                    <input type="text" id="numberDay">
+                    <button id="button" class="btn-secondary btn">OK</button>
+                    <script>
+                        let clickButton =
+                            document.getElementById("button");
+                        clickButton.addEventListener("click", function
+                            weekDay() {
+                            let day =
+                                Number(document.getElementById("numberDay").value);
+                            switch (day) {
+                                case 0:
+                                    alert("It's Sunday!")
+                                    break;
+                                case 1:
+                                    alert("It's Monday");
+                                    break;
+                                case 2:
+                                    alert("It's Tuesday");
+                                    break;
+                                case 3:
+                                    alert("It's Wednesday");
+                                    break;
+                                case 4:
+                                    alert("It's Thursday");
+                                    break;
+                                case 5:
+                                    alert("It's Friday");
+                                    break;
+                                case 6:
+                                    alert("It's Saturday");
+                                    break;
+                            }
+                        })
+                    </script>
+                </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <div>
+                        <!-- <h5 class="text-secondary">Q.20 Write to show </h5> -->
+                        <h6 class="text-secondary mt-3">ii). Vowel or Consonant using switch case in JS?</h6>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        <table>
+                            <tr>
+                                <td> <input type="text" name="a" id="first" placeholder="Enter character" /> </td>
+                            </tr>
+                            <tr>
+                                <td> <button onclick="vowel()" class="btn btn-secondary">Submit</button> </td>
+                            </tr>
+                        </table>
+                        <div id="num"></div>
+                        <script>
+                            function vowel() {
+                                var ch;
+                                ch = document.getElementById("first").value;
+                                switch (ch) {
+                                    case 'a':
+                                    case 'e':
+                                    case 'i':
+                                    case 'o':
+                                    case 'u':
+                                    case 'A':
+                                    case 'E':
+                                    case 'I':
+                                    case 'O':
+                                    case 'U':
+                                        document.getElementById("num").innerHTML = "vowel character";
+                                        break;
+                                    default: document.getElementById("num").innerHTML =
+                                        "Not an vowel";
+                                        break;
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <hr class="text-secondary mt-5">
+                <hr class="text-secondary">
+                <h2 class="d-flex justify-content-center text-secondary">(Conditional looping logic Question)</h2>
+                <hr class="text-secondary">
+                <hr class="text-secondary">
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.21 What are the looping structures in JavaScript? Any one Example?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h6>JavaScript For Loop</h6>
+                    <p id="demo1"></p>
+                    <script>
+                        const cars = ["A", "B", "C", "D", "E", "F"];
+                        // const cars = ["A , b , c , d , e , f , j "];
+                        let text = "";
+                        for (let i = 0; i < cars.length; i++) {
+                            text += cars[i] + "<br>";
+                        }
+                        document.getElementById("demo1").innerHTML = text; 
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.22 Write a print 972 to 897 using for loop in JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h2>JavaScript For
+                        Loop</h2>
+                    <p id="demo2"></p>
+                    <script>
+                        let textw = "";
+                        for (let i = 972; i > 897; i--) {
+                            textw += "The number is " + i + " , " + "<br>";
+                        }
+                        document.getElementById("demo2").innerHTML = textw;
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.23 Write to print factorial of given number?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h6>Factorial Calculator</h6>
+                    <form>
+                        Enter a number: <br>
+                        <input type="text" id="inputValue"> <br><br>
+                        <button type="button" class="btn btn-secondary" onclick="FindFactorial()">Find</button>
+                    </form>
+                    <p id="outputArea"></p>
+                    <script>
+                        function FindFactorial() {
+                            let number =
+                                parseInt(document.getElementById("inputValue").value);
+                            let result = 1;
+
+                            if (number === 0 || number === 1) {
+                                result = 1;
+
+
+
+
+                            }
+                            else {
+                                for (let i = 2; i <= number; i++) {
+                                    result *= i;
+                                }
+                            }
+
+                            document.getElementById("outputArea").innerHTML = "Factorial of " + number + " is: " + result;
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.24 Write to print Fibonacci series up to given numbers?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h6>Fibonacci series</h6>
+                    <h6>Enter the limit:</h6>
+                    <input type="text" id="limit" placeholder="Enter your limit"> <br><br>
+                    <button onclick="getFibonacci()" class="btn btn-secondary">Get Fibonacci Series</button>
+                    <div id="output1"></div>
+                    <script>
+                        function getFibonacci() {
+                            var limit = document.getElementById("limit").value;
+                            fibonacciSeries(limit);
+                        }
+
+                        function fibonacciSeries(limit) {
+                            var first_num1 = 0, second_num1 = 1, next_num1;
+                            var outputElement = document.getElementById("output1");
+
+                            if (limit != '') {
+                                outputElement.innerHTML = "";
+
+                                if (limit >= 1) {
+                                    outputElement.innerHTML += first_num1 + "<br>";
+                                }
+                                if (limit >= 2) {
+                                    outputElement.innerHTML += second_num1 + "<br>";
+                                }
+
+                                for (var i = 3; i <= limit; i++) {
+                                    next_num1 = first_num1 + second_num1;
+                                    first_num1 = second_num1;
+                                    second_num1 = next_num1;
+                                    outputElement.innerHTML += next_num1 + "<br>";
+                                }
+                            } else {
+                                outputElement.innerHTML = "Please enter a value!";
+                            }
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.25 Write to print number in reverse order e.g.: number = 64728 ->
+                        reverse =82746
+                        in JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+
+                    <h6 id="result"></h6>
+                    <script>
+                        function reverse_a_number(n) {
+                            n = n + "";
+                            return n.split("").reverse().join("");
+                        }
+                        let number = 64728;
+                        let reversedNumber =
+                            Number(reverse_a_number(number));
+                        document.getElementById("result").innerText = `==> Reversed number: ${reversedNumber}`;
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.26 Write a program make a summation of given number (E.g., 1523 Ans: -
+                        11) in JS?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p> summation of given number (1523)</p>
+                    <input type="text" placeholder="Enter your number....." id="limit1" value="1523"> <br><br>
+                    <button onclick="sumOfDigit()" class="btn btn-secondary">Summation</button>
+                    <div id="output"></div>
+                    <script>
+                        function sumOfDigit() {
+                            var limit = document.getElementById("limit1").value;
+                            var result = sumOfDigit1(limit);
+                            document.getElementById("output").innerHTML = "Summation: " + result;
+                        }
+
+                        function sumOfDigit1(num) {
+                            return num.toString().split("")
+                                .reduce((sum, digit) =>
+                                    sum + parseInt(digit), 0);
+                        }
+
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.27 Write a program you have to make a summation of first and last
+                        Digit. (E.g.,
+                        1234 Ans:
+                        -5) in JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p> summation of first and last Digit. </p>
+                    <input type="text" placeholder="Enter your number..." id="numberInput" value="1234"> <br><br>
+                    <button onclick="calculateSum()" class="btn btn-secondary">Calculate Summation</button>
+                    <div id="output2"></div>
+                    <script>
+                        function firstDigit(n) {
+                            while (n >= 10)
+                                n /= 10;
+                            return Math.floor(n);
+                        }
+                        function lastDigit(n) {
+                            return n % 10;
+                        }
+                        function calculateSum() {
+                            let n = document.getElementById("numberInput").value;
+                            if (n && !isNaN(n)) {
+                                n = parseInt(n, 10); // ensure the input is treated as an integer
+                                let first = firstDigit(n);
+                                let last = lastDigit(n);
+                                let sum = first + last;
+                                document.getElementById("output2").innerHTML = " summation of first and last digit: " + sum;
+                            } else {
+                                document.getElementById("output2").innerHTML = "please enter a valid number.";
+                            }
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.28 Use console.log() and escape characters to print the following
+                        pattern in JS?
+                        <br>
+                        1 1 1 1 1 <br>
+                        2 1 2 4 8 <br>
+                        3 1 3 9 27 <br>
+                        4 1 4 16 64 <br>
+                        5 1 5 25 125 <br>
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p>
+                        function generatePattern(rows) { <br>
+                        for (let i = 1; i <= rows; i++) { <br>
+                            let pattern = ""; <br>
+                            for (let j = 0; j < 5; j++) { <br>
+                                if (j === 0) { <br>
+                                pattern += i + " "; <br>
+                                } else if (j === 1) { <br>
+                                pattern += "1 "; <br>
+                                } else { <br>
+                                pattern += Math.pow(i, j) + " "; <br>
+                                } <br>
+                                } <br>
+                                console.log(pattern.trim()); <br>
+                                } <br>
+                                } <br>
+                                generatePattern(5); <br>
+                    </p>
+                    <script>
+                        function generatePattern(rows) {
+                            for (let i = 1; i <= rows; i++) {
+                                let pattern = "";
+                                for (let j = 0; j < 5; j++) {
+                                    if (j === 0) {
+                                        pattern += i + " ";
+                                    } else if (j === 1) {
+                                        pattern += "1 ";
+                                    } else {
+                                        pattern += Math.pow(i, j) + " ";
+                                    }
+                                }
+                                console.log(pattern.trim());
+                            }
+                        }
+
+                        generatePattern(5);
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <div>
+                        <h5 class="text-secondary">Q.29 Use pattern in console.log in JS?</h5>
+                        <h6 class="text-secondary">i). <br><br>
+                            1 <br>
+                            1 0 <br>
+                            1 0 1 <br>
+                            1 0 1 0 <br>
+                            1 0 1 0 1 <br>
+                        </h6>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        <h5 class="text-secondary">Pattern Generation</h5>
+                        <div id="pattern"></div>
+                        <p>
+                            function generatePattern(rows) { <br>
+                            for (let i = 1; i <= rows; i++) { <br>
+                                let pattern = ""; <br>
+                                for (let j = 1; j <= i; j++) { <br>
+                                    if (j % 2 === 0) { <br>
+                                    pattern += "0 "; <br>
+                                    } else { <br>
+                                    pattern += "1 "; <br>
+                                    } <br>
+                                    } <br>
+                                    console.log(pattern.trim()); <br>
+                                    } <br>
+                                    } <br>
+                                    generatePattern(5); <br>
+                        </p>
+                        <script>
+                            function generatePattern(rows) {
+                                for (let i = 1; i <= rows; i++) {
+                                    let pattern = "";
+                                    for (let j = 1; j <= i; j++) {
+                                        if (j % 2 === 0) {
+                                            pattern += "0 ";
+                                        } else {
+                                            pattern += "1 ";
+                                        }
+                                    }
+                                    console.log(pattern.trim());
+                                }
+                            }
+
+                            generatePattern(5);
+                        </script>
+                    </div>
+                    <div>
+                        <!-- <h5 class="text-secondary">Q.29 Use pattern in console.log in JS?</h5> -->
+                        <h6 class="text-secondary mt-3">
+                            ii). <br><br>
+                            A <br>
+                            B C <br>
+                            DE F <br>
+                            G H I J <br>
+                            K L M N O <br>
+                        </h6>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        <p>
+                            let c = 5; <br>
+                            let string12 = ""; <br>
+                            let count12 = 0; <br>
+                            for (let i = 1; i <= c; i++) { <br>
+                                for (let j = 0; j < i; j++) { <br>
+                                    string12 += String.fromCharCode(count12 + 65); <br>
+                                    count12++; <br>
+                                    } <br>
+                                    string12 += "\n"; <br>
+                                    } <br>
+                                    console.log(string12); <br>
+                        </p>
+                        <script>
+                            let c = 5;
+                            let string12 = "";
+                            let count12 = 0;
+                            for (let i = 1; i <= c; i++) {
+                                for (let j = 0; j < i; j++) {
+                                    string12 += String.fromCharCode(count12 + 65);
+                                    count12++;
+                                }
+                                string12 += "\n";
+                            }
+                            console.log(string12); 
+                        </script>
+                    </div>
+                    <div>
+                        <!-- <h5 class="text-secondary">Q.29 Use pattern in console.log in JS?</h5> -->
+                        <h6 class="text-secondary mt-3">
+                            iii). <br><br>
+                            1 <br>
+                            2 3 <br>
+                            4 5 6 <br>
+                            7 8 9 10 <br>
+                            11 12 13 14 15 <br>
+                        </h6>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        <p>
+                            let n = 5; <br>
+                            let string = ""; <br>
+                            let count = 1; <br>
+                            for (let i = 1; i <= n; i++) { <br>
+                                for (let j = 1; j <= i; j++) { <br>
+                                    string += count; <br>
+                                    count++; <br>
+                                    } <br>
+                                    string += "\n"; <br>
+                                    } <br>
+                                    console.log(string); <br>
+                        </p>
+                        <script>
+                            let n = 5;
+                            let string = "";
+                            let count = 1;
+                            for (let i = 1; i <= n; i++) {
+                                for (let j = 1; j <= i; j++) {
+                                    string += count;
+                                    count++;
+                                }
+                                string += "\n";
+                            }
+
+
+
+
+                            console.log(string); 
+                        </script>
+                    </div>
+                    <div>
+                        <!-- <h5 class="text-secondary">Q.29 Use pattern in console.log in JS?</h5> -->
+                        <h6 class="text-secondary mt-3">
+                            iv).<br><br>
+                            * <br>
+                            * * <br>
+                            * * * <br>
+                            * * * * <br>
+                            * * * * * <br>
+                        </h6>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        <p> let rows = 5; <br>
+                            let pattern = ""; <br>
+                            for (let n = 1; n <= rows; n++) {<br>
+                                for (let num = 1; num <= n; num++) {<br>
+                                    pattern += "*";<br>
+                                    }<br>
+                                    pattern += "\n";<br>
+                                    }<br>
+                                    console.log(pattern);<br>
+                        </p>
+                        <script>
+                            let rows = 5;
+                            let pattern = "";
+                            for (let n = 1; n <= rows; n++) {
+                                for (let num = 1; num <= n; num++) {
+                                    pattern += "*";
+                                }
+                                pattern += "\n";
+                            }
+                            console.log(pattern);
+                        </script>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.30 Accept 3 numbers from user using while loop and check each numbers
+                        palindrome
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p>Enter three numbers:</p>
+                    <input type="text" id="number1" placeholder="Enter first number"> <br><br>
+                    <input type="text" id="number2" placeholder="Enter second number"><br><br>
+                    <input type="text" id="number3" placeholder="Enter third number"> <br><br>
+                    <button onclick="checkPalindromes()" class="btn btn-secondary">Check Palindromes</button><br>
+                    <br>
+                    <div id="output143"></div>
+                    <script>
+                        function isPalindrome(num) {
+                            let originalNum = num.toString();
+                            let reversedNum = originalNum.split('').reverse().join('');
+                            return originalNum === reversedNum;
+                        }
+
+                        function checkPalindromes() {
+                            const numbers = [];
+                            const inputElements = [document.getElementById("number1"), document.getElementById("number2"), document.getElementById("number3")];
+                            const outputElement = document.getElementById("output143");
+                            outputElement.innerHTML = ""; // Clear previous output
+
+                            for (let i = 0; i < inputElements.length; i++) {
+                                let input = inputElements[i].value;
+                                if (input !== null && !isNaN(input) && input.trim() !== '') {
+                                    let num = parseInt(input, 10);
+                                    numbers.push(num);
+                                } else {
+                                    outputElement.innerHTML += "Please enter a valid number.<br>";
+                                    return;
+                                }
+                            }
+
+                            numbers.forEach(num => {
+                                if (isPalindrome(num)) {
+                                    outputElement.innerHTML += `${num} is a palindrome.<br>`;
+                                } else {
+                                    outputElement.innerHTML += `${num} is not a palindrome.<br>`;
+                                }
+                            });
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.31 Write a JavaScript Program to display the current day and time in
+                        the following
+                        format. Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <div id="output21"></div>
+                    <script>
+                        function getCurrentDayAndTime() {
+                            let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                            let nows = new Date();
+                            let Days = daysOfWeek[nows.getDay()];
+
+                            let hours = nows.getHours();
+                            let minutes = nows.getMinutes();
+                            let seconds = nows.getSeconds();
+                            let milliseconds = nows.getMilliseconds();
+
+                            const ampm = hours >= 12 ? 'PM' : 'AM';
+                            hours = hours % 12;
+                            hours = hours ? hours : 12; // the hour '0' should be '12'
+
+                            const currentTime = `Current Time is ${hours} ${ampm} : ${minutes} : ${seconds} : ${milliseconds}`;
+
+                            return `Today is ${Days}. ${currentTime}`;
+                        }
+
+                        document.getElementById("output21").innerHTML = getCurrentDayAndTime();
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.32 Write a JavaScript program to get the current date?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <div id="output31"></div>
+                    <script>
+                        function getCurrentDate() {
+                            const today12 = new Date();
+                            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                            return today12.toLocaleDateString(undefined, options);
+                        }
+
+                        document.getElementById("output31").innerHTML = "Today's Date: " + getCurrentDate();
+                    </script>
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.33 Write a JavaScript program to compare two objects?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <div id="output41"></div>
+                    <script>
+                        function compareObjects(obj1, obj2) {
+                            const keys1 = Object.keys(obj1);
+                            const keys2 = Object.keys(obj2);
+
+                            // Check if the number of properties is the same
+                            if (keys1.length !== keys2.length) {
+                                return false;
+                            }
+
+                            // Check each property and value
+                            for (let key of keys1) {
+                                if (obj1[key] !== obj2[key]) {
+                                    return false;
+                                }
+                            }
+
+                            return true;
+                        }
+
+                        const objectA = { name: "Alice", age: 25, city: "New York" };
+                        const objectB = { name: "Alice", age: 25, city: "New York" };
+                        const objectC = { name: "Bob", age: 30, city: "Chicago" };
+
+                        const resultAB = compareObjects(objectA, objectB);
+                        const resultAC = compareObjects(objectA, objectC);
+
+                        document.getElementById("output41").innerHTML = `
+                        Comparing Object A and B: ${resultAB} <br>
+                        Comparing Object A and C: ${resultAC}
+                    `;
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.34 Write a JavaScript program to convert an array of objects into CSV
+                        string?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        function convertToCSV(arr) {
+                            // Check if the array is empty
+                            if (!arr.length) return '';
+
+                            // Extract headers
+                            const headers = Object.keys(arr[0]);
+                            const csvRows = [];
+
+                            // Add headers to the CSV
+                            csvRows.push(headers.join(','));
+
+                            // Add each row of data
+                            for (const row of arr) {
+                                const values = headers.map(header => {
+                                    const escapedValue = ('' + row[header]).replace(/"/g, '\\"'); // Escape quotes
+                                    return `"${escapedValue}"`; // Wrap values in quotes
+                                });
+                                csvRows.push(values.join(','));
+                            }
+
+                            return csvRows.join('\n' + "<br>"); // Join all rows with new line
+                        }
+
+                        // Example usage
+                        const data = [
+                            { Name: 'John Doe', age: 28, city: 'New York' },
+                            { Name: 'Jane Smith', age: 34, city: 'Los Angeles' },
+                            { Name: 'Sam Johnson', age: 22, city: 'Chicago' }
+                        ];
+
+                        const csvString = convertToCSV(data);
+                        document.write("<br>" + csvString + "<br>");
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.35 Write a JavaScript program to capitalize first letter of a string?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> <br>
+                    <input type="text" id="inputText" placeholder="Enter your word......." value="hello"> <br><br>
+                    <button onclick="capitalizeFirstLetter()" class="btn btn-secondary">capitalize first latter</button>
+                    <p id="outputo"></p>
+                    <script>
+                        function capitalizeFirstLetter() {
+                            const str = document.getElementById('inputText').value;
+                            if (str.length === 0) return; // Handle empty string
+                            const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
+                            document.getElementById('outputo').innerText = capitalized; // Display the result
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q. 45 Write a JavaScript program to determine if a variable is array?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        function isArray(variable) {
+                            return Array.isArray(variable);
+                        }
+
+                        // Test examples
+                        document.write(isArray([1, 2, 3]) + "<br>"); // true
+                        document.write(isArray('hello') + "<br>"); // false
+                        document.write(isArray({}) + "<br>"); // false
+                        document.write(isArray([]) + "<br>"); // true
+                        document.write(isArray(null) + "<br>"); // false
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.46 Write a JavaScript program to clone an array?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <span> [1,2,3] clone Array</span> <br>
+                    <script>
+                        function cloneArray(arr) {
+                            return arr.slice();
+                        }
+
+                        // Test example
+                        const originalArray = [1, 2, 3];
+                        const clonedArray = cloneArray(originalArray);
+                        document.write(clonedArray); // [1, 2, 3]
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.47 What is the drawback of declaring methods directly in JavaScript
+                        objects?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        const obj12 = {
+                            name1: 'Object 1',
+                            greet1: function () {
+                                document.write(`Hello from ${this.name1}` + "<br>");
+                            }
+                        };
+
+                        const obj22 = {
+                            name1: 'Object 2',
+                            greet1: function () {
+                                document.write(`Hello from ${this.name1}`);
+                            }
+                        };
+
+                        // Example usage
+                        obj12.greet1(); // Outputs: Hello from Object 1
+                        obj22.greet1(); // Outputs: Hello from Object 2
+
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.48 Print the length of the string on the browser console using
+                        console.log()?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> <br>
+                    <input type="text" id="inputString" placeholder="Enter your word...." value="Hello"> <br><br>
+                    <button onclick="lengthstring()" class="btn btn-secondary">length String</button>
+                    <p id="output81"></p>
+                    <script>
+                        function lengthstring() {
+                            let myString = document.getElementById("inputString").value;
+                            let length12 = myString.length;
+                            document.getElementById("output81").textContent = `Length: ${length12}`;
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.49 Change all the string characters to capital letters using
+                        toUpperCase() method?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span> <br>
+                    <input type="text" id="inputString5" placeholder="Enter your word...." value="hello"> <br><br>
+                    <button onclick="convertToUpperCase()" class="btn btn-secondary">Convert to Upper Case</button>
+                    <p id="output85"></p>
+                    <script>
+                        function convertToUpperCase() {
+                            let myString = document.getElementById("inputString5").value;
+                            let upperCaseString = myString.toUpperCase(); // Convert to upper case
+                            document.getElementById("output85").textContent = `Upper Case: ${upperCaseString}`;
+                        }
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.50 What is the drawback of declaring methods directly in JavaScript
+                        objects?
+                    </h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Memory Redundancy: Each object instance has its own copy of the method, leading to increased
+                        memory usage
+                        when multiple instances are created.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Inflexibility: It can be difficult to modify or extend the functionality across multiple
+                        instances since
+                        changes need to be made in every object.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Inheritance Complexity: Directly declared methods make it harder to manage inheritance and
+                        method
+                        overriding, complicating object-oriented design.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        ontext Loss: When methods are used as callbacks, the `this` context may be lost, leading to
+                        unexpected
+                        behavior unless bound explicitly.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Performance Issues: Creating methods on each instance can slow down performance, especially when
+                        many
+                        objects are instantiated, as it consumes more memory and resources.
+                    </p>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.51 Write a JavaScript program to get the current date. Expected Output
+                        : mm-ddyyyy,
+                        mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        function getCurrentDate() {
+                            const today = new Date();
+
+                            const month = String(today.getMonth() + 1).padStart(2, '0'); // Month (01-12)
+                            const day = String(today.getDate()).padStart(2, '0'); // Day (01-31)
+                            const year = today.getFullYear(); // Year (yyyy)
+
+                            // Formatting
+                            const format1 = `${month}-${day}-${year}`; // mm-dd-yyyy
+                            const format2 = `${month}/${day}/${year}`; // mm/dd/yyyy
+                            const format3 = `${day}-${month}-${year}`; // dd-mm-yyyy
+                            const format4 = `${day}/${month}/${year}`; // dd/mm/yyyy
+
+                            document.write(format1 + "<br>");
+                            document.write(format2 + "<br>");
+                            document.write(format3 + "<br>");
+                            document.write(format4 + "<br>");
+                        }
+
+                        // Call the function
+                        getCurrentDate();
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.52 Use indexOf to determine the position of the first occurrence of a
+                        in 30 Days
+                        Of JavaScript?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        const text5 = "30 Days Of JavaScript";
+                        const position = text5.indexOf("a");
+
+                        document.write(position); // Outputs: 8
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q,53 Use lastIndexOf to determine the position of the last occurrence of
+                        a in 30 Days
+                        Of JavaScript?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+                        let text6 = "30 Days Of JavaScript";
+                        let position2 = text6.lastIndexOf("a");
+
+                        document.write(position2); // Outputs: -1
+
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.54 Form Validtion in JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <form id="myForm" onsubmit="return validateForm()">
+                        <table class="table">
+                            <tr>
+                                <td class="bg-dark text-light">
+                                    <label for="name">Name:</label>
+                                </td>
+                                <td class="bg-dark">
+                                    <input type="text" id="name" placeholder="Enter your name" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-dark text-light">
+                                    <label for="email">Email:</label>
+                                </td>
+                                <td class="bg-dark">
+                                    <input type="email" id="email" placeholder="Enter your email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-dark text-center">
+                                    <button type="submit" class="btn btn-secondary">Submit</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <br><br>
+
+                        <br><br>
+
+                    </form>
+                    <p id="error3" style="color: red;"></p>
+                    <script>
+                        function validateForm() {
+                            const name = document.getElementById("name").value;
+                            const email = document.getElementById("email").value;
+                            const errorElement = document.getElementById("error3");
+
+                            // Clear previous error messages
+                            errorElement.textContent = "";
+
+                            // Check if name is empty
+                            if (name.trim() === "") {
+                                errorElement.textContent = "Name is required.";
+                                return false;
+                            }
+
+                            // Validate email format
+                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailPattern.test(email)) {
+                                errorElement.textContent = "Please enter a valid email address.";
+                                return false;
+                            }
+
+                            // If everything is valid
+                            return true;
+                        }
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.55 Form in Email, number, Password, Validation?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <form id="myForm" onsubmit="return validateForm1()">
+                        <table class="table">
+                            <tr>
+                                <td class="bg-dark text-light">
+
+                                    <label for="email">Email:</label>
+                                </td>
+                                <td class="bg-dark">
+
+                                    <input type="email" id="email" placeholder="Enter your email" required>
+                                </td>
+                            </tr>
+                            <br> <br>
+                            <tr>
+                                <td class="bg-dark text-light">
+                                    <label for="number">Phone Number:</label>
+                                </td>
+                                <td class="bg-dark">
+                                    <input type="tel" id="number" placeholder="Enter your phone number" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-dark text-light">
+                                    <label for="password">Password:</label>
+                                </td>
+                                <td class="bg-dark">
+                                    <input type="password" id="password" placeholder="Enter your password" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-dark text-center">
+                                    <button type="submit" class="btn btn-secondary">Submit</button>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </form>
+                    <p id="error1" style="color: red;"></p>
+                    <script>
+                        function validateForm1() {
+                            const email = document.getElementById("email").value;
+                            const number = document.getElementById("number").value;
+                            const password = document.getElementById("password").value;
+                            const errorElement = document.getElementById("error1");
+
+                            // Clear previous error messages
+                            errorElement.textContent = "";
+
+                            // Validate email format
+                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailPattern.test(email)) {
+                                errorElement.textContent += "Please enter a valid email address.\n";
+                                return false;
+                            }
+
+                            // Validate phone number (must be 10 digits)
+                            const numberPattern = /^\d{10}$/;
+                            if (!numberPattern.test(number)) {
+                                errorElement.textContent += "Phone number must be 10 digits.\n";
+                                return false;
+                            }
+
+                            // Validate password (minimum 6 characters)
+                            if (password.length < 6) {
+                                errorElement.textContent += "Password must be at least 6 characters long.\n";
+                                return false;
+                            }
+
+                            // If everything is valid
+                            return true;
+                        }
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.56 Dynamic Form Validation in JS?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <form id="dynamicForm">
+                        <table class="table">
+                            <tr>
+                                <td class="bg-dark text-light">
+                                    <label for="email">Email:</label>
+                                </td>
+                                <td class="bg-dark">
+                                    <input type="email" id="email" placeholder="Enter your email" required>
+                                    <span class="error text-light" id="emailError"></span>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-dark text-light">
+                                    <label for="number">Phone Number:</label>
+                                </td>
+                                <td class="bg-dark">
+                                    <input type="tel" id="number" placeholder="Enter your phone number" required>
+                                    <span class="error text-light" id="numberError"></span>
+                                    <br>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-dark text-light">
+                                    <label for="password">Password:</label>
+
+                                </td>
+                                <td class="bg-dark">
+                                    <input type="password" id="password" placeholder="Enter your password" required>
+                                    <span class="error text-light" id="passwordError"></span>
+                                    <br>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-dark text-center">
+                                    <button type="submit" class="btn btn-secondary">Submit</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const emailInput = document.getElementById("email");
+                            const numberInput = document.getElementById("number");
+                            const passwordInput = document.getElementById("password");
+
+                            emailInput.addEventListener("input", validateEmail);
+                            numberInput.addEventListener("input", validateNumber);
+                            passwordInput.addEventListener("input", validatePassword);
+
+                            function validateEmail() {
+                                const email = emailInput.value;
+                                const emailError = document.getElementById("emailError");
+                                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                                if (!emailPattern.test(email)) {
+                                    emailError.textContent = "Invalid email format.";
+                                } else {
+                                    emailError.textContent = "";
+                                }
+                            }
+
+                            function validateNumber() {
+                                const number = numberInput.value;
+                                const numberError = document.getElementById("numberError");
+                                const numberPattern = /^\d{10}$/;
+
+                                if (!numberPattern.test(number)) {
+                                    numberError.textContent = "Phone number must be 10 digits.";
+                                } else {
+                                    numberError.textContent = "";
+                                }
+                            }
+
+                            function validatePassword() {
+                                const password = passwordInput.value;
+                                const passwordError = document.getElementById("passwordError");
+
+                                if (password.length < 6) {
+                                    passwordError.textContent = "Password must be at least 6 characters long.";
+                                } else {
+                                    passwordError.textContent = "";
+                                }
+                            }
+
+                            document.getElementById("dynamicForm").onsubmit = function (event) {
+                                validateEmail();
+                                validateNumber();
+                                validatePassword();
+
+                                if (
+                                    emailError.textContent ||
+                                    numberError.textContent ||
+                                    passwordError.textContent
+                                ) {
+                                    event.preventDefault();
+                                }
+                            };
+                        });
+
+                    </script>
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.57 how many type of JS Event? How to use it ?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <table class="table">
+                        <tr>
+                            <th class="bg-dark"></th>
+                            <th class="bg-dark text-light">
+
+                                Event Type
+                            </th>
+
+
+                            <th class="bg-dark text-light">
+
+                                Example Events
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                1.
+                            </td>
+                            <td class="bg-dark text-light">
+
+                                Mouse Events
+                            </td>
+                            <td class="bg-dark text-light">
+                                click, dblclick, mouseenter
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                2.
+                            </td>
+                            <td class="bg-dark text-light">
+                                Keyboard Events
+                            </td>
+                            <td class="bg-dark text-light">
+                                keydown, keyup
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                3.
+                            </td>
+                            <td class="bg-dark text-light">
+                                Form Events
+                            </td class="bg-dark  text-light">
+                            <td class="bg-dark text-light">
+                                submit, change
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                4.
+                            </td>
+                            <td class="bg-dark text-light">
+                                Window Events
+                            </td>
+                            <td class="bg-dark text-light">
+                                load, resize
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                5.
+                            </td>
+                            <td class="bg-dark text-light">
+                                Touch Events
+                            </td class="bg-dark text-light">
+                            <td class="bg-dark text-light">
+                                touchstart, touchend
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                6.
+                            </td>
+                            <td class="bg-dark text-light">
+                                Clipboard Events
+                            </td>
+                            <td class="bg-dark text-light">
+                                copy, paste
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                7.
+                            </td>
+                            <td class="bg-dark text-light">
+                                Media Events
+                            </td>
+                            <td class="bg-dark text-light">
+                                play, pause
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                8.
+                            </td>
+                            <td class="bg-dark text-light">
+                                Focus Events
+                            </td>
+                            <td class="bg-dark text-light">
+
+                                focus, blur
+                            </td>
+                        </tr>
+                    </table>
+                    <script>
+
+                        element.addEventListener1("click", function () {
+                            console.log("Element clicked!");
+                        });
+                        document.addEventListener2("keydown", function (event) {
+                            console.log(`Key pressed: ${event.key}`);
+                        });
+                        form.addEventListener3("submit", function (event) {
+                            event.preventDefault(); // Prevent form submission
+                            console.log("Form submitted!");
+                        });
+                        window.addEventListener4("load", function () {
+                            console.log("Page fully loaded!");
+                        });
+                        element.addEventListener5("touchstart", function () {
+                            console.log("Touch started!");
+                        });
+                        element.addEventListener6("paste", function (event) {
+                            console.log("Content pasted!");
+                        });
+                        video.addEventListener7("play", function () {
+                            console.log("Video is playing!");
+                        });
+                        inputField.addEventListener8("focus", function () {
+                            console.log("Input field focused!");
+                        });
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.60 What is Bom vs Dom in JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+
+                    <table class="table">
+                        <tr>
+                            <th class="bg-dark text-light">
+                                Feature
+                            </th>
+                            <th class="bg-dark text-light">
+                                BOM
+                            </th>
+                            <th class="bg-dark text-light">
+                                DOM
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                Definition
+                            </td>
+                            <td class="bg-dark text-light">
+                                Interacts with the browser
+                            </td>
+                            <td class="bg-dark text-light">
+
+                                window Represents the HTML document
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                key
+                            </td>
+                            <td class="bg-dark text-light">
+                                Objects window, navigator, location, history
+                            </td>
+                            <td class="bg-dark text-light">
+                                document, Element, Node
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                Purpose
+                            </td>
+                            <td class="bg-dark text-light">
+                                Control browser behavior and properties
+                            </td>
+                            <td class="bg-dark text-light">
+
+                                Manipulate HTML structure and content
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h4>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        BOM (Browser Object Model):
+                    </h4>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Definition: BOM refers to the objects provided by the browser that allow JavaScript to interact
+                        with
+                        the browser window and perform operations related to the browser itself.
+                    </p>
+                    <h5>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Key Features:
+                    </h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Window Object: The global object that represents the browser window. It contains properties and
+                        methods related to the browser.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Navigator Object: Provides information about the browser (e.g., userAgent, platform).
+
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Location Object: Contains information about the current URL and allows manipulation (e.g.,
+                        changing the URL).
+
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        History Object: Allows navigation through the browser's session history (e.g., back and
+                        forward).
+
+                    </p>
+                    <script>
+                        // // Alerting a message
+                        // document.write("Hello, World!");
+
+                        // // Redirecting to a new URL
+                        // window.location.href = "#";
+
+                        // // Accessing browser information
+                        // document.write(navigator.userAgent);
+
+                    </script>
+                    <br><br>
+                    <h4>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+
+                        DOM (Document Object Model):
+                    </h4>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+
+                        Definition: DOM is a programming interface for web documents, representing the structure of a
+                        webpage as a tree of objects. It allows JavaScript to manipulate the content, structure, and
+                        style
+                        of the webpage.
+                    </p>
+                    <h5>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Key Features:
+                    </h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Represents the entire HTML document as a tree of nodes (elements, attributes, text).
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Enables dynamic updates to the content and structure of the webpage.
+                    </p>
+                    <script>
+                        // // Selecting an element by ID
+                        // const element = document.getElementById("myElement");
+
+                        // // Changing text content of an element
+                        // element.textContent = "New text!";
+
+                        // // Adding a new element
+                        // const newElement = document.createElement("div");
+                        // document.body.appendChild(newElement);
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.61 Array vs object defences in JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <table class="table">
+                        <tr>
+                            <th class="bg-dark text-light">Feature</th>
+                            <th class="bg-dark text-light">Arrays</th>
+                            <th class="bg-dark text-light">Objects</th>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                Definition
+                            </td>
+                            <td class="bg-dark text-light">
+                                Ordered collection of elements
+                            </td>
+                            <td class="bg-dark text-light">
+                                Collection of key-value pairs
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                Access
+                            </td>
+                            <td class="bg-dark text-light">
+                                By numeric index
+                            </td>
+                            <td class="bg-dark text-light">
+                                By property name (key)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                Order
+                            </td>
+                            <td class="bg-dark text-light">
+                                Maintains order of elements
+                            </td>
+                            <td class="bg-dark text-light">
+                                No guaranteed order
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                Methods
+                            </td>
+                            <td class="bg-dark text-light">
+                                Rich built-in methods (e.g., push, pop)
+                            </td>
+                            <td class="bg-dark text-light">
+                                Fewer built-in methods; can be extended
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                Usage
+                            </td>
+                            <td class="bg-dark text-light">
+                                List of items
+                            </td>
+                            <td class="bg-dark text-light">
+                                Complex entities with attributes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg-dark text-light">
+                                Example Access
+                            </td>
+                            <td class="bg-dark text-light">
+                                array[0]
+                            </td>
+                            <td class="bg-dark text-light">
+                                object.property or object['property']
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h4>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Arrays
+                    </h4>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Definition: Arrays are ordered collections of data, where each element has a numeric index.
+                    </p>
+                    <br>
+                    <h5> <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Characteristics:</h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Index-Based: Elements are accessed using their index, starting from 0.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Order: Elements maintain their order of insertion.
+
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Methods: Arrays come with built-in methods for adding, removing, and manipulating elements
+                        (e.g., push, pop, shift, unshift, splice, slice).
+
+                    </p>
+                    <br>
+                    <h5>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Usage:
+                    </h5>
+                    <p> <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        When you need an ordered list of items.
+                    </p>
+                    <p> <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Suitable for iterating through elements.
+
+                    </p>
+                    <br>
+                    <br>
+                    <h4>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Example:-
+                    </h4>
+                    <br>
+                    <p>[ Apple , Banana , Cherry ]</p>
+                    <script>
+                        // Creating an array
+                        let fruits = ["Apple", "Banana", "Cherry"];
+
+                        // Accessing elements
+                        document.write(fruits[0]); // Outputs: Apple
+
+                        // Adding an element
+                        fruits.push("Date");
+
+                        // Iterating through an array
+                        fruits.forEach(function (fruit) {
+                            console.log(fruit);
+                        });
+
+                    </script>
+                    <br><br>
+                    <h4>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Objects:
+                    </h4>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Definition: Objects are collections of key-value pairs, where the keys are strings (or symbols)
+                        and the values can be of any type.
+                    </p>
+                    <br>
+                    <h5>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Characteristics:
+                    </h5>
+
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Key-Based: Properties are accessed using their keys.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Unordered: The properties do not have a guaranteed order.
+
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Methods: Objects do not have as many built-in methods as arrays, but they can be extended with
+                        custom methods.
+
+                    </p>
+                    <br>
+                    <h5>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Usage:
+                    </h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        When you need to store data with named properties.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Suitable for representing complex entities with various attributes.
+
+                    </p>
+                    <br>
+                    <br>
+                    <h4>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Example:-
+                    </h4>
+                    <script>
+                        // Creating an object
+                        let person = {
+                            name: "John",
+                            age: 30,
+                            occupation: "Developer"
+                        };
+
+                        // Accessing properties
+                        document.write(person.name + "<br>"); // Outputs: John
+
+                        // Adding a property
+                        person.city = "New York";
+
+                        // Iterating through an object's properties
+                        for (let key in person) {
+                            document.write(key + ": " + person[key] + " <br>");
+                        }
+
+                    </script><br><br>
+                    <h5>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Use Arrays:
+                    </h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        When you need an ordered list.
+
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        When the order of elements is important.
+
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        For collections of data where elements are accessed by position.
+
+                    </p>
+                    <br>
+                    <h5>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Use Objects:
+                    </h5>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        When you need to store data with named properties.
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        When the relationship between data is more complex.
+
+                    </p>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        For entities with various attributes and behaviors.
+
+                    </p>
+                    <br>
+                    <h4>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Combining Arrays and Objects:
+                    </h4>
+                    <p>
+                        <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                        Sometimes, you may need to use arrays and objects together to represent more complex data
+                        structures.
+                    </p>
+                    <br>
+                    <br>
+                    <h4>
+                        <span class="text-light"><i class="fa-solid fa-arrow-right"></i></span>
+                        Example:-
+                    </h4>
+                    <script>
+                        // Array of objects
+                        let users = [
+                            { name: "Alice", age: 25 },
+                            { name: "Bob", age: 30 },
+                            { name: "Charlie", age: 35 }
+                        ];
+
+                        // Accessing properties of objects within an array
+                        users.forEach(function (user) {
+                            document.write(user.name + " is " + user.age + " years old. <br>");
+                        });
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.62 Split the string into an array using split() Method?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <input type="text" id="stringInput" placeholder="Enter a string"><br><br>
+                    <button onclick="splitString()" class="btn btn-secondary">Split String</button>
+                    <p id="result12"></p>
+                    <script>
+                        function splitString() {
+                            // Get the string from the input field
+                            const str = document.getElementById('stringInput').value;
+
+                            // Split the string into an array
+                            const strArray = str.split(' '); // Split by space
+
+                            // Display the resulting array
+                            document.getElementById('result12').textContent = `Array: [${strArray.join(', ')}]`;
+                        }
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.63 Check if the string contains a word Script using includes() method?
+                    </h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <input type="text" id="stringInput" placeholder="Enter a string"> <br><br>
+                    <button onclick="checkForScript()" class="btn btn-secondary">Check for 'Script'</button>
+                    <p id="result123"></p>
+                    <script>
+                        function checkForScript() {
+                            // Get the string from the input field
+                            const str12 = document.getElementById('stringInput').value;
+
+                            // Check if the string contains the word 'Script'
+                            const containsScript = str12.includes('Script');
+
+                            // Display the result
+                            const resultElement = document.getElementById('result123');
+                            if (containsScript) {
+                                resultElement.textContent = "The string contains the word 'Script'.";
+                            } else {
+                                resultElement.textContent = "The string does not contain the word 'Script'.";
+                            }
+                        }
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.64 Change all the string characters to lowercase letters using
+                        toLowerCase() Method.</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <input type="text" id="stringInput" placeholder="Enter a string"> <br><br>
+                    <button onclick="convertToLowercase()" class="btn btn-secondary">Convert to Lowercase</button>
+                    <p id="result1234"></p>
+                    <script>
+                        function convertToLowercase() {
+                            // Get the string from the input field
+                            const str134 = document.getElementById('stringInput').value;
+
+                            // Convert the string to lowercase
+                            const lowerCaseStr = str134.toLowerCase();
+
+                            // Display the result
+                            document.getElementById('result1234').textContent = `Lowercase: ${lowerCaseStr}`;
+                        }
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.65 What is Character at index 15 in ’30 Days of JavaScript’ string? Use
+                        charAt() method</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <p>The string is: '30 Days of JavaScript'</p>
+                    <button onclick="findCharacter()" class="btn btn-secondary">Find Character at Index 15</button>
+                    <p id="result567"></p>
+                    <script>
+                        function findCharacter() {
+                            // Define the string
+                            const str = "30 Days of JavaScript";
+
+                            // Find the character at index 15
+                            const charAt15 = str.charAt(15);
+
+                            // Display the result
+                            document.getElementById('result567').textContent = `Character at index 15: ${charAt15}`;
+                        }
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.66 copy to one string to another string in JS?</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <input type="text" id="sourceString" placeholder="Enter the source string"> <br><br>
+                    <button onclick="copyString()" class="btn  btn-secondary">Copy String</button>
+                    <p id="result678"></p>
+                    <script>
+                        function copyString() {
+                            // Get the source string from the input field
+                            const sourceStr = document.getElementById('sourceString').value;
+
+                            // Copy the source string to a new string variable
+                            const copiedStr = sourceStr;
+
+                            // Display the copied string
+                            document.getElementById('result678').textContent = `Copied String: ${copiedStr}`;
+                        }
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.67 Create basic math operation in JS</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <table class="table">
+                        <tr class="text-center">
+                            <th colspan="2" class="bg-dark  text-light">Maths Operations</th>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="bg-dark text-light">Enter 1st Number: </td>
+                            <td class="bg-dark text-light"><input type="text" id="num1897"
+                                    placeholder="Enter the 1st number"></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="bg-dark text-light">Enter 2nd Number: </td>
+                            <td class="bg-dark text-light"><input type="text" id="num232"
+                                    placeholder="Enter the 2nd number"></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td colspan="2" class="bg-dark">
+
+
+
+
+                                <button onclick="performOperation('+')"
+                                    class="bg-dark text-light btn btn-secondary">+</button>
+                                <button onclick="performOperation('-')" class="bg-dark text-light btn btn-secondary"
+                                    style="margin-left: 10px; ">–</button>
+                                <button onclick="performOperation('*')" class="bg-dark text-light btn btn-secondary"
+                                    style="margin-left: 10px; ">×</button>
+                                <button onclick="performOperation('/')" class="bg-dark text-light btn btn-secondary"
+                                    style="margin-left: 10px; ">÷</button>
+                                <button onclick="performOperation('%')" class="bg-dark text-light btn btn-secondary"
+                                    style="margin-left: 10px; ">%</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">Answer is : <span id="result897"
+                                    class="text-center"></span></td>
+                        </tr>
+                    </table>
+                    <script>
+                        function performOperation(operation) {
+                            const num132 =
+                                parseFloat(document.getElementById('num1897').value);
+                            const num232 =
+                                parseFloat(document.getElementById('num232').value);
+                            let result;
+                            if (isNaN(num132) || isNaN(num132)) {
+                                result = 'Please enter valid numbers';
+                            } else {
+                                switch (operation) {
+
+
+
+
+                                    case '+':
+                                        result = num132 + num232;
+                                        break;
+                                    case '-':
+                                        result = num132 - num232;
+                                        break;
+                                    case '*':
+                                        result = num132 * num232;
+                                        break;
+                                    case '/':
+                                        result = num132 / num232;
+                                        break;
+                                    case '%':
+                                        result = num132 % num232;
+                                        break;
+                                    default:
+                                        result = 'Invalid Operation';
+                                }
+                            }
+                            document.getElementById('result897').textContent =
+                                result;
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary">Q.68 Create result.</h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h1 class="text-center text-light">Enter Maths</h1>
+                    <hr class="bg-dark text-light">
+                    <table class="table" id="table">
+                        <tr class="text-center">
+                            <td class="bg-dark text-light">C Language:</td>
+
+
+
+
+                            <td class="bg-dark text-light"><input type="text" id="cLanguage" /></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="bg-dark text-light">C++ Language:</td>
+                            <td class="bg-dark text-light"><input type="text" id="cppLanguage" /></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-light bg-dark">Database:</td>
+                            <td class="text-light bg-dark"><input type="text" id="database" /></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-light bg-dark">HTML:</td>
+                            <td class="text-light bg-dark"><input type="text" id="html" /></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-light bg-dark">CSS:</td>
+                            <td class="text-light bg-dark"><input type="text" id="css" /></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-light bg-dark">PHP:</td>
+                            <td class="text-light bg-dark"><input type="text" id="php" /></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="bg-dark text-light">Core Java:</td>
+                            <td class="bg-dark text-light"><input type="text" id="coreJava" /></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td colspan="2" class="bg-dark text-light">
+                                <button onclick="calculateResults()" class="btn btn-secondary">Result</button>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-light bg-dark">Total is:</td>
+                            <td class="text-light bg-dark">
+                                <h1 id="total">0</h1>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-light bg-dark">Percentage is:</td>
+                            <td class="text-light bg-dark">
+                                <h1 id="percentage123">0%</h1>
+                            </td>
+                        </tr>
+                    </table>
+                    <script>
+                        function calculateResults() {
+                            const subjects = ['cLanguage', 'cppLanguage',
+                                'database', 'html', 'css', 'php', 'coreJava'];
+
+
+
+
+                            let total = 0;
+                            let isValid = true;
+
+                            for (let i = 0; i < subjects.length; i++) {
+                                const mark =
+                                    parseFloat(document.getElementById(subjects[i]).value);
+                                if (isNaN(mark) || mark < 0 || mark > 50) {
+                                    alert('Please enter valid marks between 0 and 50 for all subjects.');
+                                    isValid = false;
+                                    break;
+                                }
+                                total += mark;
+                            }
+
+                            if (!isValid) return;
+
+                            const percentage123 = (total / (subjects.length *
+                                50)) * 100;
+
+                            document.getElementById('total').textContent
+                                = total;
+
+                            document.getElementById('percentage123').textContent = percentage123.toFixed(2) + '%';
+                        }
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary"></h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <style>
+                        * {
+                            box-sizing: border-box;
+                        }
+
+                        body {
+                            font-family: Verdana, sans-serif;
+                            margin: 0;
+                            /* display: flex; */
+                            /* justify-content: center; */
+                            align-items: center;
+                            height: 100vh;
+                            background-color: #f0f0f0;
+                        }
+
+                        .slider-container {
+                            position: relative;
+                            width: 300px;
+                            height: 300px;
+                            align-items: center;
+                            overflow: hidden;
+                        }
+
+                        .slider {
+                            display: flex;
+                            transition: transform 0.5s ease;
+                        }
+
+                        .color-box {
+                            min-width: 300px;
+                            height: 300px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 24px;
+                            font-weight: bold;
+                            color: white;
+                        }
+
+                        .arrow {
+                            position: absolute;
+                            top: 50%;
+                            width: auto;
+                            padding: 16px;
+                            margin-top: -22px;
+                            color: white;
+                            font-weight: bold;
+                            font-size: 18px;
+                            transition: 0.6s ease;
+                            user-select: none;
+                            cursor: pointer;
+                        }
+
+                        .prev {
+                            left: 0;
+                        }
+
+                        .next {
+                            right: 0;
+                        }
+
+                        .arrow:hover {
+                            background-color: rgba(0, 0, 0, 0.8);
+                        }
+
+                        .dots-container {
+                            text-align: center;
+                            margin-top: 10px;
+                        }
+
+                        .dot {
+                            cursor: pointer;
+                            height: 15px;
+                            width: 15px;
+                            margin: 0 2px;
+                            background-color: #bbb;
+                            border-radius: 50%;
+                            display: inline-block;
+                            transition: background-color 0.6s ease;
+                        }
+
+                        .active,
+                        .dot:hover {
+                            background-color: #717171;
+                        }
+                    </style>
+                    </head>
+
+                    <body>
+
+                        <div class="slider-container">
+                            <div class="slider">
+                                <div class="color-box" style="background-color: red;">Red</div>
+                                <div class="color-box" style="background-color: blue;">Blue</div>
+                                <div class="color-box" style="background-color: green;">Green</div>
+                                <div class="color-box" style="background-color: yellow;">Yellow</div>
+                                <div class="color-box" style="background-color: purple;">Purple</div>
+                            </div>
+                            <span class="arrow prev" onclick="plusSlides(-1)">&#10094;</span>
+                            <span class="arrow next" onclick="plusSlides(1)">&#10095;</span>
+                        </div>
+
+                        <div class="dots-container">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                        </div>
+
+                        <script>
+                            let slideIndex = 1;
+                            const slider = document.querySelector('.slider');
+                            const slides = document.querySelectorAll('.color-box');
+                            const dots = document.querySelectorAll('.dot');
+                            const totalSlides = slides.length;
+
+                            function showSlides(n) {
+                                if (n > totalSlides) { slideIndex = 1 }
+                                if (n < 1) { slideIndex = totalSlides }
+                                slider.style.transform = `translateX(${-(slideIndex - 1) * 300}px)`;
+                                dots.forEach(dot => dot.classList.remove('active'));
+                                dots[slideIndex - 1].classList.add('active');
+                            }
+
+                            function plusSlides(n) {
+                                showSlides(slideIndex += n);
+                            }
+
+                            function currentSlide(n) {
+                                showSlides(slideIndex = n);
+                            }
+
+                            // Initialize the slider
+                            showSlides(slideIndex);
+                        </script>
+
+                        <script>
+
+                        </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-light">
+                <div class="text-light mt-5 container">
+                    <h5 class="text-secondary"></h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <h1>Change Background Color</h1>
+                    <input type="text" id="colorInput" placeholder="Enter color name or hex code">
+                    <button onclick="changeBackgroundColor()">Change Background</button>
+                </div>
+                <script>
+                    function changeBackgroundColor() {
+                        let color123 = document.getElementById('colorInput').value;
+                        document.body.style.backgroundColor = color123;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary"></h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary"></h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary"></h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary"></h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-dark text-light">
+
+                <div class="text-light mt-5">
+                    <h5 class="text-secondary"></h5>
+                    <span class="text-secondary"><i class="fa-solid fa-arrow-right"></i></span>
+                    <script>
+
+                    </script>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

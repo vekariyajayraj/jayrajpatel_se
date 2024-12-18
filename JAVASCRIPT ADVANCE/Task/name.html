@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="fname" id="">
+    <input type="text" name="fname" id="">
+    <input type="text" name="lname" id="">
+    <h1 id="one" style="font-size: 100px; color: red;"></h1>
+</body>
+<script>
+    var val = document.getElementsByName("fname")
+
+    document.getElementById("one").innerHTML=val[0].tagName
+</script>
+</html>
