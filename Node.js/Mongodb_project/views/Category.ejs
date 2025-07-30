@@ -1,0 +1,105 @@
+<%- include('./layout/header.ejs') %>
+  <%- include('./layout/navbar.ejs') %>
+    <%- include('./layout/sidebar.ejs') %>
+
+      <main class="app-main">
+        <!--begin::App Content Header-->
+        <div class="app-content-header">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="mb-0">Category</h3>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Category</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end::App Content Header-->
+
+        <!--begin::App Content-->
+        <div class="app-content">
+          <div class="container-fluid">
+
+            
+            <div class="row g-4 justify-content-end">
+              <div class="col-md-6">
+                
+              </div>
+            </div>
+
+            <!-- Main Form + Table aligned right -->
+            <div class="row g-4 justify-content-end">
+              <!-- Add Category -->
+              <div class="col-md-5">
+                <div class="card card-primary card-outline mb-4">
+                  <div class="card-header">
+                    <div class="card-title">Add Category</div>
+                  </div>
+                  <form name="frm" method="post" action="/Category/add">
+                    <input type="hidden" name="catid" value="<%= (editcat != '') ? editcat._id : '' %>">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label class="form-label">Category Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          name="catname" value="<%= (editcat != '') ? editcat.catname : '' %>" required/>
+                      </div>
+                    </div>
+                    <!-- <div class="card-footer">
+                      <button type="submit"  class="<%= (editcat!='')? 'btn btn-warning' : 'btn btn-primary' %>"><%= (editcat!='')?'Update':'Save'%></button>
+                    </div> -->
+                    <div class="card-footer">
+                      <button type="submit" class="<%= (editcat!= '') ? 'btn btn-warning' : 'btn btn-primary'%>"><%= (editcat!= '') ? 'Update' : 'Save' %></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Category List Table -->
+              <div class="col-md-5">
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <h3 class="card-title">Category List</h3>
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th>Category</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% alldata.map((i,_id)=> { %>
+                          <tr>
+                            <td>
+                              <%= _id + 1 %>
+                            </td>
+                            <td>
+                              <%= i.catname %>
+                            </td>
+                            <td>
+                              <a href="/Category/edit/<%= i._id %>" class="btn btn-primary">Edit</a>  
+                              
+                              <a href="/Category/del/<%= i._id %>" class="btn btn-danger">Delete</a>
+                            </td>
+                          </tr>
+                          <% })%>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--end::App Content-->
+      </main>
+
+      <%- include('./layout/footer.ejs') %>
